@@ -1,0 +1,36 @@
+TODO as new extensions (modular approach)
+
+
+partner_tt_address
+==================
+
+Submodule
+- Add new submodule in the 'tools' section
+  * Sync tt_address (display delta first, then commit)
+  * Configure (link to the page with the tt_address records). If none found, it will be the same pid.
+  * Save the link as page TSConfig (mod.tx_partner_tt_address.tt_address_pid)
+
+Hook in TCE-Main
+- Sync tt_address whenever a partner changes
+- (optional: sync partner whenever tt_address changes)
+
+
+
+partner_dmail
+=============
+
+Submodule
+- Add new submodule in the 'tools' section
+  * Sync tt_address (display delta first, then commit)
+  * Configure (link to the page with the direct_mail plugin)
+  * Save the link as page TSConfig (mod.tx_partner_dmail.direct_mail_pid)
+
+
+Partner-View
+- New tab-strip 'Newsletter'
+- Show the newsletter categories defined in the linked page with the direct_mail plugin
+  (mod.web_modules.dmail.categories)
+
+Hook in TCE-Main
+- Sync tt_address.module_sys_dmail_category whenever the newsletter-cat of a partner changes
+- (optional: sync partner whenever tt_address changes)

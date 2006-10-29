@@ -1,0 +1,327 @@
+a:2:{s:4:"meta";a:3:{s:5:"title";s:11:"Partner API";s:5:"descr";s:344:"This is the official API (Application Programming Interface) for the extension 'partner'. Please use only this API when you need access to partner information in your own extension, as this ensures backwards-compatibility wherevery possible.
+
+If you are missing a function or need a hook somewhere, please let me know (typo3@bruehlmeier.com).";s:7:"options";a:2:{s:10:"usageCount";N;s:19:"includeCodeAbstract";N;}}s:5:"files";a:6:{s:14:"MD5_ea88ef809c";a:4:{s:8:"filename";s:37:"api/class.tx_partner_contact_info.php";s:8:"filesize";i:2970;s:6:"header";a:5:{s:4:"text";s:73:"
+
+API functions for reading/writing/processing contact-information
+data.
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}s:5:"other";a:1:{i:0;s:49:"@author David Bruehlmeier <typo3@bruehlmeier.com>";}s:11:"other_index";a:1:{s:7:"@author";a:1:{i:0;s:41:"David Bruehlmeier <typo3@bruehlmeier.com>";}}}s:3:"DAT";a:6:{i:1;a:8:{s:6:"header";s:31:"class tx_partner_contact_info {";s:5:"class";i:1;s:11:"parentClass";s:23:"tx_partner_contact_info";s:4:"cDat";a:3:{s:4:"text";s:187:"
+
+This class contains functions needed to read contact-infos from the 'partner'-extension.
+Please use only this class to access contact-info records, as this
+represents the official API.
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}}s:7:"content";s:0:"";s:12:"content_size";i:2;s:13:"content_lines";i:1;s:6:"atLine";i:42;}i:3;a:7:{s:6:"header";s:37:"function tx_partner_contact_info()		{";s:11:"parentClass";s:23:"tx_partner_contact_info";s:4:"cDat";a:3:{s:4:"text";s:75:"
+
+Constructor of the class. Loads all configurations values needed to run.
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:133;s:13:"content_lines";i:13;s:6:"atLine";i:49;}i:5;a:7:{s:6:"header";s:32:"function getContactInfo($uid)		{";s:11:"parentClass";s:23:"tx_partner_contact_info";s:4:"cDat";a:3:{s:4:"text";s:65:"
+
+Reads a contact information and writes the data in $this->data
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:7:"integer";i:1;s:36:"$uid: UID of the contact information";}}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:512;s:13:"content_lines";i:23;s:6:"atLine";i:69;}i:7;a:8:{s:6:"header";s:31:"function insertContactInfo()		{";s:11:"parentClass";s:23:"tx_partner_contact_info";s:11:"sectionText";a:1:{i:0;s:15:"PROCESSING DATA";}s:4:"cDat";a:3:{s:4:"text";s:1:"
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:8;s:13:"content_lines";i:5;s:6:"atLine";i:96;}i:9;a:4:{s:6:"header";s:31:"function updateContactInfo()		{";s:11:"parentClass";s:23:"tx_partner_contact_info";s:4:"cDat";a:3:{s:4:"text";s:1:"
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:6:"atLine";i:105;}i:11;a:7:{s:6:"header";s:31:"function deleteContactInfo()		{";s:11:"parentClass";s:23:"tx_partner_contact_info";s:4:"cDat";a:3:{s:4:"text";s:1:"
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:249;s:13:"content_lines";i:13;s:6:"atLine";i:114;}}}s:14:"MD5_797d250e9f";a:4:{s:8:"filename";s:28:"api/class.tx_partner_div.php";s:8:"filesize";i:36598;s:6:"header";a:5:{s:4:"text";s:341:"
+
+Class with helper functions used in various places within this
+extension. It is encouraged to use these functions in extensions
+of this extension as well!
+
+Note: Some functions cannot be used under FE-conditions. Please
+refer to the documentation of the functions.
+
+Use non-instantiated, e.g. tx_partner_div::getMergedFieldVisibilities()
+
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}s:5:"other";a:1:{i:0;s:49:"@author David Bruehlmeier <typo3@bruehlmeier.com>";}s:11:"other_index";a:1:{s:7:"@author";a:1:{i:0;s:41:"David Bruehlmeier <typo3@bruehlmeier.com>";}}}s:3:"DAT";a:25:{i:1;a:7:{s:6:"header";s:22:"class tx_partner_div {";s:5:"class";i:1;s:11:"parentClass";s:14:"tx_partner_div";s:7:"content";s:0:"";s:12:"content_size";i:125;s:13:"content_lines";i:7;s:6:"atLine";i:46;}i:3;a:8:{s:6:"header";s:48:"function getStandardEmailAddress($partnerUid)		{";s:11:"parentClass";s:14:"tx_partner_div";s:11:"sectionText";a:1:{i:0;s:12:"READING DATA";}s:4:"cDat";a:3:{s:4:"text";s:155:"
+
+Get the standard e-mail address of a partner. If found, the whole contact-info record is returned
+as an array. If not found, the function returns false.
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:7:"integer";i:1;s:84:"$partnerUid: UID of the partner for which the standard e-mail address shall be found";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:93:"Record from tx_partner_contact_info with the standard-email address for the requested partner";}}s:7:"content";s:0:"";s:12:"content_size";i:459;s:13:"content_lines";i:21;s:6:"atLine";i:61;}i:5;a:7:{s:6:"header";s:47:"function getPartnerCountByFeUser($feUserUid)		{";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:3:{s:4:"text";s:70:"
+
+Get the number of partners that are assigned to a specific fe_user.
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:7:"integer";i:1;s:80:"$feUserUid: UID of the fe_user for which the number of partners shall be counted";}}s:6:"return";a:2:{i:0;s:7:"integer";i:1;s:40:"Number of partners found for the fe_user";}}s:7:"content";s:0:"";s:12:"content_size";i:386;s:13:"content_lines";i:16;s:6:"atLine";i:89;}i:7;a:7:{s:6:"header";s:82:"function getAllowedRelationshipTypes($pid, $partnerType, $primaryOrSecondary=0)		{";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:5:{s:4:"text";s:213:"
+
+Get all allowed relationship types for the partner type in the requested PID.
+The allowed relationship types are returned as an array.
+
+This is the 'sister'-function to tx_partner_div::getAllowedPartnerTypes().
+";s:5:"param";a:3:{i:0;a:2:{i:0;s:7:"integer";i:1;s:59:"$pid: PID of the folder with the relationship-types records";}i:1;a:2:{i:0;s:7:"integer";i:1;s:64:"$partnerType: Type of the partner (0 = Person, 1 = Organization)";}i:2;a:2:{i:0;s:7:"integer";i:1;s:121:"$primaryOrSecondary: Indicates if the partner type comes from the primary partner (=0) or from the secondary partner (=1)";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:42:"Array with all possible relationship types";}s:5:"other";a:1:{i:0;s:45:"@see tx_partner_div::getAllowedPartnerTypes()";}s:11:"other_index";a:1:{s:4:"@see";a:1:{i:0;s:41:"tx_partner_div::getAllowedPartnerTypes() ";}}}s:7:"content";s:0:"";s:12:"content_size";i:1190;s:13:"content_lines";i:30;s:6:"atLine";i:118;}i:9;a:7:{s:6:"header";s:60:"function getAllowedPartnerTypes($uid, $mainOrSecondary=0)		{";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:5:{s:4:"text";s:137:"
+
+Get the allowed partner types for a relationship type. This is the 'sister'-function to tx_partner_div::getAllowedRelationshipTypes().
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:7:"integer";i:1;s:37:"$uid: UID of relationship type record";}i:1;a:2:{i:0;s:7:"integer";i:1;s:98:"$mainOrSecondary: Indicates if the partner will be main (=0) or secondary (=1) in the relationship";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:67:"Array with the allowed partner types (0 = Person, 1 = Organization)";}s:5:"other";a:1:{i:0;s:50:"@see tx_partner_div::getAllowedRelationshipTypes()";}s:11:"other_index";a:1:{s:4:"@see";a:1:{i:0;s:46:"tx_partner_div::getAllowedRelationshipTypes() ";}}}s:7:"content";s:0:"";s:12:"content_size";i:1194;s:13:"content_lines";i:24;s:6:"atLine";i:157;}i:11;a:7:{s:6:"header";s:93:"function checkRelationship($uidPrimaryPartner, $uidSecondaryPartner, $uidRelationshipType)		{";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:3:{s:4:"text";s:78:"
+
+Checks if it is allowed to join to partners by a certain relationship type.
+";s:5:"param";a:3:{i:0;a:2:{i:0;s:7:"integer";i:1;s:46:"$uidPrimaryPartner: UID of the primary partner";}i:1;a:2:{i:0;s:7:"integer";i:1;s:50:"$uidSecondaryPartner: UID of the secondary partner";}i:2;a:2:{i:0;s:7:"integer";i:1;s:57:"$uidRelationshipType: UID of the relationship type record";}}s:6:"return";a:2:{i:0;s:7:"boolean";i:1;s:78:"Returns true if the partners are allowed for the relationship, otherwise false";}}s:7:"content";s:0:"";s:12:"content_size";i:1081;s:13:"content_lines";i:25;s:6:"atLine";i:190;}i:13;a:7:{s:6:"header";s:42:"function getContactInfo($uid, $scope=2)		{";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:3:{s:4:"text";s:273:"
+
+Get the contact info for a partner. The partner must be identified with its UID. You can also determine if you
+want only the standard contact info ($scope = 1) or all contact info ($scope = 2). The found contact info will
+be returned as an array of contact-info objects.
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:7:"integer";i:1;s:24:"$uid: UID of the partner";}i:1;a:2:{i:0;s:7:"integer";i:1;s:60:"$scope: Only standard (=1) or all contact info (=2, default)";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:39:"Array of all found contact-info objects";}}s:7:"content";s:0:"";s:12:"content_size";i:568;s:13:"content_lines";i:22;s:6:"atLine";i:225;}i:15;a:7:{s:6:"header";s:55:"function getRelationships($uid, $primaryOrSecondary)		{";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:3:{s:4:"text";s:265:"
+
+Get the relationships for a partner. The partner must be identified with its UID and you must determine whether
+the partner is the PRIMARY or the SECONDARY partner in the relationship. The found relationships will be returned
+as an array of relationship objects.
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:7:"integer";i:1;s:24:"$uid: UID of the partner";}i:1;a:2:{i:0;s:7:"integer";i:1;s:112:"$primaryOrSecondary: Indicates if the partner is the main (=0) or the secondary (=1) partner in the relationship";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:40:"Array of all found relationships objects";}}s:7:"content";s:0:"";s:12:"content_size";i:592;s:13:"content_lines";i:22;s:6:"atLine";i:257;}i:17;a:7:{s:6:"header";s:42:"function getAllowedStatus($pid, $table)		{";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:5:{s:4:"text";s:54:"
+
+Get the allowed status records for a specific table
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:7:"integer";i:1;s:48:"$pid: PID where the status record(s) are located";}i:1;a:2:{i:0;s:6:"string";i:1;s:63:"$table: Name of the table for which to get the status record(s)";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:51:"Array with all allowed status records for the table";}s:5:"other";a:1:{i:0;s:102:"@todo	Possible improvement: The relevant records should be directly selected by a proper SQL statement";}s:11:"other_index";a:1:{s:5:"@todo";a:1:{i:0;s:96:"Possible improvement: The relevant records should be directly selected by a proper SQL statement";}}}s:7:"content";s:0:"";s:12:"content_size";i:533;s:13:"content_lines";i:22;s:6:"atLine";i:288;}i:19;a:7:{s:6:"header";s:42:"function checkPartnerRecordsExist($pid)		{";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:3:{s:4:"text";s:76:"
+
+Checks if there exists at least one partner record for the requested PID.
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:7:"integer";i:1;s:44:"$pid: PID where to check for partner records";}}s:6:"return";a:2:{i:0;s:7:"boolean";i:1;s:69:"False if there are none, true if there is at least one partner record";}}s:7:"content";s:0:"";s:12:"content_size";i:374;s:13:"content_lines";i:12;s:6:"atLine";i:317;}i:21;a:7:{s:6:"header";s:38:"function getValRecord($table, $uid)		{";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:3:{s:4:"text";s:65:"
+
+Get any tx_partner_val* record (such as tx_partner_val_status)
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:6:"string";i:1;s:41:"$table: Name of the tx_partner_val* table";}i:1;a:2:{i:0;s:7:"integer";i:1;s:46:"$uid: UID of the record to read from the table";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:27:"Array with the record found";}}s:7:"content";s:0:"";s:12:"content_size";i:616;s:13:"content_lines";i:28;s:6:"atLine";i:337;}i:23;a:7:{s:6:"header";s:50:"function getMergedFieldVisibilities($partnerUid) {";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:3:{s:4:"text";s:436:"
+
+Gets the merged field visibility settings for a partner-record.
+The function will get the default and the user-defined field visibility settings and then
+merge the values (i.e. the default values will be overwritten by user-defined values).
+
+The resulting array has the same structure as the stored array in
+tx_partner_main.field_visibilities and is sorted according to the
+list in $TCA[..table..]['interface']['showRecordFieldList']
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:7:"integer";i:1;s:82:"$partnerUid: The UID of the partner for which to get the merged field visibilities";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:73:"Merged field visibilities, sorted according to showRecordFieldList in TCA";}}s:7:"content";s:0:"";s:12:"content_size";i:686;s:13:"content_lines";i:24;s:6:"atLine";i:378;}i:25;a:7:{s:6:"header";s:44:"function getDefaultFieldVisibilities($pid) {";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:3:{s:4:"text";s:468:"
+
+Gets the default field visibility settings from TSconfig. The page from which the
+TSconfig parameters are fetched from is defined by the pid (which must be the sys-folder
+where the partner records are stored).
+
+The system will check if the settings in TSconfig are valid (i.e. configured fields in $TCA
+from tx_partner_main or tx_partner_contact_info and only allowed keywords). The resulting
+array will be in the order defined in TCA>interface>showRecordFieldList.
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:7:"integer";i:1;s:71:"$pid: The PID from which to fetch the default field visibility settings";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:33:"Default field visibility settings";}}s:7:"content";s:0:"";s:12:"content_size";i:2412;s:13:"content_lines";i:54;s:6:"atLine";i:415;}i:27;a:7:{s:6:"header";s:27:"function getReport($uid)		{";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:3:{s:4:"text";s:105:"
+
+Gets the details of a report, including the UID's and the number of the
+partners that must be selected
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:7:"integer";i:1;s:52:"$uid: UID of the report for which to get the details";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:32:"Details for the requested report";}}s:7:"content";s:0:"";s:12:"content_size";i:771;s:13:"content_lines";i:27;s:6:"atLine";i:477;}i:29;a:7:{s:6:"header";s:43:"function getAllTypeFields($table, $type)		{";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:3:{s:4:"text";s:178:"
+
+Gets all fields according to the 'types'-configuration in $TCA for the record
+specified. It is based on t3lib_BEfunc::getTCAtypes, but it also includes
+all fields in palettes.
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:6:"string";i:1;s:35:"$table: Table name (present in TCA)";}i:1;a:2:{i:0;s:7:"integer";i:1;s:25:"$type: Type of the record";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:68:"Array with all fields according to the 'types'-configuration in $TCA";}}s:7:"content";s:0:"";s:12:"content_size";i:886;s:13:"content_lines";i:38;s:6:"atLine";i:514;}i:31;a:8:{s:6:"header";s:46:"function syncPartnerWithFeUser($partnerUid)		{";s:11:"parentClass";s:14:"tx_partner_div";s:11:"sectionText";a:1:{i:0;s:15:"PROCESSING DATA";}s:4:"cDat";a:3:{s:4:"text";s:201:"
+
+Syncronize redundant partner / contact-info data with the fe_user assigned to the partner.
+If the fe_user is assigned to more than one partner, the function will not make any changes to
+the fe_user.
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:7:"integer";i:1;s:69:"$partnerUid: UID of the partner for which the fe_user shall be sync'd";}}s:6:"return";a:2:{i:0;s:7:"boolean";i:1;s:52:"True if sync was successful, false if not successful";}}s:7:"content";s:0:"";s:12:"content_size";i:1302;s:13:"content_lines";i:42;s:6:"atLine";i:561;}i:33;a:7:{s:6:"header";s:49:"function createLabel($table, $uid, $record='')		{";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:3:{s:4:"text";s:171:"
+
+Create value for the 'label'-field. The label field is built upon several parameters and
+depends on the the record (Partner or Contact-Info) and the type of the record.
+";s:5:"param";a:3:{i:0;a:2:{i:0;s:6:"string";i:1;s:115:"$table: Table of the record for which the label must be created (either tx_partner_main or tx_partner_contact_info)";}i:1;a:2:{i:0;s:6:"string";i:1;s:138:"$uid: UID of the record for which the label must be created. If $record is provided, this parameter is not needed and will be disregarded.";}i:2;a:2:{i:0;s:6:"string";i:1;s:93:"$record: Record for which the label must be created. Optional alternative to providing a UID.";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:41:"Value for the 'label'-field of the record";}}s:7:"content";s:0:"";s:12:"content_size";i:3003;s:13:"content_lines";i:101;s:6:"atLine";i:613;}i:35;a:8:{s:6:"header";s:43:"function getEditPartnerLink($partnerUID)		{";s:11:"parentClass";s:14:"tx_partner_div";s:11:"sectionText";a:1:{i:0;s:24:"OUTPUT RELATED (BACKEND)";}s:4:"cDat";a:3:{s:4:"text";s:71:"
+
+Function to create an 'edit partner' link.
+
+For use in Backend only.
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:6:"string";i:1;s:60:"$partnerUID: UID of the partner which the link must point to";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:33:"HTML with the 'edit partner' link";}}s:7:"content";s:0:"";s:12:"content_size";i:623;s:13:"content_lines";i:18;s:6:"atLine";i:723;}i:37;a:7:{s:6:"header";s:41:"function getEditFeUserLink($feUserUid)		{";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:3:{s:4:"text";s:72:"
+
+Function to create the 'edit fe_user' link.
+
+For use in Backend only.
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:7:"integer";i:1;s:59:"$feUserUid: UID of the fe_user which the link must point to";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:33:"HTML with the 'edit partner' link";}}s:7:"content";s:0:"";s:12:"content_size";i:616;s:13:"content_lines";i:19;s:6:"atLine";i:750;}i:39;a:7:{s:6:"header";s:41:"function getEditReportLink($reportUID)		{";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:3:{s:4:"text";s:70:"
+
+Function to create an 'edit report' link.
+
+For use in Backend only.
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:6:"string";i:1;s:58:"$reportUID: UID of the report which the link must point to";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:32:"HTML with the 'edit report' link";}}s:7:"content";s:0:"";s:12:"content_size";i:625;s:13:"content_lines";i:19;s:6:"atLine";i:778;}i:41;a:7:{s:6:"header";s:40:"function getMailIconLink($partnerUID)		{";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:3:{s:4:"text";s:183:"
+
+Creates the mail icon with a link to the standard e-mail address of the partner.
+If no standard e-mail address can be found, the function returns nothing.
+
+For use in Backend only.
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:6:"string";i:1;s:73:"$partnerUID: UID of the partner for which the linked icon must be created";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:30:"HTML with the linked mail icon";}}s:7:"content";s:0:"";s:12:"content_size";i:800;s:13:"content_lines";i:21;s:6:"atLine";i:807;}i:43;a:7:{s:6:"header";s:152:"function getFormatIcons($reportUid, $requestedFormats='', $orientation='horizontal', $linked=TRUE, $withLabels=TRUE, $tableWrap=TRUE, $backPath = '')		{";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:3:{s:4:"text";s:115:"
+
+Creates a list of format-icons for downloading data from a report in specific formats.
+
+For use in Backend only.
+";s:5:"param";a:7:{i:0;a:2:{i:0;s:7:"integer";i:1;s:143:"$reportUid: UID of the report for which to download the data. Must be provided if $linked is set to TRUE, otherwise the icon will not be linked";}i:1;a:2:{i:0;s:6:"string";i:1;s:195:"$requestedFormats: Comma-separated list of formats which must be returned. If not provided, the formats configured as 'external' in $TYPO3_CONF_VARS['EXTCONF']['partner']['formats'] will be taken";}i:2;a:2:{i:0;s:6:"string";i:1;s:82:"$orientation: Orientation of the output. Can bei either 'horizontal' or 'vertical'";}i:3;a:2:{i:0;s:7:"boolean";i:1;s:73:"$linked: If set, the icons/labels will be linked to the download-function";}i:4;a:2:{i:0;s:7:"boolean";i:1;s:67:"$withLabels: If set, the icons will be returned with a proper label";}i:5;a:2:{i:0;s:7:"boolean";i:1;s:93:"$tableWrap: If set, the result will be wrapped in <table> tags (otherwise just <tr><td> tags)";}i:6;a:2:{i:0;s:6:"string";i:1;s:46:"$backPath: The back-path to the calling script";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:27:"HTML for use in the Backend";}}s:7:"content";s:0:"";s:12:"content_size";i:2004;s:13:"content_lines";i:56;s:6:"atLine";i:843;}i:45;a:8:{s:6:"header";s:31:"function getDateArray($date)		{";s:11:"parentClass";s:14:"tx_partner_div";s:11:"sectionText";a:1:{i:0;s:13:"MISCELLANEOUS";}s:4:"cDat";a:3:{s:4:"text";s:202:"
+
+Validates a date inputted in the format YYYYMMDD
+and returns the date as an array with the
+parts ['year'], ['month'] and ['day'].
+
+If the input string is not a valid date, the function returns false.
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:6:"string";i:1;s:34:"$date: Date in the format YYYYMMDD";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:90:"Date splitted into the parts ['year'], ['month'] and ['day'] or false if date is not valid";}}s:7:"content";s:0:"";s:12:"content_size";i:456;s:13:"content_lines";i:18;s:6:"atLine";i:910;}i:47;a:4:{s:6:"header";s:81:"function getMessageOutput($msgArray, $tableStyle='', $trStyle='', $tdStyle='')		{";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:3:{s:4:"text";s:356:"
+
+Gets the HTML-output for a message array. The message array needs to be in the following format:
+$msgArray = array(
+		array('info' => 'This is just an information'),
+		array('success' => 'This is a success message'),
+		array('warning' => 'This is a warning'),
+		array('error' => 'This is an error!'),
+		array('asdf' => 'This is the default message'),
+);
+";s:5:"param";a:4:{i:0;a:2:{i:0;s:5:"array";i:1;s:46:"$msgArray: Array with the accumulated messages";}i:1;a:2:{i:0;s:6:"string";i:1;s:49:"$tableStyle: Style-attributes for the <table>-tag";}i:2;a:2:{i:0;s:6:"string";i:1;s:44:"$trStyle: Style-attributes for the <tr>-tags";}i:3;a:2:{i:0;s:6:"string";i:1;s:44:"$tdStyle: Style-attributes for the <td>-tags";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:49:"HTML-output for the messages (wrapped in a table)";}}s:6:"atLine";i:945;}i:49;a:7:{s:6:"header";s:17:"function blur()	{";s:11:"parentClass";s:14:"tx_partner_div";s:4:"cDat";a:3:{s:4:"text";s:47:"
+
+Returns 'this.blur();' string, if supported.
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:78:"If the current browser supports styles, the string 'this.blur();' is returned.";}}s:7:"content";s:0:"";s:12:"content_size";i:289;s:13:"content_lines";i:10;s:6:"atLine";i:1011;}}}s:14:"MD5_e2c30a6200";a:4:{s:8:"filename";s:29:"api/class.tx_partner_lang.php";s:8:"filesize";i:2815;s:6:"header";a:5:{s:4:"text";s:235:"
+
+Class for getting localized labels under both Frontend
+and Backend conditions. This is used throughout the extension
+in API-functions which must be usable under any conditions.
+
+Use non-instantiated, eg: tx_partner_lang::getLabel()
+
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}s:5:"other";a:1:{i:0;s:49:"@author David Bruehlmeier <typo3@bruehlmeier.com>";}s:11:"other_index";a:1:{s:7:"@author";a:1:{i:0;s:41:"David Bruehlmeier <typo3@bruehlmeier.com>";}}}s:3:"DAT";a:2:{i:1;a:4:{s:6:"header";s:23:"class tx_partner_lang {";s:5:"class";i:1;s:11:"parentClass";s:15:"tx_partner_lang";s:6:"atLine";i:37;}i:3;a:7:{s:6:"header";s:28:"function getLabel($label)		{";s:11:"parentClass";s:15:"tx_partner_lang";s:4:"cDat";a:3:{s:4:"text";s:249:"
+
+Gets a label under both Frontend and Backend conditions. Under Backend conditions,
+the label will be localized using the $LANG object. Under Frontend conditions, the
+label will be localized using the pibase-function to read the $LOCAL_LANG array.
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:6:"string";i:1;s:51:"$label: Name of the label for which to get the text";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:27:"Localized text of the label";}}s:7:"content";s:0:"";s:12:"content_size";i:1054;s:13:"content_lines";i:42;s:6:"atLine";i:47;}}}s:14:"MD5_488238cfac";a:4:{s:8:"filename";s:29:"api/class.tx_partner_main.php";s:8:"filesize";i:5364;s:6:"header";a:5:{s:4:"text";s:60:"
+
+API functions for reading/writing/processing partner-data
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}s:5:"other";a:1:{i:0;s:49:"@author David Bruehlmeier <typo3@bruehlmeier.com>";}s:11:"other_index";a:1:{s:7:"@author";a:1:{i:0;s:41:"David Bruehlmeier <typo3@bruehlmeier.com>";}}}s:3:"DAT";a:8:{i:1;a:8:{s:6:"header";s:23:"class tx_partner_main {";s:5:"class";i:1;s:11:"parentClass";s:15:"tx_partner_main";s:4:"cDat";a:3:{s:4:"text";s:173:"
+
+This class contains functions needed to read data from the 'partner'-extension.
+Please use only this class to access partner records, as this
+represents the official API.
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}}s:7:"content";s:0:"";s:12:"content_size";i:2;s:13:"content_lines";i:1;s:6:"atLine";i:42;}i:3;a:7:{s:6:"header";s:29:"function tx_partner_main()		{";s:11:"parentClass";s:15:"tx_partner_main";s:4:"cDat";a:3:{s:4:"text";s:75:"
+
+Constructor of the class. Loads all configurations values needed to run.
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:133;s:13:"content_lines";i:13;s:6:"atLine";i:49;}i:5;a:8:{s:6:"header";s:28:"function getPartner($uid)		{";s:11:"parentClass";s:15:"tx_partner_main";s:11:"sectionText";a:1:{i:0;s:12:"READING DATA";}s:4:"cDat";a:3:{s:4:"text";s:73:"
+
+Gets a partner and writes the data into the class variable $this->data
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:7:"integer";i:1;s:32:"$uid: UID of the partner the get";}}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:777;s:13:"content_lines";i:26;s:6:"atLine";i:69;}i:7;a:7:{s:6:"header";s:36:"function getContactInfo($scope=2)		{";s:11:"parentClass";s:15:"tx_partner_main";s:4:"cDat";a:3:{s:4:"text";s:215:"
+
+Reads the contact information for the current partner. The result will be made available as an array of contact-info objects
+in $this->contactInfo.
+
+1 = Only contact info marked as 'standard'
+2 = All contact info
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:7:"integer";i:1;s:73:"$scope: Scope for the reading the contact info (optional, default: 2=all)";}}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:384;s:13:"content_lines";i:16;s:6:"atLine";i:106;}i:9;a:7:{s:6:"header";s:38:"function getRelationships($scope=3)		{";s:11:"parentClass";s:15:"tx_partner_main";s:4:"cDat";a:3:{s:4:"text";s:695:"
+
+Reads the relationships for the current partner. The result will be made available as an array of relationship objects,
+$this->relationshipsAsPrimary for relationships where the current partner is the primary partner and in
+$this->relationshipsAsSecondary for relationships where the current partner is the secondary partner.
+
+The $scope can be set as follows:
+1 = Only relationships where the current partner is the PRIMARY partner (result in $this->relationshipsAsPrimary)
+2 = Only relationships where the current partner is the SECONDARY partner (result in $this->relationshipsAsSecondary)
+3 = All relationships (result in $this->relationshipsAsPrimary and $this->relationshipsAsSecondary)
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:7:"integer";i:1;s:74:"$scope: Scope for the reading the relationships (optional, default: 3=all)";}}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:541;s:13:"content_lines";i:22;s:6:"atLine";i:136;}i:11;a:8:{s:6:"header";s:27:"function insertPartner()		{";s:11:"parentClass";s:15:"tx_partner_main";s:11:"sectionText";a:1:{i:0;s:15:"PROCESSING DATA";}s:4:"cDat";a:3:{s:4:"text";s:1:"
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:8;s:13:"content_lines";i:5;s:6:"atLine";i:162;}i:13;a:4:{s:6:"header";s:27:"function updatePartner()		{";s:11:"parentClass";s:15:"tx_partner_main";s:4:"cDat";a:3:{s:4:"text";s:1:"
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:6:"atLine";i:171;}i:15;a:7:{s:6:"header";s:27:"function deletePartner()		{";s:11:"parentClass";s:15:"tx_partner_main";s:4:"cDat";a:3:{s:4:"text";s:1:"
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:231;s:13:"content_lines";i:11;s:6:"atLine";i:180;}}}s:14:"MD5_ed885236a5";a:4:{s:8:"filename";s:30:"api/class.tx_partner_query.php";s:8:"filesize";i:29584;s:6:"header";a:5:{s:4:"text";s:123:"
+
+Class for getting partner-data (queries) in various ways
+and output formats. Recommended for use in your own extensions.
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}s:5:"other";a:1:{i:0;s:49:"@author David Bruehlmeier <typo3@bruehlmeier.com>";}s:11:"other_index";a:1:{s:7:"@author";a:1:{i:0;s:41:"David Bruehlmeier <typo3@bruehlmeier.com>";}}}s:3:"DAT";a:15:{i:1;a:8:{s:6:"header";s:24:"class tx_partner_query {";s:5:"class";i:1;s:11:"parentClass";s:16:"tx_partner_query";s:4:"cDat";a:3:{s:4:"text";s:123:"
+
+Class for getting partner-data (queries) in various ways
+and output formats. Recommended for use in your own extensions.
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}}s:7:"content";s:0:"";s:12:"content_size";i:127;s:13:"content_lines";i:9;s:6:"atLine";i:46;}i:3;a:8:{s:6:"header";s:42:"function getPartnerByReport($reportUid)		{";s:11:"parentClass";s:16:"tx_partner_query";s:11:"sectionText";a:1:{i:0;s:12:"GETTING DATA";}s:4:"cDat";a:3:{s:4:"text";s:123:"
+
+Gets partner data based on the selection defined in a saved report.
+The selected data is made available in $this->query.
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:7:"integer";i:1;s:71:"$reportUid: UID of the report which defines the partners to be selected";}}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:149;s:13:"content_lines";i:9;s:6:"atLine";i:63;}i:5;a:7:{s:6:"header";s:42:"function getPartnerByList($partnerList)		{";s:11:"parentClass";s:16:"tx_partner_query";s:4:"cDat";a:3:{s:4:"text";s:108:"
+
+Gets partner data based on an array of partner-UIDs.
+The selected data is made available in $this->query.
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:5:"array";i:1;s:74:"$partnerList: Array with partner-UIDs which will be selected for the query";}}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:223;s:13:"content_lines";i:9;s:6:"atLine";i:80;}i:7;a:7:{s:6:"header";s:57:"function getPartnerByOccupation($occupations, $pid='')		{";s:11:"parentClass";s:16:"tx_partner_query";s:4:"cDat";a:3:{s:4:"text";s:146:"
+
+Gets partner data based on an array of occupation-UIDs (key of tx_partner_val_occupations)
+The selected data is made available in $this->query.
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:5:"array";i:1;s:124:"$occupations: Array with occupation-UIDs. All partners with at least one of these occupations will be selected in the query.";}i:1;a:2:{i:0;s:7:"integer";i:1;s:92:"$pid: Page-ID (Optional). If not provided, the function will look for partners in all PID's.";}}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:1108;s:13:"content_lines";i:31;s:6:"atLine";i:98;}i:9;a:7:{s:6:"header";s:93:"function getPartnerByRelationshipType($partnerListArray, $relationshipTypesArray, $pid='')		{";s:11:"parentClass";s:16:"tx_partner_query";s:4:"cDat";a:3:{s:4:"text";s:274:"
+
+Gets partner data based on an array of partners and relationship types.
+The function will select all partners which are connected to the array of requested partners by
+at least one of the requested relationship types.
+
+The selected data is made available in $this->query.
+";s:5:"param";a:3:{i:0;a:2:{i:0;s:5:"array";i:1;s:97:"$partnerListArray: Array with partner-UIDs from which the function will look for related partners";}i:1;a:2:{i:0;s:5:"array";i:1;s:166:"$relationshipTypesArray: Array with relationship types (key of tx_partner_val_rel_types). This defines the kind of relationship the partners must have to be selected.";}i:2;a:2:{i:0;s:7:"integer";i:1;s:92:"$pid: Page-ID (Optional). If not provided, the function will look for partners in all PID's.";}}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:1473;s:13:"content_lines";i:34;s:6:"atLine";i:142;}i:11;a:7:{s:6:"header";s:111:"function getPartnerBySearchStrings($searchStrings, $exactSearch=TRUE, $pid='', $limitBegin='', $limitMax='')		{";s:11:"parentClass";s:16:"tx_partner_query";s:4:"cDat";a:3:{s:4:"text";s:173:"
+
+Gets a partner by search strings. If there are no values in the searchStrings array, the function
+will return false.
+
+The selected data is made available in $this->query.
+";s:5:"param";a:5:{i:0;a:2:{i:0;s:5:"array";i:1;s:84:"$searchStrings: Array of search strings as pairs 'name_of_field' => 'value_of_field'";}i:1;a:2:{i:0;s:7:"boolean";i:1;s:81:"$exactSearch: If set to FALSE, each searchString will be appended with a wildcard";}i:2;a:2:{i:0;s:7:"integer";i:1;s:91:"$pid: Page-ID (Optional). If not provided, the function will look for partners in all PID's";}i:3;a:2:{i:0;s:7:"integer";i:1;s:50:"$limitBegin: Limit the search from here (optional)";}i:4;a:2:{i:0;s:7:"integer";i:1;s:47:"$limitMax: End the search-limit here (optional)";}}s:6:"return";a:2:{i:0;s:7:"integer";i:1;s:85:"Total number of partners selectable by the current options (not regarding the limits)";}}s:7:"content";s:0:"";s:12:"content_size";i:2139;s:13:"content_lines";i:60;s:6:"atLine";i:190;}i:13;a:7:{s:6:"header";s:135:"function getPartnerByBirthday($fromYear='0000', $fromMonth='01', $fromDay='01', $toYear='9999', $toMonth='12', $toDay='31', $pid='')		{";s:11:"parentClass";s:16:"tx_partner_query";s:4:"cDat";a:3:{s:4:"text";s:118:"
+
+Gets all partners with their birthday within a certain range.
+
+The selected data is made available in $this->query.
+";s:5:"param";a:7:{i:0;a:2:{i:0;s:6:"string";i:1;s:111:"$fromYear (YYYY): Start of the search period (Year). If left empty, the year will be disregarded in the search.";}i:1;a:2:{i:0;s:6:"string";i:1;s:70:"$fromMonth (MM): Start of the search period (Month). Must be supplied.";}i:2;a:2:{i:0;s:6:"string";i:1;s:66:"$fromDay (DD): Start of the search period (Day). Must be supplied.";}i:3;a:2:{i:0;s:6:"string";i:1;s:57:"$toYear (YYYY): End of the search period (Year). Optional";}i:4;a:2:{i:0;s:6:"string";i:1;s:58:"$toMonth (MM): End of the search period (Month). Optional.";}i:5;a:2:{i:0;s:6:"string";i:1;s:54:"$toDay (DD): End of the search period (Day). Optional.";}i:6;a:2:{i:0;s:7:"integer";i:1;s:92:"$pid: Page-ID (Optional). If not provided, the function will look for partners in all PID's.";}}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:1519;s:13:"content_lines";i:38;s:6:"atLine";i:265;}i:15;a:7:{s:6:"header";s:38:"function getContactInfo($scope='2')		{";s:11:"parentClass";s:16:"tx_partner_query";s:4:"cDat";a:3:{s:4:"text";s:237:"
+
+Gets the contact-infos in the requested scope. The partner data must already be loaded and be available
+in $this->query, otherwise the function will do nothing. The contact-infos will also be stored in the
+class variable $this->query.
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:7:"integer";i:1;s:89:"$scope: Scope for the contact info (0 = None, 1 = Only standard entries, 2 = All entries)";}}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:143;s:13:"content_lines";i:8;s:6:"atLine";i:312;}i:17;a:7:{s:6:"header";s:30:"function getRelationships()		{";s:11:"parentClass";s:16:"tx_partner_query";s:4:"cDat";a:3:{s:4:"text";s:229:"
+
+Gets the relationships of the partner. The partner data must already be loaded and be available
+in $this->query, otherwise the function will do nothing. The contact-infos will also be stored in the
+class variable $this->query.
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:279;s:13:"content_lines";i:14;s:6:"atLine";i:328;}i:19;a:8:{s:6:"header";s:204:"function getFormattedDataByQuery($format='CSV', $fieldScope='all', $contactInfoScope='2', $fieldSelection=array(), $processedValues=TRUE, $techValues=TRUE, $blankValues=TRUE, $additionalParams=array())		{";s:11:"parentClass";s:16:"tx_partner_query";s:11:"sectionText";a:1:{i:0;s:22:"GETTING FORMATTED DATA";}s:4:"cDat";a:3:{s:4:"text";s:208:"
+
+Returns the data currently selected by the query in the required format.
+The query must be available in $this->query, so you must call at least
+one getPartner* function first (e.g. $this->getPartnerByList)
+";s:5:"param";a:8:{i:0;a:2:{i:0;s:6:"string";i:1;s:45:"$format: Determines the format for the output";}i:1;a:2:{i:0;s:6:"string";i:1;s:178:"$fieldScope: Determines the scope of how many fields will be in the result. Can be either 'all' (all fields in $TCA) or 'field_selection' (all fields in the fieldSelection array)";}i:2;a:2:{i:0;s:7:"integer";i:1;s:177:"$contactInfoScope: Determines the scope of how much contact information will be in the result. Can be 0 (no contact-info), 1 (only standard contact-info) or 2 (all contact-info)";}i:3;a:2:{i:0;s:5:"array";i:1;s:88:"$fieldSelection: A field selection array as stored in tx_partner_reports-field_selection";}i:4;a:2:{i:0;s:7:"boolean";i:1;s:123:"$processedValues: If set, the values will be processed (e.g. a UNIX-timestamp will be converted to a human-readable format)";}i:5;a:2:{i:0;s:7:"boolean";i:1;s:87:"$techValues: If set, the the technical values will be preserved if a value is processed";}i:6;a:2:{i:0;s:7:"boolean";i:1;s:63:"$blankValues: If set, the result will also contain empty fields";}i:7;a:2:{i:0;s:5:"array";i:1;s:89:"$additionalParams: These parameters will be appended when calling the formatting-function";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:14:"Formatted data";}}s:7:"content";s:0:"";s:12:"content_size";i:752;s:13:"content_lines";i:22;s:6:"atLine";i:358;}i:21;a:7:{s:6:"header";s:57:"function getFormattedDataByReport($uid, $format='CSV')		{";s:11:"parentClass";s:16:"tx_partner_query";s:4:"cDat";a:3:{s:4:"text";s:134:"
+
+Gets formatted data as requested by the selection criteria and options saved in
+a report. The report must be identified by its UID.
+";s:5:"param";a:2:{i:0;a:2:{i:0;s:7:"integer";i:1;s:52:"$uid: UID of the report for which to build the query";}i:1;a:2:{i:0;s:6:"string";i:1;s:45:"$format: Determines the format for the output";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:14:"Formatted data";}}s:7:"content";s:0:"";s:12:"content_size";i:1775;s:13:"content_lines";i:53;s:6:"atLine";i:389;}i:23;a:8:{s:6:"header";s:73:"function getStructure($fieldScope, $contactInfoScope, $fieldSelection)		{";s:11:"parentClass";s:16:"tx_partner_query";s:11:"sectionText";a:1:{i:0;s:23:"INTERNAL HELPER METHODS";}s:4:"cDat";a:3:{s:4:"text";s:271:"
+
+This function builds a structure based on the fieldScope ('all' or 'field_selection') and the contactInfoScope.
+If the fieldScope is 'field_selection', a fieldSelection array must be provided.
+
+The output is an array with the structures for 'file' and 'screen' output.
+";s:5:"param";a:3:{i:0;a:2:{i:0;s:6:"string";i:1;s:190:"$fieldScope: Determines the scope of how many fields must be included in the structure. Can be either 'all' (all fields in $TCA) or 'field_selection' (all fields in the fieldSelection array)";}i:1;a:2:{i:0;s:7:"integer";i:1;s:189:"$contactInfoScope: Determines the scope of how much contact information must be included in the structure. Can be 0 (no contact-info), 1 (only standard contact-info) or 2 (all contact-info)";}i:2;a:2:{i:0;s:5:"array";i:1;s:88:"$fieldSelection: A field selection array as stored in tx_partner_reports-field_selection";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:46:"Structure with two parts ('file' and 'screen')";}}s:7:"content";s:0:"";s:12:"content_size";i:2431;s:13:"content_lines";i:80;s:6:"atLine";i:454;}i:25;a:7:{s:6:"header";s:156:"function getSelectedValuesFromCurrentQuery($fieldScope, $contactInfoScope, $fieldSelection, $processedValues=TRUE, $techValues=FALSE, $blankValues=FALSE)		{";s:11:"parentClass";s:16:"tx_partner_query";s:4:"cDat";a:3:{s:4:"text";s:69:"
+
+Gets the fields selected by the parameters from the current query.
+";s:5:"param";a:6:{i:0;a:2:{i:0;s:6:"string";i:1;s:188:"$fieldScope: Determines the scope of how many fields must be selected from the query. Can be either 'all' (all fields in $TCA) or 'field_selection' (all fields in the fieldSelection array)";}i:1;a:2:{i:0;s:7:"integer";i:1;s:187:"$contactInfoScope: Determines the scope of how much contact information must be selected from the query. Can be 0 (no contact-info), 1 (only standard contact-info) or 2 (all contact-info)";}i:2;a:2:{i:0;s:5:"array";i:1;s:88:"$fieldSelection: A field selection array as stored in tx_partner_reports-field_selection";}i:3;a:2:{i:0;s:7:"boolean";i:1;s:123:"$processedValues: If set, the values will be processed (e.g. a UNIX-timestamp will be converted to a human-readable format)";}i:4;a:2:{i:0;s:7:"boolean";i:1;s:87:"$techValues: If set, the the technical values will be preserved if a value is processed";}i:5;a:2:{i:0;s:7:"boolean";i:1;s:63:"$blankValues: If set, the result will also contain empty fields";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:38:"Selected values from the current query";}}s:7:"content";s:0:"";s:12:"content_size";i:2231;s:13:"content_lines";i:49;s:6:"atLine";i:546;}i:27;a:4:{s:6:"header";s:123:"function getFieldData($table, $field, $value, $fieldScope, $fieldSelection, $processedValues, $techValues, $blankValues)		{";s:11:"parentClass";s:16:"tx_partner_query";s:4:"cDat";a:3:{s:4:"text";s:59:"
+
+Internal function to get the proper value for one field.
+";s:5:"param";a:8:{i:0;a:2:{i:0;s:6:"string";i:1;s:57:"$table: Name of the table from which the value comes from";}i:1;a:2:{i:0;s:6:"string";i:1;s:57:"$field: Name of the field from which the value comes from";}i:2;a:2:{i:0;s:6:"string";i:1;s:29:"$value: Value to be processed";}i:3;a:2:{i:0;s:6:"string";i:1;s:188:"$fieldScope: Determines the scope of how many fields must be selected from the query. Can be either 'all' (all fields in $TCA) or 'field_selection' (all fields in the fieldSelection array)";}i:4;a:2:{i:0;s:5:"array";i:1;s:88:"$fieldSelection: A field selection array as stored in tx_partner_reports-field_selection";}i:5;a:2:{i:0;s:7:"boolean";i:1;s:123:"$processedValues: If set, the values will be processed (e.g. a UNIX-timestamp will be converted to a human-readable format)";}i:6;a:2:{i:0;s:7:"boolean";i:1;s:87:"$techValues: If set, the the technical values will be preserved if a value is processed";}i:7;a:2:{i:0;s:7:"boolean";i:1;s:63:"$blankValues: If set, the result will also contain empty fields";}}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:38:"Selected values from the current query";}}s:6:"atLine";i:609;}i:29;a:7:{s:6:"header";s:72:"function getProcessedValue($table, $field, $value, $techValues=FALSE)		{";s:11:"parentClass";s:16:"tx_partner_query";s:4:"cDat";a:3:{s:4:"text";s:194:"
+
+Internal function to get a processed value for a single field. Mainly uses
+t3lib_BEfunc::getProcessedValue, but not all values can be processed by this
+function, so a little add-on is needed.
+";s:5:"param";a:4:{i:0;a:2:{i:0;s:6:"string";i:1;s:57:"$table: Name of the table from which the value comes from";}i:1;a:2:{i:0;s:6:"string";i:1;s:57:"$field: Name of the field from which the value comes from";}i:2;a:2:{i:0;s:6:"string";i:1;s:29:"$value: Value to be processed";}i:3;a:2:{i:0;s:7:"boolean";i:1;s:87:"$techValues: If set, the the technical values will be preserved if a value is processed";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:35:"Processed value (htmlspecialchar'd)";}}s:7:"content";s:0:"";s:12:"content_size";i:1748;s:13:"content_lines";i:55;s:6:"atLine";i:659;}}}s:14:"MD5_fb4e16018b";a:4:{s:8:"filename";s:37:"api/class.tx_partner_relationship.php";s:8:"filesize";i:11268;s:6:"header";a:5:{s:4:"text";s:79:"
+
+API functions for reading/writing/processing relationships between partners.
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}s:5:"other";a:1:{i:0;s:49:"@author David Bruehlmeier <typo3@bruehlmeier.com>";}s:11:"other_index";a:1:{s:7:"@author";a:1:{i:0;s:41:"David Bruehlmeier <typo3@bruehlmeier.com>";}}}s:3:"DAT";a:6:{i:1;a:8:{s:6:"header";s:31:"class tx_partner_relationship {";s:5:"class";i:1;s:11:"parentClass";s:23:"tx_partner_relationship";s:4:"cDat";a:3:{s:4:"text";s:194:"
+
+This class contains functions needed to work with relationship records from the 'partner'-extension.
+Please use only this class to access partner records, as this
+represents the official API.
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}}s:7:"content";s:0:"";s:12:"content_size";i:2;s:13:"content_lines";i:1;s:6:"atLine";i:42;}i:3;a:7:{s:6:"header";s:37:"function tx_partner_relationship()		{";s:11:"parentClass";s:23:"tx_partner_relationship";s:4:"cDat";a:3:{s:4:"text";s:75:"
+
+Constructor of the class. Loads all configurations values needed to run.
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:133;s:13:"content_lines";i:13;s:6:"atLine";i:49;}i:5;a:8:{s:6:"header";s:33:"function getRelationship($uid)		{";s:11:"parentClass";s:23:"tx_partner_relationship";s:11:"sectionText";a:1:{i:0;s:12:"READING DATA";}s:4:"cDat";a:3:{s:4:"text";s:58:"
+
+Reads a relationship and writes the data in $this->data
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:7:"integer";i:1;s:32:"$uid: UID of relationship record";}}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:515;s:13:"content_lines";i:24;s:6:"atLine";i:69;}i:7;a:8:{s:6:"header";s:44:"function insertRelationship($insertArray)		{";s:11:"parentClass";s:23:"tx_partner_relationship";s:11:"sectionText";a:1:{i:0;s:15:"PROCESSING DATA";}s:4:"cDat";a:3:{s:4:"text";s:802:"
+
+Creates a new relationship. This is the data that must be provided as an array in $insertArray
+
+$insertArray = array(
+		'pid' => '',				// Mandatory: PID where to create the record
+		'hidden' => '',				// Optional: Set to '1' if you want to create a hidden record
+		'type' => '',				// Mandatory: Valid UID from tx_partner_val_rel_types
+		'uid_primary' => '',		// Mandatory: UID of the primary partner record
+		'uid_secondary' => '',		// Mandatory: UID of the secondary partner record
+		'status' => '',				// Mandatory: Valid UID from tx_partner_val_status
+		'established_date' => '',	// Optional: Date when the relationship was established
+		'lapsed_date' => '',		// Optional: Date when the relationship lapsed
+		'lapsed_reason' => '',		// Optional: Reason (freetext) why the relationship lapsed
+);
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:5:"array";i:1;s:87:"$insertArray: Array with all fields to create the new relationship. Structure as above.";}}s:6:"return";a:2:{i:0;s:7:"integer";i:1;s:27:"UID of the new relationship";}}s:7:"content";s:0:"";s:12:"content_size";i:1551;s:13:"content_lines";i:39;s:6:"atLine";i:112;}i:9;a:4:{s:6:"header";s:44:"function updateRelationship($changeArray)		{";s:11:"parentClass";s:23:"tx_partner_relationship";s:4:"cDat";a:3:{s:4:"text";s:1306:"
+
+Updates the current relationship record. The relationship must already be available in $this->data (load it with
+$this->getRelationship() first).
+
+This is the data which can be updated by populating $changeArray:
+	$changeArray = array(
+		'hidden' => '',					// Boolean (0 = not hidden, 1 = hidden)
+		'type' => '',					// Valid UID from tx_partner_val_rel_type. The type must be allowed for the selected type.
+		'uid_primary' => '',			// Valid UID from tx_partner_main. This is the primary partner in the relationship. Must be of a type which fits the relationship type.
+		'uid_secondary' => '',			// Valid UID from tx_partner_main. This is the secondary partner in the relationship. Must be of a type which fits the relationship type.
+		'status' => '',					// Valid UID from tx_partner_val_status.
+		'established_date' => '',		// Unix-Timestamp
+		'lapsed_date' => '',			// Unix-Timestamp
+		'lapsed_reason' => '',			// String
+	);
+
+All data is validated. If a field contains an invalid value, the correctly filled fields are updated nevertheless.
+Exceptions are the type and the type. If the type does not match the types of the primary and the secondary partner
+Or if the primary and the secondary partner cannot be related by the chosen type, the function will not update
+anything and will return false.
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:5:"array";i:1;s:66:"$changeArray: Array with all fields to update. Structure as above.";}}s:6:"return";a:2:{i:0;s:7:"boolean";i:1;s:29:"True if update was succesful.";}}s:6:"atLine";i:176;}i:11;a:7:{s:6:"header";s:32:"function deleteRelationship()		{";s:11:"parentClass";s:23:"tx_partner_relationship";s:4:"cDat";a:3:{s:4:"text";s:141:"
+
+Deletes the current relationship. The relationship must already be available in $this->data (load it with
+$this->getRelationship() first).
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:7:"content";s:0:"";s:12:"content_size";i:622;s:13:"content_lines";i:21;s:6:"atLine";i:256;}}}}}

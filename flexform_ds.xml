@@ -1,0 +1,544 @@
+<T3DataStructure>
+  <meta>
+    <langDisable>1</langDisable>
+  </meta>
+  <sheets>
+	<CSV>
+	  <ROOT>
+		<TCEforms>
+			<sheetTitle>LLL:EXT:partner/locallang.php:tx_partner.label.format.csv.abbreviation</sheetTitle>
+		</TCEforms>
+	    <el>
+		  <delimiter>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.csv.delimiter</label>
+				<config>
+					<type>input</type>
+					<size>1</size>
+					<max>1</max>
+  					<default>;</default>
+				</config>
+			  </TCEforms>
+		  </delimiter>
+		  <wrap>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.csv.wrap</label>
+				<config>
+					<type>input</type>
+					<size>1</size>
+					<max>1</max>
+  					<default></default>
+				</config>
+			  </TCEforms>
+		  </wrap>
+		  <line_end>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.csv.line_end</label>
+				<config>
+					<type>select</type>
+					<items type="array">
+					<numIndex index="0" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.csv.line_end.I.0</numIndex>
+						<numIndex index="1">0</numIndex>
+					</numIndex>
+					<numIndex index="1" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.csv.line_end.I.1</numIndex>
+						<numIndex index="1">1</numIndex>
+					</numIndex>
+					<numIndex index="2" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.csv.line_end.I.2</numIndex>
+						<numIndex index="1">2</numIndex>
+					</numIndex>
+					</items>
+					<maxitems>1</maxitems>
+					<multiple>0</multiple>
+				</config>
+			  </TCEforms>
+		  </line_end>
+		  <include_field_names>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.csv.include_field_names</label>
+				<config>
+					<type>check</type>
+				</config>
+			  </TCEforms>
+		  </include_field_names>
+		  <include_table_names>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.csv.include_table_names</label>
+				<config>
+					<type>check</type>
+				</config>
+			  </TCEforms>
+		  </include_table_names>
+	    </el>
+	  </ROOT>
+    </CSV>
+	<XLS>
+	  <ROOT>
+		<TCEforms>
+			<sheetTitle>LLL:EXT:partner/locallang.php:tx_partner.label.format.xls.abbreviation</sheetTitle>
+		</TCEforms>
+	    <el>
+		  <date_format>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.xls.date_format</label>
+				<config>
+					<type>select</type>
+					<items type="array">
+					<numIndex index="0" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.xls.date_format.I.0</numIndex>
+						<numIndex index="1">0</numIndex>
+					</numIndex>
+					<numIndex index="1" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.xls.date_format.I.1</numIndex>
+						<numIndex index="1">1</numIndex>
+					</numIndex>
+					</items>
+					<maxitems>1</maxitems>
+					<multiple>0</multiple>
+				</config>
+			  </TCEforms>
+		  </date_format>
+		  <fg_color_field_names>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.xls.fg_color_field_names</label>
+				<config>
+					<type>input</type>
+					<size>10</size>
+					<wizards>
+						<colorpick>
+							<type>colorbox</type>
+							<title>LLL:EXT:partner/locallang.php:tx_partner.label.color_picker</title>
+							<script>wizard_colorpicker.php</script>
+							<dim>20x20</dim>
+							<tableStyle>border: solid 1px black; margin-left: 20px;</tableStyle>
+							<JSopenParams>height=550,width=365,status=0,menubar=0,scrollbars=1</JSopenParams>
+							<exampleImg>gfx/wizard_colorpickerex.jpg</exampleImg>
+						</colorpick>					
+					</wizards>
+				</config>
+			  </TCEforms>
+		  </fg_color_field_names>
+		  <bg_color_field_names>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.xls.bg_color_field_names</label>
+				<config>
+					<type>input</type>
+					<size>10</size>
+					<wizards>
+						<colorpick>
+							<type>colorbox</type>
+							<title>LLL:EXT:partner/locallang.php:tx_partner.label.color_picker</title>
+							<script>wizard_colorpicker.php</script>
+							<dim>20x20</dim>
+							<tableStyle>border: solid 1px black; margin-left: 20px;</tableStyle>
+							<JSopenParams>height=550,width=365,status=0,menubar=0,scrollbars=1</JSopenParams>
+							<exampleImg>gfx/wizard_colorpickerex.jpg</exampleImg>
+						</colorpick>					
+					</wizards>
+				</config>
+			  </TCEforms>
+		  </bg_color_field_names>
+		  <include_tech_field_names>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.xls.include_tech_field_names</label>
+				<config>
+					<type>check</type>
+				</config>
+			  </TCEforms>
+		  </include_tech_field_names>
+		  <fg_color_tech_field_names>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.xls.fg_color_tech_field_names</label>
+				<config>
+					<type>input</type>
+					<size>10</size>
+					<wizards>
+						<colorpick>
+							<type>colorbox</type>
+							<title>LLL:EXT:partner/locallang.php:tx_partner.label.color_picker</title>
+							<script>wizard_colorpicker.php</script>
+							<dim>20x20</dim>
+							<tableStyle>border: solid 1px black; margin-left: 20px;</tableStyle>
+							<JSopenParams>height=550,width=365,status=0,menubar=0,scrollbars=1</JSopenParams>
+							<exampleImg>gfx/wizard_colorpickerex.jpg</exampleImg>
+						</colorpick>					
+					</wizards>
+				</config>
+			  </TCEforms>
+		  </fg_color_tech_field_names>
+		  <bg_color_tech_field_names>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.xls.bg_color_tech_field_names</label>
+				<config>
+					<type>input</type>
+					<size>10</size>
+					<wizards>
+						<colorpick>
+							<type>colorbox</type>
+							<title>LLL:EXT:partner/locallang.php:tx_partner.label.color_picker</title>
+							<script>wizard_colorpicker.php</script>
+							<dim>20x20</dim>
+							<tableStyle>border: solid 1px black; margin-left: 20px;</tableStyle>
+							<JSopenParams>height=550,width=365,status=0,menubar=0,scrollbars=1</JSopenParams>
+							<exampleImg>gfx/wizard_colorpickerex.jpg</exampleImg>
+						</colorpick>					
+					</wizards>
+				</config>
+			  </TCEforms>
+		  </bg_color_tech_field_names>
+		  <include_table_names>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.xls.include_table_names</label>
+				<config>
+					<type>check</type>
+				</config>
+			  </TCEforms>
+		  </include_table_names>
+		  <fg_color_table_names>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.xls.fg_color_table_names</label>
+				<config>
+					<type>input</type>
+					<size>10</size>
+					<wizards>
+						<colorpick>
+							<type>colorbox</type>
+							<title>LLL:EXT:partner/locallang.php:tx_partner.label.color_picker</title>
+							<script>wizard_colorpicker.php</script>
+							<dim>20x20</dim>
+							<tableStyle>border: solid 1px black; margin-left: 20px;</tableStyle>
+							<JSopenParams>height=550,width=365,status=0,menubar=0,scrollbars=1</JSopenParams>
+							<exampleImg>gfx/wizard_colorpickerex.jpg</exampleImg>
+						</colorpick>					
+					</wizards>
+				</config>
+			  </TCEforms>
+		  </fg_color_table_names>
+		  <bg_color_table_names>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.xls.bg_color_table_names</label>
+				<config>
+					<type>input</type>
+					<size>10</size>
+					<wizards>
+						<colorpick>
+							<type>colorbox</type>
+							<title>LLL:EXT:partner/locallang.php:tx_partner.label.color_picker</title>
+							<script>wizard_colorpicker.php</script>
+							<dim>20x20</dim>
+							<tableStyle>border: solid 1px black; margin-left: 20px;</tableStyle>
+							<JSopenParams>height=550,width=365,status=0,menubar=0,scrollbars=1</JSopenParams>
+							<exampleImg>gfx/wizard_colorpickerex.jpg</exampleImg>
+						</colorpick>					
+					</wizards>
+				</config>
+			  </TCEforms>
+		  </bg_color_table_names>
+	    </el>
+	  </ROOT>
+    </XLS>
+	<PDF>
+	  <ROOT>
+		<TCEforms>
+			<sheetTitle>LLL:EXT:partner/locallang.php:tx_partner.label.format.pdf.abbreviation</sheetTitle>
+		</TCEforms>
+	    <type>array</type>
+	    <el>
+		  <orientation>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.pdf.orientation</label>
+				<config>
+					<type>select</type>
+					<items type="array">
+					<numIndex index="0" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.orientation.I.portrait</numIndex>
+						<numIndex index="1">portrait</numIndex>
+					</numIndex>
+					<numIndex index="1" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.orientation.I.landscape</numIndex>
+						<numIndex index="1">landscape</numIndex>
+					</numIndex>
+					</items>
+					<maxitems>1</maxitems>
+					<multiple>0</multiple>
+				</config>
+			  </TCEforms>
+		  </orientation>
+		  <unit>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.pdf.unit</label>
+				<config>
+					<type>select</type>
+					<items type="array">
+					<numIndex index="0" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.unit.I.pt</numIndex>
+						<numIndex index="1">pt</numIndex>
+					</numIndex>
+					<numIndex index="1" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.unit.I.mm</numIndex>
+						<numIndex index="1">mm</numIndex>
+					</numIndex>
+					<numIndex index="2" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.unit.I.cm</numIndex>
+						<numIndex index="1">cm</numIndex>
+					</numIndex>
+					<numIndex index="3" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.unit.I.in</numIndex>
+						<numIndex index="1">in</numIndex>
+					</numIndex>
+					</items>
+					<maxitems>1</maxitems>
+					<multiple>0</multiple>
+				</config>
+			  </TCEforms>
+		  </unit>
+		  <format>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.pdf.format</label>
+				<config>
+					<type>select</type>
+					<items type="array">
+					<numIndex index="0" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.format.I.A3</numIndex>
+						<numIndex index="1">A3</numIndex>
+					</numIndex>
+					<numIndex index="1" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.format.I.A4</numIndex>
+						<numIndex index="1">A4</numIndex>
+					</numIndex>
+					<numIndex index="2" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.format.I.A5</numIndex>
+						<numIndex index="1">A5</numIndex>
+					</numIndex>
+					<numIndex index="3" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.format.I.letter</numIndex>
+						<numIndex index="1">letter</numIndex>
+					</numIndex>
+					<numIndex index="4" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.format.I.legal</numIndex>
+						<numIndex index="1">legal</numIndex>
+					</numIndex>
+					</items>
+					<maxitems>1</maxitems>
+					<multiple>0</multiple>
+				</config>
+			  </TCEforms>
+		  </format>
+		  <margin_left>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.pdf.margin_left</label>
+				<config>
+					<type>input</type>
+					<size>4</size>
+					<max>4</max>
+  					<default></default>
+				</config>
+			  </TCEforms>
+		  </margin_left>
+		  <margin_top>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.pdf.margin_top</label>
+				<config>
+					<type>input</type>
+					<size>4</size>
+					<max>4</max>
+  					<default></default>
+				</config>
+			  </TCEforms>
+		  </margin_top>
+		  <margin_right>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.pdf.margin_right</label>
+				<config>
+					<type>input</type>
+					<size>4</size>
+					<max>4</max>
+  					<default></default>
+				</config>
+			  </TCEforms>
+		  </margin_right>
+		  <font>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.pdf.font</label>
+				<config>
+					<type>select</type>
+					<items type="array">
+					<numIndex index="0" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.font.I.courier</numIndex>
+						<numIndex index="1">courier</numIndex>
+					</numIndex>
+					<numIndex index="1" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.font.I.helvetica</numIndex>
+						<numIndex index="1">helvetica</numIndex>
+					</numIndex>
+					<numIndex index="2" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.font.I.arial</numIndex>
+						<numIndex index="1">arial</numIndex>
+					</numIndex>
+					<numIndex index="3" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.font.I.times</numIndex>
+						<numIndex index="1">times</numIndex>
+					</numIndex>
+					</items>
+					<maxitems>1</maxitems>
+					<multiple>0</multiple>
+					<itemsProcFunc>tx_partner_select->fonts</itemsProcFunc>
+				</config>
+			  </TCEforms>
+		  </font>
+		  <font_size>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.pdf.font_size</label>
+				<config>
+					<type>select</type>
+					<items type="array">
+					<numIndex index="0" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.font_size.I.8</numIndex>
+						<numIndex index="1">8</numIndex>
+					</numIndex>
+					<numIndex index="1" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.font_size.I.10</numIndex>
+						<numIndex index="1">10</numIndex>
+					</numIndex>
+					<numIndex index="2" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.font_size.I.12</numIndex>
+						<numIndex index="1">12</numIndex>
+					</numIndex>
+					<numIndex index="3" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.font_size.I.14</numIndex>
+						<numIndex index="1">14</numIndex>
+					</numIndex>
+					</items>
+					<maxitems>1</maxitems>
+					<multiple>0</multiple>
+				</config>
+			  </TCEforms>
+		  </font_size>
+		  <fill_color>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.pdf.fill_color</label>
+				<config>
+					<type>select</type>
+					<items type="array">
+					<numIndex index="0" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.fill_color.I.very_light</numIndex>
+						<numIndex index="1">240</numIndex>
+					</numIndex>
+					<numIndex index="1" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.fill_color.I.light</numIndex>
+						<numIndex index="1">185</numIndex>
+					</numIndex>
+					<numIndex index="2" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.fill_color.I.medium</numIndex>
+						<numIndex index="1">130</numIndex>
+					</numIndex>
+					<numIndex index="3" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.fill_color.I.dark</numIndex>
+						<numIndex index="1">75</numIndex>
+					</numIndex>
+					<numIndex index="4" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.fill_color.I.very_dark</numIndex>
+						<numIndex index="1">20</numIndex>
+					</numIndex>
+					</items>
+					<maxitems>1</maxitems>
+					<multiple>0</multiple>
+				</config>
+			  </TCEforms>
+		  </fill_color>
+		  <picture_position>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.pdf.picture_position</label>
+				<config>
+					<type>select</type>
+					<items type="array">
+					<numIndex index="0" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.picture_position.I.top_left</numIndex>
+						<numIndex index="1">top_left</numIndex>
+					</numIndex>
+					<numIndex index="1" type="array">
+						<numIndex index="0">LLL:EXT:partner/locallang.php:tx_partner.label.pdf.picture_position.I.top_right</numIndex>
+						<numIndex index="1">top_right</numIndex>
+					</numIndex>
+					</items>
+					<maxitems>1</maxitems>
+					<multiple>0</multiple>
+				</config>
+			  </TCEforms>
+		  </picture_position>
+		  <picture_width>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.pdf.picture_width</label>
+				<config>
+					<type>input</type>
+					<size>4</size>
+					<max>4</max>
+  					<default></default>
+				</config>
+			  </TCEforms>
+		  </picture_width>
+		  <picture_margin_top>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.pdf.picture_margin_top</label>
+				<config>
+					<type>input</type>
+					<size>4</size>
+					<max>4</max>
+  					<default></default>
+				</config>
+			  </TCEforms>
+		  </picture_margin_top>
+		  <template>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.pdf.template</label>
+				<config>
+					<type>group</type>
+					<internal_type>file</internal_type>
+					<allowed>pdf</allowed>
+					<uploadfolder>uploads/tx_partner</uploadfolder>
+					<show_thumbs>0</show_thumbs>
+					<size>1</size>
+  					<maxitems>1</maxitems>
+				</config>
+			  </TCEforms>
+		  </template>
+	    </el>
+	  </ROOT>
+    </PDF>
+	<BE_module>
+	  <ROOT>
+		<TCEforms>
+			<sheetTitle>LLL:EXT:partner/locallang.php:tx_partner.label.format.BE_module.abbreviation</sheetTitle>
+		</TCEforms>
+	    <el>
+		  <editReport>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.BE_module.edit_report</label>
+				<config>
+					<type>check</type>
+				</config>
+			  </TCEforms>
+		  </editReport>
+		  <editPartner>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.BE_module.edit_partner</label>
+				<config>
+					<type>check</type>
+				</config>
+			  </TCEforms>
+		  </editPartner>
+		  <mailLink>
+			  <TCEforms>
+				<label>LLL:EXT:partner/locallang.php:tx_partner.label.BE_module.mail_link</label>
+				<config>
+					<type>check</type>
+				</config>
+			  </TCEforms>
+		  </mailLink>
+	    </el>
+	  </ROOT>
+    </BE_module>
+  </sheets>
+</T3DataStructure>

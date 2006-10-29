@@ -1,0 +1,8 @@
+  # cat=basic//20; type=boolean; label= Do not use Tab-Dividers: Here you can disable the "dividers2tabs" feature (TYPO3 > 3.7.0). "Dividers to Tabs" means: the BE form is divided in several sections. It is highly recommended to use this feature, because it improves the usability of the BE-view of a partner. However, if you don't want this, set this value to 1 by checking the box.
+noTabDividers = 0
+
+  # cat=basic//30; type=boolean; label= Generate Reports in Background: The background generation of reports is very useful if you want to generate reports with for large number of data, because the creation process is allowed to take more than the usual 30-seconds timeout. If you would like to turn this feature on, you can do so by checking the box. There must be a backend-user called "_cli_partner". Please refer to the manual (chapter configuration/installation) for further details.
+generateReportsInBackground = 0
+
+  # cat=basic//40; type=int [1-99]; label= Maximum number of Partners: This is the maximum number of partners which are displayed in reports on one page.
+maxNoOfPartner = 10

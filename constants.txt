@@ -1,0 +1,14 @@
+plugin.tx_partner_pi1 {
+		# cat=plugin.partner; type=string; label= Partner Records Storage: Comma-separated list of PID's where the partner records are stored.
+	recordsPID = 
+		# cat=plugin.partner; type=string; label= Partner-Fields to Display: Comma-separated list of partner-fields which should be displayed. The fields must be configured in $TCA (table tx_partner_main). The field names must exactly correspond to the $TCA-fieldnames!
+	partnerDisplayFields = first_name,last_name,street,org_name,street,country,postal_code,locality,image
+		# cat=plugin.partner; type=string; label= Contact Info-Fields to Display: Comma-separated list of contact information-fields which should be displayed. The fields must be configured in $TCA (table tx_partner_contact_info). The field names must exactly correspond to the $TCA-fieldnames!
+	contactInfoDisplayFields = type,nature,label
+		# cat=plugin.partner; type=boolean; label= Show Blank Fields: If set, all configured showFields will be displayed, even if no value could be selected for the field. If you don't want to display empty fields, set this constant to 0 (false).
+	showBlankFields = 0
+        # cat=plugin.partner; type=boolean; label= Show Processed Values: If set, the raw values from the database will be processed to show human-readable output. Otherwise, the raw database output (e.g. the foreign-keys, the file-name for the image, etc.) will be shown.
+    showProcessedValues = 1
+		# cat=plugin.partner/file; type=file[html,htm,tmpl,txt]; label= Template File: This is the template file for displaying partners.
+	templateFile = EXT:partner/pi1/partner_display.tmpl
+}

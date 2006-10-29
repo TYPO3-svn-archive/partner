@@ -1,0 +1,195 @@
+**********************************
+***  DESCRIPTIONS
+**********************************
+This extension includes everything you need to manage partners (persons and organisations). You can save everything from addresses to occupations, from legal forms to birth dates. Unlimited contact information records (e.g. phone numbers) can be managed for each partner. You can manage relationships between partners as well, for instance to build a hierarchy of partners. If you would like to display partner data on you website, you can use the built-in frontend-plugin. The data model is based on the xCIL/xCRL standards from OASIS, so it is easy to exchange data with other partner management tools.
+This is the official API (Application Programming Interface) for the extension 'partner'. Please use only this API when you need access to partner information in your own extension, as this ensures backwards-compatibility wherevery possible. If you are missing a function or need a hook somewhere, please let me know (typo3@bruehlmeier.com).
+
+
+*********************************
+** KNOWN BUGS
+*********************************
+
+- There seems to be a way to getting partners saved without a label...
+  ==> Probably happens when changing the partner-type and reloading the form. The partner is automatically
+      saved (core-function), even without the must-fields filled. When this partner is then exited, it is
+      already saved and has no label.
+
+- Downloading a file from a report
+  ==> Currently, the download is only possible with right-clicking the link, because the return value
+      of the onClick handler is set to false. But otherwise, IE is getting a JavaScript error.
+
+- When creating a new relationship from a freshly saved partner, there is an error after saving the relationship.
+
+- When creating a new contact-info and DONT set it to standard (but there is already a std-record), it will
+  be saved as std-record anyways and the other record will loose the std-flag.
+
+- The colorpickers in the Report Designer (XLS format options) do not work properly. This is probably due
+  to a bug in the FlexForm (Bug Id# 2052)
+
+
+
+*********************************
+** FUTURE RELEASES
+*********************************
+
+Prio 1
+------
+- Make sure only the actually changed fields are processed in the datamap (influence on the sync process and the log)
+  $thisRef->checkValue_currentRecord
+
+General Stuff
+-------------
+- Write patch for t3lib_BEfunc::getLabelFromItemlist (must call itemsProcFunc before processing)
+- Check the use of htmlspecialchars
+- Add support for exporting single partners as VCF-file as an API-function (similar to mail-icon)
+- Make the surrogate field 'tx_partner_name' configurable
+- Check use of direct database operations ($GLOBALS['TYPO3_DB']) and replace by higher-level
+  API-functions wherever possible
+
+
+Public Fields
+-------------
+- More testing
+- Perhaps add support for different settings according to the assigned fe_user group?
+
+
+API
+---
+- Add missing methods for writing
+- Better error handling (e.g. in case no partner could be selected)
+- Check which values need to be delivered from outside, now that the FE-Plugin is a separate extension
+- Switch getFormattedData functions to using an array of options instead of single variables (easier for
+  further extensions)
+- Check in 3.8.0 if t3lib_div::fixed_lgd_cs still does not check for TYPO3_MODE == 'BE'. If so, write
+  a patch, because otherwise the function will result in an error when used in the frontend.
+- Language handling, especially under FE-conditions is most probably not correct the way it is
+  currently implemented.
+- Add user-field functionality for contact-infos
+
+
+Module Functions
+----------------
+- Relationships Overview: Use the API
+- Relationships Overview: 'Boss-Relationship', mark the 'boss' in a special way (special icon?)
+- Relationships Overview: Sort by last_name within the same hierarchy
+- Relationships Overview: The plus/minus stuff of treeView doesn't work...
+  * Check t3lib_arrayBrowser as an alternative for output
+
+- Birthday List: Make configurable standard-mail (title, text) with localization feature
+
+- Report-Designer: Change sorting in the field_selection display ('natural' = TCA, 'alphabetical' with asort)
+- Report-Designer: Additional parameters for the format 'HTML', e.g. for links and images
+- Report-Designer: Make it possible to save 'templates' for reports (i.e. everything except
+  the selecion part). This allows to re-use the same settings for several reports and
+  still stay consistent.
+- Report-Designer: Default-Values in FlexForm-Fields possible (check new core-functions)
+
+- New Tool: Mass Creation of course attendants. Chose one course. Enter many partners who
+  attended the course. Updating will then set the according flag for all selected partners.
+- New Tool: Function to define a different short form ('label') of a partner per language. Save to new table.
+  One definition can be marked as 'standard'. When the std-definition changes, give possibility
+  to update all partners with the new definition (label needs to physically available on the table
+  in order for T3-standard functions to work). Make API-function to get the label of the partner in
+  a certain language (FE-compatible).
+
+- New Function: Like the mail or the CSV-icon, display a PDF icon for each partner. Clicking this icon
+  will create a 'Memo' in PDF with the address of the current partner. The layout of the PDF should be
+  defined in the report designer, including the possibility to use templates and select the fields for display.
+
+
+
+Single Partner Edit
+-------------------
+- Relationship Overview in single-partner-display:
+  * The 'new relationship'-link. Make it only a link if any relationship types for the current
+    situation are available. Otherwise, just output the text with no link and possible an info-icon
+    with some help-text stating that the relationship types must be configured first.
+
+- Delete all related records on tx_partner_contact_info when the record on tx_partner_main is deleted
+  ==> needs a hook in TCE-Main (deleteRecord)
+
+- Make additional plausibilizations
+  * Relationship: Allow only partners according to the type (e.g. P-P will allow only Persons)
+
+- Set the 'hide'-flag whenever a freely customizable status has been selected
+
+- Exclude relationship and contact-info records from the LIST-module
+  ==> check for new $TCA feature (is on Kasper's TODO-list 2004.11.26)
+
+- Find a good way to save 'boss-relationships'
+  * Should be saved with the relationship record as an additional field and NOT as a new relationship type
+  * Add possibility in pi1 and api to select only the leader of a certain relationship-type
+  * For the tree-view, the icon with the tie wold be cool... :-)
+  * Changing the icon might need a hook in the iconworks-area somewhere... Possbly can be done with the skinning api?
+
+
+
+Frontend-Stuff
+----------------
+- Planning of org events
+
+- Report: List of tasks per organisation and per event
+
+- FE-Editing of partner
+  ==> fe_adminLib.inc? Example in feuser_admin
+  ==> Maybe use sg_zfelib or cwt_feedit?
+
+- Check use of localization in FE-Output
+  ==> perhaps use pi_getLL($key,$alt='')?
+
+- List of partners
+  ==> Make it possible to position each single field through an optional marker, e.g. ###MAIN_IMAGE### for
+      tx_partner_main.image. This will enable a more flexible frontend-output.
+
+- Own template for partner_pi1_getSinglePartner
+  ==> Needs redesign of partner_pi1_getList
+  ==> Allow use of custom markers (like in tt_news)
+
+- Show Org Hierarchy
+  ==> Selection criteria same as in backend
+
+- Check out 'sr_static_info'. It might be useful for localized outputs, e.g. of addresses.
+
+- Better standard-templates, including help-text for partner_no_template.tmpl
+
+
+
+*********************************
+** CONSIDERATIONS
+*********************************
+
+Statistics
+----------
+- Check (create?) stats-module for integration with TYPO3
+
+- Ideas:
+  http://www.php-resource.de/scripte/browsesub/PHP/Chart/
+  http://php.resourceindex.com/Functions_and_Classes/Images_and_Graphs/Graph_Creation/
+   * graPHPite  http://sourceforge.net/projects/graphite/
+   * Panachart  http://www.panacode.com/panachart/index.php
+   * JpGraph    http://www.aditus.nu/jpgraph/index.php
+   * PHPLOT     http://sourceforge.net/projects/phplot/
+
+
+Synchronizing
+-------------
+- Sync with offline client with SOAP or XML-RPC
+- Candidates
+  * PSync http://thinkforge.org/projects/psync/
+
+
+Data Type / JS-eval for birth_date and death_date
+-------------------------------------------------
+- TCE Forms function JStop($formname='forms[0]') and JSbottom($formname='forms[0]')?
+- Checked out danp_birthdaylist and eu_birthdays. No real solutions, just workarounds.
+- Tried rlmp_dateselectlib, which is nice, but could not integrate it into the backend.
+- It is on the TODO-list for the core! When will it be realized?
+- Mail on 2004-09-28 to Kasper. Offered mini-sponsoring
+- Answer from Kasper: He wanted only to allow submission in a non-unix format, not storage.
+  But he offered an open ear if specifications for a new data format would be supplied.
+- Sent requirements for non-unix dates to Kasper on 2004-11-22 and published it on the Wiki
+- Feedback on requirements: Should be solved by extending the date-field to int32 and handling
+  the dates by a mature set of functions such as the ADOdb Date Time Library
+  http://phplens.com/lens/dl/adodb-time.zip
+- No further activities yet. Probably too technical for me to solve. IMO should be a
+  subject for the core (maybe TYPO3 4.0?). Similar discussions were lead on the calendar-ng.
