@@ -103,7 +103,8 @@ class tx_partner_div {
 			// Read the allowed relationship types from the database
 		$listQuery = ' AND ('.$GLOBALS['TYPO3_DB']->listQuery('allowed_categories', $allowedCategories[0], 'tx_partner_val_rel_types');
 		$listQuery.= ' OR '.$GLOBALS['TYPO3_DB']->listQuery('allowed_categories', $allowedCategories[1], 'tx_partner_val_rel_types').')';
-		$res = $GLOBALS['TYPO3_DB']->exec_SELECTquery('*', 'tx_partner_val_rel_types', 'pid='.$pid.$listQuery);
+		$confArr = unserialize($GLOBALS['_EXTCONF']);
+		$res = $GLOBALS['TYPO3_DB']->exec_SELECTquery('*', 'tx_partner_val_rel_types', ($confArr['lookupsFromCurrentPageOnly'] != 0 ? 'pid='.$pid : '1=1').$listQuery);
 
 		if (is_resource($res))		{
 			while ($rec = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res))		{
@@ -267,7 +268,8 @@ class tx_partner_div {
 		$out = '';
 
 			// Get all status records
-		$res = $GLOBALS['TYPO3_DB']->exec_SELECTquery('*', 'tx_partner_val_status', 'pid='.$pid);
+		$confArr = unserialize($GLOBALS['_EXTCONF']);
+		$res = $GLOBALS['TYPO3_DB']->exec_SELECTquery('*', 'tx_partner_val_status', ($confArr['lookupsFromCurrentPageOnly'] != 0 ? 'pid='.$pid : ''));
 		if ($res)		{
 			while ($rec = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res))		{
 				$out[$rec['uid']] = $rec;
@@ -676,6 +678,11 @@ class tx_partner_div {
 				$number = ' '.$record['number'];
 			}
 
+				// Get the extension
+			if ($record['extension']) {
+				$extension = '-'.$record['extension'];
+			}
+
 					// Get the localized labels for the nature of the contact
 				if ($record['nature'] == '0') {
 					$labelNature = ' '.tx_partner_lang::getLabel('tx_partner.label.private.1char').':';
@@ -688,7 +695,7 @@ class tx_partner_div {
 				$typeLabel = tx_partner_lang::getLabel('tx_partner_contact_info.type.I.'.$record['type']);
 				switch ($record['type']) {
 					case 0: // Phone
-					$label = $standard.$typeLabel.$labelNature.$cn_phone.$area_code.$number;
+					$label = $standard.$typeLabel.$labelNature.$cn_phone.$area_code.$number.$extension;
 					break;
 
 					case 1: // Mobile
@@ -696,7 +703,7 @@ class tx_partner_div {
 					break;
 
 					case 2: // Fax
-					$label = $standard.$typeLabel.$labelNature.$cn_phone.$area_code.$number;
+					$label = $standard.$typeLabel.$labelNature.$cn_phone.$area_code.$number.$extension;
 					break;
 
 					case 3: // E-Mail

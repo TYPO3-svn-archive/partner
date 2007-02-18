@@ -6,3 +6,6 @@ generateReportsInBackground = 0
 
   # cat=basic//40; type=int [1-99]; label= Maximum number of Partners: This is the maximum number of partners which are displayed in reports on one page.
 maxNoOfPartner = 10
+
+  # cat=basic/enable/50; type=boolean; label= Allow lookups from same page only: If selected, records for value tables like titles, status, occupations, hobbies... must reside on the same page as the main partner records. If deselected, records from all pages are shown in the selection boxes.
+lookupsFromCurrentPageOnly = 1

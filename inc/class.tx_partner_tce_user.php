@@ -259,6 +259,8 @@ class tx_partner_tce_user {
 		global $LANG;
 		$LANG->includeLLFile('EXT:partner/locallang.php');
 
+		$confArr = unserialize($GLOBALS['_EXTCONF']);
+
 			// Get the list of relationships
 		$selectField = 'uid_'.$primaryOrSecondary;
 		$relationshipsList = t3lib_BEfunc::getRecordsByField('tx_partner_relationships', $selectField, $partnerUID);
@@ -275,7 +277,7 @@ class tx_partner_tce_user {
 				if ($primaryOrSecondary == 'primary') {
 
 					// Title of relationship
-					$titleArray = t3lib_BEfunc::getRecord('tx_partner_val_rel_types', $theRelationship['type'], 'primary_title', ' AND pid='.$pid);
+					$titleArray = t3lib_BEfunc::getRecord('tx_partner_val_rel_types', $theRelationship['type'], 'primary_title', ($confArr['lookupsFromCurrentPageOnly'] != 0 ? ' AND pid='.$pid : '') );
 
 					// Record found or not available
 					if (is_array($titleArray)) {
@@ -300,7 +302,7 @@ class tx_partner_tce_user {
 				// For SECONDARY partners
 				if ($primaryOrSecondary == 'secondary') {
 					// Title of relationship
-					$titleArray = t3lib_BEfunc::getRecord('tx_partner_val_rel_types', $theRelationship['type'], 'secondary_title', ' AND pid='.$pid);
+					$titleArray = t3lib_BEfunc::getRecord('tx_partner_val_rel_types', $theRelationship['type'], 'secondary_title', ($confArr['lookupsFromCurrentPageOnly'] != 0 ? ' AND pid='.$pid : '') );
 					// Record found or not available
 					if (is_array($titleArray)) {
 						$returnList[$currentRelationship]['title'] = $titleArray['secondary_title'];

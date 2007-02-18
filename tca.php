@@ -30,6 +30,9 @@
 
 if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 
+// Get the extension configuration
+$confArr = unserialize($_EXTCONF);
+
 $TCA['tx_partner_main'] = Array (
 	'ctrl' => $TCA['tx_partner_main']['ctrl'],
 	'interface' => Array (
@@ -115,7 +118,8 @@ $TCA['tx_partner_main'] = Array (
 				'type' => 'select',
 				'itemsProcFunc' => 'tx_partner_select->status',
 				'foreign_table' => 'tx_partner_val_status',
-				'foreign_table_where' => 'AND tx_partner_val_status.pid=###CURRENT_PID### ORDER BY tx_partner_val_status.sorting',
+				'foreign_table_where' => ($confArr['lookupsFromCurrentPageOnly'] != 0 ? 'AND tx_partner_val_status.pid=###CURRENT_PID### ' : '')
+										. 'ORDER BY tx_partner_val_status.sorting',
 				'size' => 1,
 				'minitems' => 0,
 				'maxitems' => 1,
@@ -148,7 +152,8 @@ $TCA['tx_partner_main'] = Array (
 					Array('',0),
 				),
 				'foreign_table' => 'tx_partner_val_contact_permissions',
-				'foreign_table_where' => 'AND tx_partner_val_contact_permissions.pid=###CURRENT_PID### ORDER BY tx_partner_val_contact_permissions.sorting',
+				'foreign_table_where' => ($confArr['lookupsFromCurrentPageOnly'] != 0 ? 'AND tx_partner_val_contact_permissions.pid=###CURRENT_PID### ' : '')
+							.'ORDER BY tx_partner_val_contact_permissions.sorting',
 				'size' => 1,
 				'minitems' => 0,
 				'maxitems' => 1,
@@ -195,7 +200,8 @@ $TCA['tx_partner_main'] = Array (
 					Array('',0),
 				),
 				'foreign_table' => 'tx_partner_val_titles',
-				'foreign_table_where' => 'AND tx_partner_val_titles.pid=###CURRENT_PID### ORDER BY tx_partner_val_titles.sorting',
+				'foreign_table_where' => ($confArr['lookupsFromCurrentPageOnly'] != 0 ? 'AND tx_partner_val_titles.pid=###CURRENT_PID### ' : '' )
+							.'ORDER BY tx_partner_val_titles.sorting',
 				'size' => 1,
 				'minitems' => 0,
 				'maxitems' => 1,
@@ -293,7 +299,8 @@ $TCA['tx_partner_main'] = Array (
 					Array('',0),
 				),
 				'foreign_table' => 'tx_partner_val_org_types',
-				'foreign_table_where' => 'AND tx_partner_val_org_types.pid=###CURRENT_PID### ORDER BY tx_partner_val_org_types.sorting',
+				'foreign_table_where' => ($confArr['lookupsFromCurrentPageOnly'] != 0 ? 'AND tx_partner_val_org_types.pid=###CURRENT_PID### ' : '')
+							.'ORDER BY tx_partner_val_org_types.sorting',
 				'size' => 1,
 				'minitems' => 0,
 				'maxitems' => 1,
@@ -308,7 +315,8 @@ $TCA['tx_partner_main'] = Array (
 					Array('',0),
 				),
 				'foreign_table' => 'tx_partner_val_legal_forms',
-				'foreign_table_where' => 'AND tx_partner_val_legal_forms.pid=###CURRENT_PID### ORDER BY tx_partner_val_legal_forms.sorting',
+				'foreign_table_where' => ($confArr['lookupsFromCurrentPageOnly'] != 0 ? 'AND tx_partner_val_legal_forms.pid=###CURRENT_PID### ' : '')
+							.'ORDER BY tx_partner_val_legal_forms.sorting',
 				'size' => 1,
 				'minitems' => 0,
 				'maxitems' => 1,
@@ -581,7 +589,8 @@ $TCA['tx_partner_main'] = Array (
 					Array('',0),
 				),
 				'foreign_table' => 'tx_partner_val_marital_status',
-				'foreign_table_where' => 'AND tx_partner_val_marital_status.pid=###CURRENT_PID### ORDER BY tx_partner_val_marital_status.sorting',
+				'foreign_table_where' => ($confArr['lookupsFromCurrentPageOnly'] != 0 ? 'AND tx_partner_val_marital_status.pid=###CURRENT_PID### ' : '' )
+							.'ORDER BY tx_partner_val_marital_status.sorting',
 				'size' => 1,
 				'minitems' => 0,
 				'maxitems' => 1,
@@ -618,7 +627,8 @@ $TCA['tx_partner_main'] = Array (
 					Array('',0),
 				),
 				'foreign_table' => 'tx_partner_val_religions',
-				'foreign_table_where' => 'AND tx_partner_val_religions.pid=###CURRENT_PID### ORDER BY tx_partner_val_religions.sorting',
+				'foreign_table_where' => ($confArr['lookupsFromCurrentPageOnly'] != 0 ? 'AND tx_partner_val_religions.pid=###CURRENT_PID### ' : '' )
+							.'ORDER BY tx_partner_val_religions.sorting',
 				'size' => 1,
 				'minitems' => 0,
 				'maxitems' => 1,
@@ -698,7 +708,8 @@ $TCA['tx_partner_main'] = Array (
 			'config' => Array (
 				'type' => 'select',
 				'foreign_table' => 'tx_partner_val_occupations',
-				'foreign_table_where' => 'AND tx_partner_val_occupations.pid=###CURRENT_PID### ORDER BY tx_partner_val_occupations.sorting',
+				'foreign_table_where' => ($confArr['lookupsFromCurrentPageOnly'] != 0 ? 'AND tx_partner_val_occupations.pid=###CURRENT_PID### ' : '' )
+							. 'ORDER BY tx_partner_val_occupations.sorting',
 				'size' => 5,
 				'autoSizeMax' => 20,
 				'selectedListStyle' => 'width:220px',
@@ -715,7 +726,8 @@ $TCA['tx_partner_main'] = Array (
 			'config' => Array (
 				'type' => 'select',
 				'foreign_table' => 'tx_partner_val_hobbies',
-				'foreign_table_where' => 'AND tx_partner_val_hobbies.pid=###CURRENT_PID### ORDER BY tx_partner_val_hobbies.sorting',
+				'foreign_table_where' => ($confArr['lookupsFromCurrentPageOnly'] != 0 ? 'AND tx_partner_val_hobbies.pid=###CURRENT_PID### ' : '' )
+							. 'ORDER BY tx_partner_val_hobbies.sorting',
 				'size' => 5,
 				'autoSizeMax' => 20,
 				'selectedListStyle' => 'width:220px',
@@ -732,7 +744,8 @@ $TCA['tx_partner_main'] = Array (
 			'config' => Array (
 				'type' => 'select',
 				'foreign_table' => 'tx_partner_val_courses',
-				'foreign_table_where' => 'AND tx_partner_val_courses.pid=###CURRENT_PID### ORDER BY tx_partner_val_courses.sorting',
+				'foreign_table_where' => ($confArr['lookupsFromCurrentPageOnly'] != 0 ? 'AND tx_partner_val_courses.pid=###CURRENT_PID### ': '' )
+						. 'ORDER BY tx_partner_val_courses.sorting',
 				'size' => 5,
 				'autoSizeMax' => 20,
 				'selectedListStyle' => 'width:220px',
@@ -1127,7 +1140,8 @@ $TCA['tx_partner_relationships'] = Array (
 				'type' => 'select',
 				'itemsProcFunc' => 'tx_partner_select->status',
 				'foreign_table' => 'tx_partner_val_status',
-				'foreign_table_where' => 'AND tx_partner_val_status.pid=###CURRENT_PID### ORDER BY tx_partner_val_status.sorting',
+				'foreign_table_where' => ($confArr['lookupsFromCurrentPageOnly'] != 0 ? 'AND tx_partner_val_status.pid=###CURRENT_PID### ' : '' )
+							. 'ORDER BY tx_partner_val_status.sorting',
 				'size' => 1,
 				'minitems' => 0,
 				'maxitems' => 1,
