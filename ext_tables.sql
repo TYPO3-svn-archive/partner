@@ -63,7 +63,6 @@ CREATE TABLE tx_partner_main (
 	contact_permission int(11) unsigned DEFAULT '0' NOT NULL,
 	fe_user blob NOT NULL,
 	image blob NOT NULL,
-	remarks text NOT NULL,
 	preceding_title tinytext NOT NULL,
 	title int(11) unsigned DEFAULT '0' NOT NULL,
 	letter_title tinytext NOT NULL,
@@ -114,6 +113,7 @@ CREATE TABLE tx_partner_main (
 	meeting_unit int(11) unsigned DEFAULT '0' NOT NULL,
 	meeting_start_date int(11) DEFAULT '0' NOT NULL,
 	field_visibility blob NOT NULL,
+	remarks text NOT NULL,
 
 	PRIMARY KEY (uid),
 	KEY parent (pid)

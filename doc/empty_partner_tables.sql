@@ -5,4 +5,17 @@ DELETE FROM tx_partner_main_hobbies_mm;
 DELETE FROM tx_partner_main_occupations_mm;
 DELETE FROM tx_partner_relationships;
 DELETE FROM tx_partner_reports;
+DELETE FROM tx_partner_val_contact_permissions;
+DELETE FROM tx_partner_val_courses;
+DELETE FROM tx_partner_val_hobbies;
+DELETE FROM tx_partner_val_legal_forms;
+DELETE FROM tx_partner_val_marital_status;
+DELETE FROM tx_partner_val_occupations;
+DELETE FROM tx_partner_val_org_types;
+DELETE FROM tx_partner_val_rel_types;
+DELETE FROM tx_partner_val_religions;
+DELETE FROM tx_partner_val_status;
+DELETE FROM tx_partner_val_titles;
+
+DELETE FROM fe_groups;
 DELETE FROM fe_users;
