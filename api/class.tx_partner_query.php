@@ -812,7 +812,7 @@ class tx_partner_query {
 		foreach ($staticInfoTableFields as $staticField=>$staticTable)		{
 			if ($staticField == $field)	{
 
-				$staticLabelField = tx_staticinfotables_div::getTCAlabelField($staticTable, true);
+				$staticLabelField = reset(tx_staticinfotables_div::getTCAlabelField($staticTable, true));
 
 				$res = $GLOBALS['TYPO3_DB']->exec_SELECTquery($staticLabelField, $staticTable, 'uid='.$value);
 				if ($res)	{
