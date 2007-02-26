@@ -3,7 +3,7 @@
 ########################################################################
 # Extension Manager/Repository config file for ext: "partner"
 #
-# Auto generated 25-02-2007 15:13
+# Auto generated 26-02-2007 08:22
 #
 # Manual updates:
 # Only the data in the array - anything else is removed by next write.
@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'description' => 'This extension includes everything you need to manage partners (persons and organisations). You can save everything from addresses to occupations, from legal forms to birth dates. Unlimited contact information records (e.g. phone numbers) can be managed for each partner. You can manage relationships between partners as well, for instance to build a hierarchy of partners. If you would like to display partner data on you website, you can use the extension partner_fe. The data model is based on the xCIL/xCRL standards from OASIS, so it is easy to exchange data with other partner management tools.',
 	'category' => 'be',
 	'shy' => 0,
-	'version' => '0.5.9',
+	'version' => '0.5.11',
 	'dependencies' => 'static_info_tables',
 	'conflicts' => '',
 	'priority' => '',
