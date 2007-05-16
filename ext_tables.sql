@@ -114,6 +114,8 @@ CREATE TABLE tx_partner_main (
 	meeting_start_date int(11) DEFAULT '0' NOT NULL,
 	field_visibility blob NOT NULL,
 	remarks text NOT NULL,
+	relationships_overview text NOT NULL,
+	contact_info text NOT NULL,	
 
 	PRIMARY KEY (uid),
 	KEY parent (pid)
@@ -416,6 +418,7 @@ CREATE TABLE tx_partner_reports (
 	allowed_formats blob NOT NULL,
 	format_options mediumblob NOT NULL,
 	field_selection mediumblob NOT NULL,
+	preview text NOT NULL,
 
 	PRIMARY KEY (uid),
 	KEY parent (pid)

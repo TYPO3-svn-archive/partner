@@ -134,10 +134,12 @@ class ext_update {
 				}
 			}
 
-			$resRel = $GLOBALS['TYPO3_DB']->exec_SELECTquery('*', 'tx_partner_relationships', '');
-			if ($resRel)		{
-				while ($rec = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($resRel))		{
-					$out['tx_partner_relationships'][$rec['uid']] = $rec;
+			if ($out['all_tables']['tx_partner_relationships'])		{
+				$resRel = $GLOBALS['TYPO3_DB']->exec_SELECTquery('*', 'tx_partner_relationships', '');
+				if ($resRel)		{
+					while ($rec = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($resRel))		{
+						$out['tx_partner_relationships'][$rec['uid']] = $rec;
+					}
 				}
 			}
 		}
