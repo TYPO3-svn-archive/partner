@@ -591,8 +591,13 @@ class tx_partner_div {
 			if ($count == 1)		{
 
 					// Get the name
-				if ($partner['first_name']) $name = $partner['first_name'].' ';
-				$name.= $partner['last_name'];
+				if ($partner['type'] == 0) {	// Person
+					if ($partner['first_name']) $name = $partner['first_name'].' ';
+					$name.= $partner['last_name'];
+				}
+				if ($partner['type'] == 1) {	// Organisation
+					$name = $partner['org_name'];
+				}
 
 					// Update the fe_users record
 				$fields_values['name'] = $name;
