@@ -36,6 +36,7 @@ Prio 1
 ------
 - Make sure only the actually changed fields are processed in the datamap (influence on the sync process and the log)
   $thisRef->checkValue_currentRecord
+- Add link Partner->BackendUser
 
 General Stuff
 -------------
