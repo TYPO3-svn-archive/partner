@@ -139,7 +139,7 @@ class tx_partner_reports_birthdaylist extends t3lib_extobjbase {
 
 			// Prepare the output
 		$content.= $this->pObj->doc->section('', $this->pObj->doc->funcMenu($LANG->getLL('tx_partner.modfunc.reports.birthdaylist.reporting_period').':', t3lib_BEfunc::getFuncMenu($this->pObj->id, 'SET[no_of_months]', $this->pObj->MOD_SETTINGS['no_of_months'], $this->pObj->MOD_MENU['no_of_months'])));
-		$content.= $this->pObj->doc->section($LANG->getLL('x_partner.modfunc.reports.birthdaylist'), $list, 0, 1);
+		$content.= $this->pObj->doc->section($LANG->getLL('tx_partner.modfunc.reports.birthdaylist'), $list, 0, 1);
 
 			// Return the output
 		return $content;

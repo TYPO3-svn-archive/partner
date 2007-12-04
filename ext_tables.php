@@ -90,6 +90,15 @@ if (TYPO3_MODE=='BE')	{
 		'LLL:EXT:partner/locallang.php:tx_partner.modfunc.reports.birthdaylist',
 		'tx_partner_reports'
 	);
+	
+		// Submodule 'Reports->Email'
+	t3lib_extMgm::insertModuleFunction(
+		'web_txpartnerM1',
+		'tx_partner_reports_email',
+		t3lib_extMgm::extPath('partner').'modfunc1/class.tx_partner_reports_email.php',
+		'LLL:EXT:partner/locallang.php:tx_partner.modfunc.reports.email',
+		'tx_partner_reports'
+	);
 
 		// Submodule 'Reports->Overview Relationships'
 	t3lib_extMgm::insertModuleFunction(
