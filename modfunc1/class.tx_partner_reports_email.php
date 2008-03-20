@@ -87,10 +87,12 @@ class tx_partner_reports_email extends t3lib_extobjbase {
 				$itemizedEmails = '';
 				if (is_array($currentPartnerList)) {
 					foreach ($partnerList[$currentOccupationUID] as $currentPartnerUID=>$currentPartner) {
-						$currentEmail = current($currentPartner->contactInfo)->data['email'];
-						$emailList[] = $currentEmail;
-						$allEmailsList[$currentEmail] = $currentEmail;
-						$itemizedEmails.= tx_partner_div::getMailIconLink($currentPartnerUID);
+						$currentEmail = $this->getStandardEmailAdress($currentPartnerUID);
+						if ($currentEmail) {
+							$emailList[] = $currentEmail;
+							$allEmailsList[$currentEmail] = $currentEmail;
+							$itemizedEmails.= $this->getMailIconLink($currentPartnerUID);
+						}
 						$itemizedEmails.= $currentPartner->data['label'];
 						$itemizedEmails.= tx_partner_div::getEditPartnerLink($currentPartnerUID);
 						$itemizedEmails.= '<br/>';
@@ -112,7 +114,7 @@ class tx_partner_reports_email extends t3lib_extobjbase {
 		if (!empty($allEmailsList)) {
 			$allEmail = $LANG->getLL('tx_partner.modfunc.reports.email.send_mail_to_all').': '.$this->getMailIcon($allEmailsList).'<br/>';
 		}
-		
+
 		// Prepare the output
 		$content.= $this->pObj->doc->section('', $this->pObj->doc->funcMenu($LANG->getLL('tx_partner.modfunc.reports.email.occupation').':', t3lib_BEfunc::getFuncMenu($this->pObj->id, 'SET[occupation]', $this->pObj->MOD_SETTINGS['occupation'], $this->pObj->MOD_MENU['occupation'])));
 		$content.= $this->pObj->doc->spacer(20);
@@ -167,7 +169,6 @@ class tx_partner_reports_email extends t3lib_extobjbase {
 					$filter[] = $k;
 					$query = t3lib_div::makeInstance('tx_partner_query');
 					$query->getPartnerByOccupation($filter);
-					$query->getContactInfo(1);
 					if (is_array($query->query)) {
 						foreach ($query->query as $partner) {
 							$out[$k][$partner->data['uid']] = $partner;
@@ -188,6 +189,39 @@ class tx_partner_reports_email extends t3lib_extobjbase {
 		}
 
 		return $out;
+	}
+
+
+	/**
+	 * Creates the mail icon with a link to the standard e-mail address of the partner.
+	 * If no standard e-mail address can be found, the function returns nothing.
+	 *
+	 * For use in Backend only.
+	 *
+	 * @param	string		$partnerUID: UID of the partner for which the linked icon must be created
+	 * @return	string		HTML with the linked mail icon
+	 */
+	function getMailIconLink($partnerUID)		{
+		global $LANG;
+		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$stdEmailAdress = $this->getStandardEmailAdress($partnerUID);
+		if (!$stdEmailAdress) return;
+
+		$mailIconLink = '<a href="mailto:'.$stdEmailAdress.'">
+				<img'.t3lib_iconWorks::skinImg($GLOBALS['BACK_PATH'], 'gfx/newmail.gif', 'width="18" height="16"').' title="'.$LANG->getLL('tx_partner.label.send_email').' ('.$stdEmailAdress.')" alt="" /></a>';
+
+		return $mailIconLink;
+	}
+
+	function getStandardEmailAdress($partnerUID) {
+		$stdContactInfo = t3lib_BEfunc::getRecordsByField(
+			'tx_partner_contact_info',
+			'uid_foreign',
+			$partnerUID,
+			'AND tx_partner_contact_info.type=3 AND tx_partner_contact_info.standard=1'
+		);
+
+		return $stdContactInfo[0]['email'];
 	}
 
 }
