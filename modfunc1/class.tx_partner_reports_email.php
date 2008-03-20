@@ -2,7 +2,7 @@
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2007 David Bruehlmeier (typo3@bruehlmeier.com)
+ *  (c) 2007-2008 David Bruehlmeier (typo3@bruehlmeier.com)
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -31,6 +31,7 @@
 require_once(PATH_t3lib.'class.t3lib_extobjbase.php');
 require_once(t3lib_extMgm::extPath('partner').'api/class.tx_partner_query.php');
 require_once(t3lib_extMgm::extPath('partner').'api/class.tx_partner_div.php');
+require_once(PATH_t3lib.'class.t3lib_iconworks.php');
 
 
 
@@ -53,7 +54,6 @@ class tx_partner_reports_email extends t3lib_extobjbase {
 	 * @see t3lib_extobjbase::init()
 	 */
 	function modMenu()	{
-		$modMenuAdd['link'] = '';
 		$modMenuAdd['occupation'] = $this->readOccupations(true);
 		return $modMenuAdd;
 	}
@@ -72,29 +72,63 @@ class tx_partner_reports_email extends t3lib_extobjbase {
 		$occupation = $this->pObj->MOD_SETTINGS['occupation'];
 		$allOccupations = $this->readOccupations();
 
-		// Get the partner for the selected occupation
-		if ($occupation == 'any') {
-			foreach ($allOccupations as $k=>$v) {
-				if ($k == 'any') continue;
-				$emailAddresses = $this->getEmailAdresses($k);
-				$list.= $this->pObj->doc->section($v, $emailAddresses, 0, 1);
-			}
-			if (!$list) $list = $LANG->getLL('tx_partner.modfunc.reports.email.no_partner_found_for_this_occupation');
-
-		} else {
-			$emailAddresses = $this->getEmailAdresses($occupation);
-			$list = $this->pObj->doc->section($allOccupations[$occupation], $emailAddresses, 0, 1);
-		}
+		// Get the partner list for the selected occupation
+		$partnerList = $this->getPartnerList($occupation);
 
 		// Prepare the output
+		$allEmailsList = array();
+		if (!empty($partnerList)) {
+			foreach ($partnerList as $currentOccupationUID=>$currentPartnerList) {
+				if ($currentOccupationUID == 'any') continue;
+				$currentOcupationLabel = $allOccupations[$currentOccupationUID];
+				$allEmailForOccupation = '';
+				$currentEmail = '';
+				$emailList = array();
+				$itemizedEmails = '';
+				if (is_array($currentPartnerList)) {
+					foreach ($partnerList[$currentOccupationUID] as $currentPartnerUID=>$currentPartner) {
+						$currentEmail = current($currentPartner->contactInfo)->data['email'];
+						$emailList[] = $currentEmail;
+						$allEmailsList[$currentEmail] = $currentEmail;
+						$itemizedEmails.= tx_partner_div::getMailIconLink($currentPartnerUID);
+						$itemizedEmails.= $currentPartner->data['label'];
+						$itemizedEmails.= tx_partner_div::getEditPartnerLink($currentPartnerUID);
+						$itemizedEmails.= '<br/>';
+					}
+
+				}
+				$allEmailForOccupation = sprintf($LANG->getLL('tx_partner.modfunc.reports.email.send_mail_to_all_members_of_this_occupation'),$currentOcupationLabel).': '.$this->getMailIcon($emailList).'<br/>';
+				$list.= $this->pObj->doc->section($currentOcupationLabel, $allEmailForOccupation.$itemizedEmails, 0, 1);
+				$list.= $this->pObj->doc->spacer(20);
+			}
+		}
+			
+		else {
+			$itemizedEmails.= sprintf($LANG->getLL('tx_partner.modfunc.reports.email.no_partner_found_for_this_occupation'),$allOccupations[$occupation]);
+			$list.= $this->pObj->doc->section($allOccupations[$occupation], $itemizedEmails, 0, 1);
+		}
+			
+
+		if (!empty($allEmailsList)) {
+			$allEmail = $LANG->getLL('tx_partner.modfunc.reports.email.send_mail_to_all').': '.$this->getMailIcon($allEmailsList).'<br/>';
+		}
+		
+		// Prepare the output
 		$content.= $this->pObj->doc->section('', $this->pObj->doc->funcMenu($LANG->getLL('tx_partner.modfunc.reports.email.occupation').':', t3lib_BEfunc::getFuncMenu($this->pObj->id, 'SET[occupation]', $this->pObj->MOD_SETTINGS['occupation'], $this->pObj->MOD_MENU['occupation'])));
-		$content.= $this->pObj->doc->spacer(5);
-		$content.= $this->pObj->doc->section('', $this->pObj->doc->funcMenu($LANG->getLL('tx_partner.modfunc.reports.email.display_link_icon').':', t3lib_BEfunc::getFuncCheck($this->pObj->id, 'SET[link]', $this->pObj->MOD_SETTINGS['link'], $this->pObj->MOD_MENU['link'])));
 		$content.= $this->pObj->doc->spacer(20);
+		$content.= $allEmail;
 		$content.= $list;
 
 		// Return the output
 		return $content;
+
+	}
+
+	function getMailIcon($emailList) {
+		global $LANG;
+		$emails = implode(';', $emailList);
+		$out = '<a href="mailto:'.$emails.'"><img'.t3lib_iconWorks::skinImg($GLOBALS['BACK_PATH'], 'gfx/newmail.gif', 'width="18" height="16"').' title="'.$LANG->getLL('tx_partner.label.send_email').'" alt="" /></a>';
+		return $out;
 	}
 
 	function readOccupations($addAny = false) {
@@ -105,7 +139,7 @@ class tx_partner_reports_email extends t3lib_extobjbase {
 		$res = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
 			'uid,oc_descr',
 			'tx_partner_val_occupations',
-			'tx_partner_val_occupations.pid'.t3lib_BEfunc::deleteClause('tx_partner_val_occupations'),
+			'tx_partner_val_occupations.pid='.$this->pObj->id.t3lib_BEfunc::deleteClause('tx_partner_val_occupations'),
 			'', // GROUP by,
 			'oc_descr' // ORDER by,
 		);
@@ -122,41 +156,40 @@ class tx_partner_reports_email extends t3lib_extobjbase {
 		return $occupations;
 	}
 
-	function getEmailAdresses($occupation) {
-		global $LANG;
-
-		$contactInfo = t3lib_div::makeInstance('tx_partner_contact_info');
-		$query = t3lib_div::makeInstance('tx_partner_query');
+	function getPartnerList($occupation) {
 		$out = array();
 
-		$filter[] = $occupation;
-		$query->getPartnerByOccupation($filter);
-
-		// Get the standard E-Mail addresses for the selected partners
-		if (is_array($query->query)) {
-			foreach ($query->query as $partner) {
-				//$contactInfo->getContactInfo($partner->data['uid']);
-				$stdContactInfo = t3lib_BEfunc::getRecordsByField(
-					'tx_partner_contact_info',
-					'uid_foreign',
-					$partner->data['uid'],
-					'AND tx_partner_contact_info.type=3 AND tx_partner_contact_info.standard=1'
-				);
-			if ($this->pObj->MOD_SETTINGS['link']) {
-				$result[] = tx_partner_div::getMailIconLink($partner->data['uid']).$stdContactInfo['0']['email'];
-			} else {
-				$result[] = $stdContactInfo['0']['email'];
+		if ($occupation == 'any') {
+			$allOccupations = $this->readOccupations();
+			foreach ($allOccupations as $k=>$v) {
+				$filter = array();
+				if ($k != 'any') {
+					$filter[] = $k;
+					$query = t3lib_div::makeInstance('tx_partner_query');
+					$query->getPartnerByOccupation($filter);
+					$query->getContactInfo(1);
+					if (is_array($query->query)) {
+						foreach ($query->query as $partner) {
+							$out[$k][$partner->data['uid']] = $partner;
+						}
+					}
+				}
 			}
-			}
-		}
-
-		if (is_array($result)) {
-			$out = implode('; ', $result);
 		} else {
-			$out = $LANG->getLL('tx_partner.modfunc.reports.email.no_partner_found_for_this_occupation');
+			$filter[] = $occupation;
+			$query = t3lib_div::makeInstance('tx_partner_query');
+			$query->getPartnerByOccupation($filter);
+			$query->getContactInfo(1);
+			if (is_array($query->query)) {
+				foreach ($query->query as $partner) {
+					$out[$occupation][$partner->data['uid']] = $partner;
+				}
+			}
 		}
+
 		return $out;
 	}
+
 }
 
 if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/partner/modfunc1/class.tx_partner_reports_email.php'])	{

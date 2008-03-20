@@ -172,6 +172,10 @@ class tx_partner_main {
 			}
 		}
 	}
+	
+	function __toString() {
+		return $this->data['label'];
+	}
 
 
 
