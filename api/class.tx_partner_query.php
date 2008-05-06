@@ -638,7 +638,7 @@ class tx_partner_query {
 	 * @return	array		Selected values from the current query
 	 */
 	function getSelectedValuesFromCurrentQuery($fieldScope, $contactInfoScope, $fieldSelection, $processedValues=TRUE, $techValues=FALSE, $blankValues=FALSE)		{
-		global $TYPO3_CONF_VARS;
+		global $TYPO3_CONF_VARS, $TCA;
 
 			// If no contact-infos are requested, unset them
 		if ($contactInfoScope == '0' && is_array($fieldNames['tx_partner_contact_info']))		{
@@ -664,7 +664,13 @@ class tx_partner_query {
 
 					// Get the values for each requested field and process it if requested
 				foreach ($partnerTypeFields as $theField)		{
-					$fv = tx_partner_query::getFieldData('tx_partner_main', $theField, $partnerObj->data[$theField], $fieldScope, $fieldSelection, $processedValues, $techValues, $blankValues);
+
+					// If it's an MM-table, change the value to the UID of the current partner
+					if ($TCA['tx_partner_main']['columns'][$theField]['config']['MM']) {
+						$fv = tx_partner_query::getFieldData('tx_partner_main', $theField, $partnerObj->data['uid'], $fieldScope, $fieldSelection, $processedValues, $techValues, $blankValues);
+					} else {
+						$fv = tx_partner_query::getFieldData('tx_partner_main', $theField, $partnerObj->data[$theField], $fieldScope, $fieldSelection, $processedValues, $techValues, $blankValues);
+					}
 					if (is_array($fv)) $data[$partnerUid]['tx_partner_main'][$theField] = $fv;
 				}
 
@@ -788,7 +794,24 @@ class tx_partner_query {
 			// If one day there is a decent FE-editing solution, hopefully there will be an equivalent function to use
 			// under FE-conditions.
 		if (TYPO3_MODE == 'BE')		{
-			$pV = t3lib_BEfunc::getProcessedValueExtra($table, $field, $value);
+					// If it's an MM table, resolve it
+			if ($TCA[$table]['columns'][$field]['config']['MM']) {
+				$mmTable = $TCA[$table]['columns'][$field]['config']['MM'];
+				$foreignTable = $TCA[$table]['columns'][$field]['config']['foreign_table'];
+				$res = $GLOBALS['TYPO3_DB']->exec_SELECT_mm_query(
+				$foreignTable.'.*',
+				$table,
+				$mmTable,
+				$foreignTable,
+				' AND '.$mmTable.'.uid_local='.$value.t3lib_BEfunc::deleteClause($table));
+				$labels = array();
+				while ($rec = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
+					$labels[] = t3lib_BEfunc::getRecordTitle($TCA[$table]['columns'][$field]['config']['foreign_table'],$rec);		
+				}
+				$pV = implode(', ', $labels);
+			} else {
+				$pV = t3lib_BEfunc::getProcessedValueExtra($table, $field, $value);
+			}
 		} else {
 			$pV = $value;
 		}
