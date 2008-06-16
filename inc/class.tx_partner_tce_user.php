@@ -198,7 +198,7 @@ class tx_partner_tce_user {
 			case 2:		// Fax
 
 					// Get the international phone prefix
-				if ($contactInformationRecord['country'])		{
+				if ($contactInformationRecord['country'] != '')		{
 					if (t3lib_extMgm::isLoaded('static_info_tables')) {
 						$cn_phone = t3lib_BEfunc::getRecord('static_countries',$contactInformationRecord['country'],'cn_phone');
 						if (is_array($cn_phone)) {
@@ -208,12 +208,12 @@ class tx_partner_tce_user {
 				}
 
 					// Get the area code
-				if ($contactInformationRecord['area_code'])		{
+				if ($contactInformationRecord['area_code'] != '')		{
 					$areaCode = ' ('.$contactInformationRecord['area_code'].')';
 				}
 
 					// Get the extension
-				if ($contactInformationRecord['extension'])		{
+				if ($contactInformationRecord['extension'] != '')		{
 					$extension = ' - '.$contactInformationRecord['extension'];
 				}
 

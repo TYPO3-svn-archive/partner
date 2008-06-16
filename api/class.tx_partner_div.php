@@ -663,7 +663,7 @@ class tx_partner_div {
 
 		
 				// Get the international phone prefix
-			if ($record['country']) {
+			if ($record['country'] != '') {
 				if (t3lib_extMgm::isLoaded('static_info_tables')) {
 					$res = $GLOBALS['TYPO3_DB']->exec_SELECTquery('cn_phone','static_countries','uid='.$record['country']);
 					if ($res) $cn_phone_array = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res);
@@ -674,17 +674,17 @@ class tx_partner_div {
 			}
 		
 				// Get the area code
-			if ($record['area_code']) {
+			if ($record['area_code'] != '') {
 				$area_code = ' ('.$record['area_code'].')';
 			}
 		
 				// Get the number
-			if ($record['number']) {
+			if ($record['number'] != '') {
 				$number = ' '.$record['number'];
 			}
 
 				// Get the extension
-			if ($record['extension']) {
+			if ($record['extension'] != '') {
 				$extension = '-'.$record['extension'];
 			}
 
