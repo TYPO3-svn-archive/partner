@@ -360,10 +360,10 @@ class tx_partner_query {
 			// Check if the selection includes the year
 		if ($fromYear != '0000')		{
 			$toYear = ($toYear>=$fromYear) ? $toYear : '9999';
-			$whereClause = "birth_date > '$fromYear$fromMonth$fromDay' AND birth_date < '$toYear$toMonth$toDay'";
+			$whereClause = "birth_date >= '$fromYear$fromMonth$fromDay' AND birth_date <= '$toYear$toMonth$toDay'";
 			$orderBy = "birth_date ASC";
 		} else {
-			$whereClause = "RIGHT(birth_date,4) > '$fromMonth$fromDay' AND RIGHT(birth_date,4) < '$toMonth$toDay'";
+			$whereClause = "RIGHT(birth_date,4) >= '$fromMonth$fromDay' AND RIGHT(birth_date,4) <= '$toMonth$toDay'";
 			$orderBy = "RIGHT(birth_date,4) ASC";
 		}
 
