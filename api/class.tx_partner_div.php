@@ -713,6 +713,9 @@ class tx_partner_div {
 					case 4: // URL
 					$label = $standard.$typeLabel.$labelNature.' '.$record['url'];
 					break;
+					
+					default:
+					$label = $standard.$typeLabel.$labelNature.$record['number'];
 			}
 			break;
 			}
