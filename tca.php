@@ -950,7 +950,6 @@ $TCA['tx_partner_contact_info'] = Array (
 					Array('LLL:EXT:partner/locallang.php:tx_partner_contact_info.type.I.2', '2', t3lib_extMgm::extRelPath('partner').'icons/selicon_tx_partner_contact_info_type_2.gif'),
 					Array('LLL:EXT:partner/locallang.php:tx_partner_contact_info.type.I.3', '3', t3lib_extMgm::extRelPath('partner').'icons/selicon_tx_partner_contact_info_type_3.gif'),
 					Array('LLL:EXT:partner/locallang.php:tx_partner_contact_info.type.I.4', '4', t3lib_extMgm::extRelPath('partner').'icons/selicon_tx_partner_contact_info_type_4.gif'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_contact_info.type.I.5', '5', t3lib_extMgm::extRelPath('partner').'icons/selicon_tx_partner_default.gif'),
 				),
 				'size' => 1,
 				'maxitems' => 1,
@@ -1075,7 +1074,6 @@ $TCA['tx_partner_contact_info'] = Array (
 		'2' => Array('showitem' => 'type, label, nature, standard, country;;;;1-1-1, area_code, number, extension, remarks'),
 		'3' => Array('showitem' => 'type, label, nature, standard, email;;;;1-1-1, remarks'),
 		'4' => Array('showitem' => 'type, label, nature, standard, url;;;;1-1-1, remarks'),
-		'5' => Array('showitem' => 'type, label, nature, standard, number;;;;1-1-1, remarks'),
 	),
 	'palettes' => Array (
 		'1' => Array('showitem' => '')
