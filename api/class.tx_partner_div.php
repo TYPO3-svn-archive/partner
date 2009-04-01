@@ -689,12 +689,7 @@ class tx_partner_div {
 			}
 
 					// Get the localized labels for the nature of the contact
-				if ($record['nature'] == '0') {
-					$labelNature = ' '.tx_partner_lang::getLabel('tx_partner.label.private.1char').':';
-				}
-				if ($record['nature'] == '1') {
-					$labelNature = ' '.tx_partner_lang::getLabel('tx_partner.label.business.1char').':';
-				}
+				$labelNature = ' '.tx_partner_lang::getLabel('tx_partner_contact_info.nature.short.I.'.$record['nature']).':';
 
 					// Assemble the label according to the type of the contact-info record
 				$typeLabel = tx_partner_lang::getLabel('tx_partner_contact_info.type.I.'.$record['type']);
