@@ -43,31 +43,31 @@
 		'CSV' => array(
 			'external' => 1,
 			'icon' => 'fileicons/csv.gif',
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner.label.format.csv',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner.label.format.csv',
 			'formatFunc' => 'EXT:partner/inc/class.tx_partner_format.php:tx_partner_format->formatAsCSV',
 		),
 		'XML' => array(
 			'external' => 1,
 			'icon' => 'fileicons/xml.gif',
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner.label.format.xml',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner.label.format.xml',
 			'formatFunc' => 'EXT:partner/inc/class.tx_partner_format.php:tx_partner_format->formatAsXML',
 		),
 		'XLS' => array(
 			'external' => 1,
 			'icon' => 'fileicons/xls.gif',
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner.label.format.xls',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner.label.format.xls',
 			'formatFunc' => 'EXT:partner/inc/class.tx_partner_format.php:tx_partner_format->formatAsXLS',
 		),
 		'BE_module' => array(
 			'external' => 0,
 			'icon' => 'fileicons/default.gif',
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner.label.format.be_module',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner.label.format.be_module',
 			'formatFunc' => 'EXT:partner/inc/class.tx_partner_format.php:tx_partner_format->formatAsBEModule',
 		),
 		'HTML' => array(
 			'external' => 0,
 			'icon' => 'fileicons/html.gif',
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner.label.format.html',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner.label.format.html',
 			'formatFunc' => 'EXT:partner/inc/class.tx_partner_format.php:tx_partner_format->formatAsHTML',
 		),
 	);
@@ -77,7 +77,7 @@
 		$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['partner']['formats']['PDF'] = array(
 			'external' => 1,
 			'icon' => 'fileicons/pdf.gif',
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner.label.format.pdf',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner.label.format.pdf',
 			'formatFunc' => 'EXT:partner/inc/class.tx_partner_format.php:tx_partner_format->formatAsPDF',
 		);
 	}
@@ -87,19 +87,19 @@
 	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['partner']['user_fields'] = array(
 		'tx_partner_main' => array(
 			'_name' => Array (
-				'label' => 'LLL:EXT:partner/locallang.php:tx_partner.user_fields.name',
+				'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner.user_fields.name',
 				'size' => '30',
 				'userFunc' => 'EXT:partner/inc/class.tx_partner_user_fields.php:tx_partner_user_fields->name',
 			),
 			'_age' => Array (
-				'label' => 'LLL:EXT:partner/locallang.php:tx_partner.user_fields.age',
+				'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner.user_fields.age',
 				'size' => '10',
 				'userFunc' => 'EXT:partner/inc/class.tx_partner_user_fields.php:tx_partner_user_fields->age',
 			),
 		),
 		'tx_partner_contact_info' => array(
 			'_prefix' => Array (
-				'label' => 'LLL:EXT:partner/locallang.php:tx_partner.user_fields.prefix',
+				'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner.user_fields.prefix',
 				'size' => '30',
 				'userFunc' => 'EXT:partner/inc/class.tx_partner_user_fields.php:tx_partner_user_fields->prefix',
 			),

@@ -52,7 +52,7 @@ class tx_partner_reports_birthdaylist extends t3lib_extobjbase {
 	 */
 	function modMenu()	{
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Add number of months to be displays
 		$labelMonths = $LANG->getLL('tx_partner.label.months');
@@ -84,7 +84,7 @@ class tx_partner_reports_birthdaylist extends t3lib_extobjbase {
 	 */
 	function main()		{
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Get a query instance
 		$query = t3lib_div::makeInstance('tx_partner_query');

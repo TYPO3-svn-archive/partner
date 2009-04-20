@@ -133,7 +133,7 @@ class tx_partner_reports extends t3lib_extobjbase {
 	
 	function getElementBrowser($uid)	{
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 		$out = '';
 		$content = '';
 		

@@ -75,7 +75,7 @@ class tx_partner_reports_relationships extends t3lib_extobjbase {
 	 */
 	function main()	{
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Get the relationship overview for the selected relationship type
 		$overview = $this->getRelationshipOverview($this->pObj->MOD_SETTINGS['relationship_type']);
@@ -101,7 +101,7 @@ class tx_partner_reports_relationships extends t3lib_extobjbase {
 	 */
 	function getRelationshipOverview($type)		{
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Get all relationships for the current relationship type
 		$relationships = t3lib_BEfunc::getRecordsByField('tx_partner_relationships', 'type', $type, 'AND tx_partner_relationships.pid='.$this->pObj->id);

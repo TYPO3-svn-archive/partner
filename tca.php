@@ -40,42 +40,42 @@ $TCA['tx_partner_main'] = Array (
 	),
 	'columns' => Array (
 		'uid' => Array (
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.uid',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.uid',
 			'config' => Array (
 				'type' => 'passthrough',
 				'size' => 3,
 			),
 		),
 		'pid' => Array (
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.pid',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.pid',
 			'config' => Array (
 				'type' => 'passthrough',
 				'size' => 3,
 			),
 		),
 		'tstamp' => Array (
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.tstamp',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.tstamp',
 			'config' => Array (
 				'type' => 'passthrough',
 				'size' => 10,
 			),
 		),
 		'crdate' => Array (
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.crdate',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.crdate',
 			'config' => Array (
 				'type' => 'passthrough',
 				'size' => 10,
 			),
 		),
 		'cruser_id' => Array (
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.cruser_id',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.cruser_id',
 			'config' => Array (
 				'type' => 'passthrough',
 				'size' => 3,
 			),
 		),
 		'deleted' => Array (
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.deleted',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.deleted',
 			'config' => Array (
 				'type' => 'passthrough',
 				'size' => 1,
@@ -83,7 +83,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'hidden' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.hidden',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.hidden',
 			'config' => Array (
 				'type' => 'check',
 				'default' => '0',
@@ -92,12 +92,12 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'type' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.type',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.type',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
-					Array('LLL:EXT:partner/locallang.php:tx_partner_main.type.I.0', '0', t3lib_extMgm::extRelPath('partner').'icons/selicon_tx_partner_main_type_0.gif'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_main.type.I.1', '1', t3lib_extMgm::extRelPath('partner').'icons/selicon_tx_partner_main_type_1.gif'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_main.type.I.0', '0', t3lib_extMgm::extRelPath('partner').'icons/selicon_tx_partner_main_type_0.gif'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_main.type.I.1', '1', t3lib_extMgm::extRelPath('partner').'icons/selicon_tx_partner_main_type_1.gif'),
 				),
 				'size' => 1,
 				'maxitems' => 1,
@@ -105,7 +105,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'label' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.label',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.label',
 			'config' => Array (
 				'type' => 'none',
 				'size' => 50,
@@ -113,7 +113,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'status' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.status',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.status',
 			'config' => Array (
 				'type' => 'select',
 				'itemsProcFunc' => 'tx_partner_select->status',
@@ -127,7 +127,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'data_source' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.data_source',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.data_source',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '10',
@@ -136,7 +136,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'external_id' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.external_id',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.external_id',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '10',
@@ -145,7 +145,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'contact_permission' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.contact_permission',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.contact_permission',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
@@ -161,7 +161,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'image' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.image',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.image',
 			'config' => Array (
 				'type' => 'group',
 				'internal_type' => 'file',
@@ -175,7 +175,7 @@ $TCA['tx_partner_main'] = Array (
 			)
 		),
 		'relationships_overview' => Array (
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.relationships_overview',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.relationships_overview',
 			'config' => Array (
 				'type' => 'user',
 				'size' => 50,
@@ -184,7 +184,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'preceding_title' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.preceding_title',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.preceding_title',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '10',
@@ -193,7 +193,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'title' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.title',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.title',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
@@ -209,7 +209,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'letter_title' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.letter_title',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.letter_title',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '48',
@@ -218,7 +218,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'first_name' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.first_name',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.first_name',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '48',
@@ -227,7 +227,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'middle_name' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.middle_name',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.middle_name',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '10',
@@ -236,7 +236,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'last_name_prefix' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.last_name_prefix',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.last_name_prefix',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '10',
@@ -245,7 +245,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'last_name' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.last_name',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.last_name',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '48',
@@ -255,7 +255,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'maiden_name' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.maiden_name',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.maiden_name',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '10',
@@ -264,7 +264,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'general_suffix' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.general_suffix',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.general_suffix',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '10',
@@ -273,7 +273,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'initials' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.initials',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.initials',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '5',
@@ -282,7 +282,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'org_name' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.org_name',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.org_name',
 			'config' => Array (
 				'eval' => 'required',
 				'type' => 'input',
@@ -292,7 +292,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'org_type' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.org_type',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.org_type',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
@@ -308,7 +308,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'org_legal_form' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.org_legal_form',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.org_legal_form',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
@@ -324,7 +324,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'department' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.department',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.department',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '10',
@@ -333,7 +333,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'building' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.building',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.building',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '10',
@@ -342,7 +342,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'floor' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.floor',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.floor',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '3',
@@ -351,7 +351,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'room' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.room',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.room',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '10',
@@ -360,7 +360,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'street' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.street',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.street',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '48',
@@ -369,7 +369,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'street_number' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.street_number',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.street_number',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '3',
@@ -378,7 +378,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'postal_code' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.postal_code',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.postal_code',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '12',
@@ -387,7 +387,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'locality' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.locality',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.locality',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '48',
@@ -396,7 +396,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'admin_area' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.admin_area',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.admin_area',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '10',
@@ -406,7 +406,7 @@ $TCA['tx_partner_main'] = Array (
 		'country' => Array (
 			'exclude' => 1,
 			'displayCond' => 'EXT:static_info_tables:LOADED:true',
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.country',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.country',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
@@ -427,7 +427,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'po_number' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.po_number',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.po_number',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '12',
@@ -436,7 +436,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'po_no_number' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.po_no_number',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.po_no_number',
 			'config' => Array (
 				'type' => 'check',
 				'size' => 1,
@@ -444,7 +444,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'po_postal_code' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.po_postal_code',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.po_postal_code',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '12',
@@ -453,7 +453,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'po_locality' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.po_locality',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.po_locality',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '10',
@@ -462,7 +462,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'po_admin_area' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.po_admin_area',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.po_admin_area',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '10',
@@ -472,7 +472,7 @@ $TCA['tx_partner_main'] = Array (
 		'po_country' => Array (
 			'exclude' => 1,
 			'displayCond' => 'EXT:static_info_tables:LOADED:true',
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.po_country',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.po_country',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
@@ -492,7 +492,7 @@ $TCA['tx_partner_main'] = Array (
 			)
 		),
 		'contact_info' => Array (
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.contact_info',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.contact_info',
 			'config' => Array (
 				'type' => 'user',
 				'size' => '50',
@@ -501,7 +501,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'formation_date' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.formation_date',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.formation_date',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '8',
@@ -513,7 +513,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'closure_date' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.closure_date',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.closure_date',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '8',
@@ -525,7 +525,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'birth_date' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.birth_date',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.birth_date',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '8',
@@ -537,7 +537,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'birth_place' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.birth_place',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.birth_place',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '48',
@@ -546,7 +546,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'death_date' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.death_date',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.death_date',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '8',
@@ -558,7 +558,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'death_place' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.death_place',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.death_place',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '48',
@@ -567,14 +567,14 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'gender' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.gender',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.gender',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
 					Array('', '9'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_main.gender.I.0', '0'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_main.gender.I.1', '1'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_main.gender.I.2', '2'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_main.gender.I.0', '0'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_main.gender.I.1', '1'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_main.gender.I.2', '2'),
 				),
 				'size' => 1,
 				'maxitems' => 1,
@@ -582,7 +582,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'marital_status' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.marital_status',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.marital_status',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
@@ -599,7 +599,7 @@ $TCA['tx_partner_main'] = Array (
 		'nationality' => Array (
 			'exclude' => 1,
 			'displayCond' => 'EXT:static_info_tables:LOADED:true',
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.nationality',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.nationality',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
@@ -620,7 +620,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'religion' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.religion',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.religion',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
@@ -637,7 +637,7 @@ $TCA['tx_partner_main'] = Array (
 		'mother_tongue' => Array (
 			'exclude' => 1,
 			'displayCond' => 'EXT:static_info_tables:LOADED:true',
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.mother_tongue',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.mother_tongue',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
@@ -659,7 +659,7 @@ $TCA['tx_partner_main'] = Array (
 		'preferred_language' => Array (
 			'exclude' => 1,
 			'displayCond' => 'EXT:static_info_tables:LOADED:true',
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.preferred_language',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.preferred_language',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
@@ -680,7 +680,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'join_date' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.join_date',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.join_date',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '8',
@@ -692,7 +692,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'leave_date' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.leave_date',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.leave_date',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '8',
@@ -704,7 +704,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'occupations' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.occupations',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.occupations',
 			'config' => Array (
 				'type' => 'select',
 				'foreign_table' => 'tx_partner_val_occupations',
@@ -722,7 +722,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'hobbies' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.hobbies',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.hobbies',
 			'config' => Array (
 				'type' => 'select',
 				'foreign_table' => 'tx_partner_val_hobbies',
@@ -740,7 +740,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'courses' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.courses',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.courses',
 			'config' => Array (
 				'type' => 'select',
 				'foreign_table' => 'tx_partner_val_courses',
@@ -758,7 +758,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'meeting_period' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.meeting_period',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.meeting_period',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '3',
@@ -774,15 +774,15 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'meeting_unit' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.meeting_unit',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.meeting_unit',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
 					Array('', ''),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_main.meeting_unit.I.0', '0'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_main.meeting_unit.I.1', '1'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_main.meeting_unit.I.2', '2'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_main.meeting_unit.I.3', '3'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_main.meeting_unit.I.0', '0'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_main.meeting_unit.I.1', '1'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_main.meeting_unit.I.2', '2'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_main.meeting_unit.I.3', '3'),
 				),
 				'size' => 1,
 				'minitems' => 0,
@@ -791,7 +791,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'meeting_start_date' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.meeting_start_date',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.meeting_start_date',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '8',
@@ -802,7 +802,7 @@ $TCA['tx_partner_main'] = Array (
 			)
 		),
 		'field_visibility' => Array (
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.field_visibility',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.field_visibility',
 			'config' => Array (
 				'type' => 'user',
 				'size' => '50',
@@ -811,7 +811,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'remarks' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.remarks',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.remarks',
 			'config' => Array (
 				'type' => 'text',
 				'cols' => '30',
@@ -821,7 +821,7 @@ $TCA['tx_partner_main'] = Array (
 		),
 		'fe_user' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.fe_user',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.fe_user',
 			'config' => Array (
 				'type' => 'group',
 				'internal_type' => 'db',
@@ -833,7 +833,7 @@ $TCA['tx_partner_main'] = Array (
 					'_VALIGN' => 'top',
 					'add' => Array(
 						'type' => 'script',
-						'title' => 'LLL:EXT:partner/locallang.php:tx_partner_main.fe_user.add',
+						'title' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.fe_user.add',
 						'icon' => 'add.gif',
 						'params' => Array(
 							'table'=>'fe_users',
@@ -844,7 +844,7 @@ $TCA['tx_partner_main'] = Array (
 					),
 					'edit' => Array(
 						'type' => 'popup',
-						'title' => 'LLL:EXT:partner/locallang.php:tx_partner_main.fe_user.edit',
+						'title' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.fe_user.edit',
 						'script' => 'wizard_edit.php',
 						'popup_onlyOpenIfSelected' => 1,
 						'icon' => 'edit2.gif',
@@ -855,8 +855,8 @@ $TCA['tx_partner_main'] = Array (
 		),
 	),
 	'types' => Array (
-		'0' => Array('showitem' => 'type, label, status;;1, title;;2;;1-1-1, first_name;;4, last_name;;3, street;;5;;1-1-1, postal_code, locality;;10, country, po_number;;6;;1-1-1, po_postal_code;;7, image;;;;1-1-1, remarks, --div--;LLL:EXT:partner/locallang.php:tx_partner.label.contact_info_relationships, contact_info;;;;1-1-1, relationships_overview;;;;1-1-1, --div--;LLL:EXT:partner/locallang.php:tx_partner.label.dates, birth_date;;8;;1-1-1, death_date;;9, gender;;;;1-1-1, marital_status, nationality, religion, mother_tongue;;;;1-1-1, preferred_language, join_date;;;;1-1-1, leave_date, --div--;LLL:EXT:partner/locallang.php:tx_partner.label.activities, occupations;;;;1-1-1, hobbies, courses, --div--;LLL:EXT:partner/locallang.php:tx_partner.label.frontend, field_visibility;;;;1-1-1, fe_user'),
-		'1' => Array('showitem' => 'type, label, status;;1, org_name;;;;1-1-1, org_type, org_legal_form, street;;5;;1-1-1, postal_code, locality;;10, country, po_number;;6;;1-1-1, po_postal_code;;7, image;;;;1-1-1, remarks, --div--;LLL:EXT:partner/locallang.php:tx_partner.label.contact_info_relationships, contact_info;;;;1-1-1, relationships_overview, --div--;LLL:EXT:partner/locallang.php:tx_partner.label.dates, formation_date;;;;1-1-1, closure_date, meeting_period;;;;1-1-1, meeting_unit, meeting_start_date, --div--;LLL:EXT:partner/locallang.php:tx_partner.label.frontend, field_visibility;;;;1-1-1, fe_user')
+		'0' => Array('showitem' => 'type, label, status;;1, title;;2;;1-1-1, first_name;;4, last_name;;3, street;;5;;1-1-1, postal_code, locality;;10, country, po_number;;6;;1-1-1, po_postal_code;;7, image;;;;1-1-1, remarks, --div--;LLL:EXT:partner/locallang_db.xml:tx_partner.label.contact_info_relationships, contact_info;;;;1-1-1, relationships_overview;;;;1-1-1, --div--;LLL:EXT:partner/locallang_db.xml:tx_partner.label.dates, birth_date;;8;;1-1-1, death_date;;9, gender;;;;1-1-1, marital_status, nationality, religion, mother_tongue;;;;1-1-1, preferred_language, join_date;;;;1-1-1, leave_date, --div--;LLL:EXT:partner/locallang_db.xml:tx_partner.label.activities, occupations;;;;1-1-1, hobbies, courses, --div--;LLL:EXT:partner/locallang_db.xml:tx_partner.label.frontend, field_visibility;;;;1-1-1, fe_user'),
+		'1' => Array('showitem' => 'type, label, status;;1, org_name;;;;1-1-1, org_type, org_legal_form, street;;5;;1-1-1, postal_code, locality;;10, country, po_number;;6;;1-1-1, po_postal_code;;7, image;;;;1-1-1, remarks, --div--;LLL:EXT:partner/locallang_db.xml:tx_partner.label.contact_info_relationships, contact_info;;;;1-1-1, relationships_overview, --div--;LLL:EXT:partner/locallang_db.xml:tx_partner.label.dates, formation_date;;;;1-1-1, closure_date, meeting_period;;;;1-1-1, meeting_unit, meeting_start_date, --div--;LLL:EXT:partner/locallang_db.xml:tx_partner.label.frontend, field_visibility;;;;1-1-1, fe_user')
 	),
 	'palettes' => Array (
 		'1' => Array('showitem' => 'contact_permission, data_source, external_id'),
@@ -881,42 +881,42 @@ $TCA['tx_partner_contact_info'] = Array (
 	),
 	'columns' => Array (
 		'uid' => Array (
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info.uid',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.uid',
 			'config' => Array (
 				'type' => 'passthrough',
 				'size' => 3,
 			),
 		),
 		'pid' => Array (
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info.pid',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.pid',
 			'config' => Array (
 				'type' => 'passthrough',
 				'size' => 3,
 			),
 		),
 		'tstamp' => Array (
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info.tstamp',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.tstamp',
 			'config' => Array (
 				'type' => 'passthrough',
 				'size' => 10,
 			),
 		),
 		'crdate' => Array (
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info.crdate',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.crdate',
 			'config' => Array (
 				'type' => 'passthrough',
 				'size' => 10,
 			),
 		),
 		'cruser_id' => Array (
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info.cruser_id',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.cruser_id',
 			'config' => Array (
 				'type' => 'passthrough',
 				'size' => 10,
 			),
 		),
 		'deleted' => Array (
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info.deleted',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.deleted',
 			'config' => Array (
 				'type' => 'passthrough',
 				'size' => 1,
@@ -924,7 +924,7 @@ $TCA['tx_partner_contact_info'] = Array (
 		),
 		'hidden' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info.hidden',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.hidden',
 			'config' => Array (
 				'type' => 'check',
 				'default' => '0',
@@ -933,7 +933,7 @@ $TCA['tx_partner_contact_info'] = Array (
 		),
 		'uid_foreign' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info.uid_foreign',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.uid_foreign',
 			'config' => Array (
 				'type' => 'passthrough',
 				'size' => '3',
@@ -941,15 +941,15 @@ $TCA['tx_partner_contact_info'] = Array (
 		),
 		'type' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info.type',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.type',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
-					Array('LLL:EXT:partner/locallang.php:tx_partner_contact_info.type.I.0', '0', t3lib_extMgm::extRelPath('partner').'icons/selicon_tx_partner_contact_info_type_0.gif'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_contact_info.type.I.1', '1', t3lib_extMgm::extRelPath('partner').'icons/selicon_tx_partner_contact_info_type_1.gif'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_contact_info.type.I.2', '2', t3lib_extMgm::extRelPath('partner').'icons/selicon_tx_partner_contact_info_type_2.gif'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_contact_info.type.I.3', '3', t3lib_extMgm::extRelPath('partner').'icons/selicon_tx_partner_contact_info_type_3.gif'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_contact_info.type.I.4', '4', t3lib_extMgm::extRelPath('partner').'icons/selicon_tx_partner_contact_info_type_4.gif'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.type.I.0', '0', t3lib_extMgm::extRelPath('partner').'icons/selicon_tx_partner_contact_info_type_0.gif'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.type.I.1', '1', t3lib_extMgm::extRelPath('partner').'icons/selicon_tx_partner_contact_info_type_1.gif'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.type.I.2', '2', t3lib_extMgm::extRelPath('partner').'icons/selicon_tx_partner_contact_info_type_2.gif'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.type.I.3', '3', t3lib_extMgm::extRelPath('partner').'icons/selicon_tx_partner_contact_info_type_3.gif'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.type.I.4', '4', t3lib_extMgm::extRelPath('partner').'icons/selicon_tx_partner_contact_info_type_4.gif'),
 				),
 				'size' => 1,
 				'maxitems' => 1,
@@ -957,12 +957,12 @@ $TCA['tx_partner_contact_info'] = Array (
 		),
 		'nature' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info.nature',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.nature',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
-					Array('LLL:EXT:partner/locallang.php:tx_partner_contact_info.nature.I.0', '0'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_contact_info.nature.I.1', '1'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.nature.I.0', '0'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.nature.I.1', '1'),
 				),
 				'size' => 1,
 				'maxitems' => 1,
@@ -970,7 +970,7 @@ $TCA['tx_partner_contact_info'] = Array (
 		),
 		'standard' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info.standard',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.standard',
 			'config' => Array (
 				'type' => 'check',
 				'size' => 1,
@@ -979,7 +979,7 @@ $TCA['tx_partner_contact_info'] = Array (
 		),
 		'label' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info.label',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.label',
 			'config' => Array (
 				'type' => 'none',
 				'size' => 50,
@@ -988,7 +988,7 @@ $TCA['tx_partner_contact_info'] = Array (
 		'country' => Array (
 			'exclude' => 1,
 			'displayCond' => 'EXT:static_info_tables:LOADED:true',
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info.country',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.country',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
@@ -1009,7 +1009,7 @@ $TCA['tx_partner_contact_info'] = Array (
 		),
 		'area_code' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info.area_code',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.area_code',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '24',
@@ -1018,7 +1018,7 @@ $TCA['tx_partner_contact_info'] = Array (
 		),
 		'number' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info.number',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.number',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '48',
@@ -1028,7 +1028,7 @@ $TCA['tx_partner_contact_info'] = Array (
 		),
 		'extension' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info.extension',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.extension',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '24',
@@ -1037,7 +1037,7 @@ $TCA['tx_partner_contact_info'] = Array (
 		),
 		'email' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info.email',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.email',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '15',
@@ -1048,7 +1048,7 @@ $TCA['tx_partner_contact_info'] = Array (
 		),
 		'url' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info.url',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.url',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '15',
@@ -1059,7 +1059,7 @@ $TCA['tx_partner_contact_info'] = Array (
 		),
 		'remarks' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info.remarks',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info.remarks',
 			'config' => Array (
 				'type' => 'text',
 				'cols' => '30',
@@ -1098,7 +1098,7 @@ $TCA['tx_partner_relationships'] = Array (
 		),
 		'type' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_relationships.type',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_relationships.type',
 			'config' => Array (
 				'type' => 'select',
 				'itemsProcFunc' => 'tx_partner_select->types',
@@ -1109,7 +1109,7 @@ $TCA['tx_partner_relationships'] = Array (
 		),
 		'uid_primary' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_relationships.uid_primary',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_relationships.uid_primary',
 			'config' => Array (
 				'type' => 'group',
 				'internal_type' => 'db',
@@ -1122,7 +1122,7 @@ $TCA['tx_partner_relationships'] = Array (
 		),
 		'uid_secondary' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_relationships.uid_secondary',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_relationships.uid_secondary',
 			'config' => Array (
 				'type' => 'group',
 				'internal_type' => 'db',
@@ -1135,7 +1135,7 @@ $TCA['tx_partner_relationships'] = Array (
 		),
 		'status' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_main.status',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main.status',
 			'config' => Array (
 				'type' => 'select',
 				'itemsProcFunc' => 'tx_partner_select->status',
@@ -1149,7 +1149,7 @@ $TCA['tx_partner_relationships'] = Array (
 		),
 		'established_date' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_relationships.established_date',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_relationships.established_date',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '8',
@@ -1161,7 +1161,7 @@ $TCA['tx_partner_relationships'] = Array (
 		),
 		'lapsed_date' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_relationships.lapsed_date',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_relationships.lapsed_date',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '8',
@@ -1173,7 +1173,7 @@ $TCA['tx_partner_relationships'] = Array (
 		),
 		'lapsed_reason' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_relationships.lapsed_reason',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_relationships.lapsed_reason',
 			'config' => Array (
 				'type' => 'text',
 				'cols' => '30',
@@ -1201,7 +1201,7 @@ $TCA['tx_partner_val_status'] = Array (
 	'columns' => Array (
 		'st_descr_short' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_status.st_descr_short',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_status.st_descr_short',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '12',
@@ -1211,7 +1211,7 @@ $TCA['tx_partner_val_status'] = Array (
 		),
 		'st_descr' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_status.st_descr',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_status.st_descr',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '30',
@@ -1221,12 +1221,12 @@ $TCA['tx_partner_val_status'] = Array (
 		),
 		'allowed_tables' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_status.allowed_tables',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_status.allowed_tables',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
-					Array('LLL:EXT:partner/locallang.php:tx_partner_val_status.allowed_tables.I.0', 'tx_partner_main'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_val_status.allowed_tables.I.1', 'tx_partner_relationships'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_val_status.allowed_tables.I.0', 'tx_partner_main'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_val_status.allowed_tables.I.1', 'tx_partner_relationships'),
 				),
 				'size' => 2,
 				'maxitems' => 2,
@@ -1252,7 +1252,7 @@ $TCA['tx_partner_val_contact_permissions'] = Array (
 	'columns' => Array (
 		'cp_descr_short' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_contact_permissions.cp_descr_short',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_contact_permissions.cp_descr_short',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '12',
@@ -1262,7 +1262,7 @@ $TCA['tx_partner_val_contact_permissions'] = Array (
 		),
 		'cp_descr' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_contact_permissions.cp_descr',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_contact_permissions.cp_descr',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '30',
@@ -1289,7 +1289,7 @@ $TCA['tx_partner_val_titles'] = Array (
 	'columns' => Array (
 		'ti_descr_short' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_titles.ti_descr_short',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_titles.ti_descr_short',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '12',
@@ -1299,7 +1299,7 @@ $TCA['tx_partner_val_titles'] = Array (
 		),
 		'ti_descr' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_titles.ti_descr',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_titles.ti_descr',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '30',
@@ -1309,7 +1309,7 @@ $TCA['tx_partner_val_titles'] = Array (
 		),
 		'ti_letter_default' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_titles.ti_letter_default',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_titles.ti_letter_default',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '48',
@@ -1335,7 +1335,7 @@ $TCA['tx_partner_val_org_types'] = Array (
 	'columns' => Array (
 		'ot_descr_short' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_org_types.ot_descr_short',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_org_types.ot_descr_short',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '12',
@@ -1345,7 +1345,7 @@ $TCA['tx_partner_val_org_types'] = Array (
 		),
 		'ot_descr' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_org_types.ot_descr',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_org_types.ot_descr',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '30',
@@ -1372,7 +1372,7 @@ $TCA['tx_partner_val_legal_forms'] = Array (
 	'columns' => Array (
 		'lf_descr_abbr' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_legal_forms.lf_descr_abbr',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_legal_forms.lf_descr_abbr',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '5',
@@ -1381,7 +1381,7 @@ $TCA['tx_partner_val_legal_forms'] = Array (
 		),
 		'lf_descr_short' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_legal_forms.lf_descr_short',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_legal_forms.lf_descr_short',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '12',
@@ -1391,7 +1391,7 @@ $TCA['tx_partner_val_legal_forms'] = Array (
 		),
 		'lf_descr' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_legal_forms.lf_descr',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_legal_forms.lf_descr',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '30',
@@ -1418,7 +1418,7 @@ $TCA['tx_partner_val_marital_status'] = Array (
 	'columns' => Array (
 		'ms_descr_short' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_marital_status.ms_descr_short',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_marital_status.ms_descr_short',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '12',
@@ -1428,7 +1428,7 @@ $TCA['tx_partner_val_marital_status'] = Array (
 		),
 		'ms_descr' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_marital_status.ms_descr',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_marital_status.ms_descr',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '30',
@@ -1455,7 +1455,7 @@ $TCA['tx_partner_val_religions'] = Array (
 	'columns' => Array (
 		'rl_descr_short' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_religions.rl_descr_short',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_religions.rl_descr_short',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '12',
@@ -1465,7 +1465,7 @@ $TCA['tx_partner_val_religions'] = Array (
 		),
 		'rl_descr' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_religions.rl_descr',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_religions.rl_descr',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '30',
@@ -1492,7 +1492,7 @@ $TCA['tx_partner_val_occupations'] = Array (
 	'columns' => Array (
 		'oc_descr_short' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_occupations.oc_descr_short',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_occupations.oc_descr_short',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '12',
@@ -1502,7 +1502,7 @@ $TCA['tx_partner_val_occupations'] = Array (
 		),
 		'oc_descr' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_occupations.oc_descr',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_occupations.oc_descr',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '30',
@@ -1529,7 +1529,7 @@ $TCA['tx_partner_val_hobbies'] = Array (
 	'columns' => Array (
 		'hb_descr_short' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_hobbies.hb_descr_short',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_hobbies.hb_descr_short',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '12',
@@ -1539,7 +1539,7 @@ $TCA['tx_partner_val_hobbies'] = Array (
 		),
 		'hb_descr' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_hobbies.hb_descr',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_hobbies.hb_descr',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '30',
@@ -1566,7 +1566,7 @@ $TCA['tx_partner_val_courses'] = Array (
 	'columns' => Array (
 		'cs_name_short' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_courses.cs_name_short',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_courses.cs_name_short',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '12',
@@ -1576,7 +1576,7 @@ $TCA['tx_partner_val_courses'] = Array (
 		),
 		'cs_name' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_courses.cs_name',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_courses.cs_name',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '30',
@@ -1586,7 +1586,7 @@ $TCA['tx_partner_val_courses'] = Array (
 		),
 		'cs_descr' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_courses.cs_descr',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_courses.cs_descr',
 			'config' => Array (
 				'type' => 'text',
 				'cols' => '30',
@@ -1595,7 +1595,7 @@ $TCA['tx_partner_val_courses'] = Array (
 		),
 		'start_date' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_courses.start_date',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_courses.start_date',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '8',
@@ -1607,7 +1607,7 @@ $TCA['tx_partner_val_courses'] = Array (
 		),
 		'end_date' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_courses.end_date',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_courses.end_date',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '8',
@@ -1634,7 +1634,7 @@ $TCA['tx_partner_val_rel_types'] = Array (
 	'columns' => Array (
 		'rt_descr_short' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_rel_types.rt_descr_short',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_rel_types.rt_descr_short',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '12',
@@ -1644,7 +1644,7 @@ $TCA['tx_partner_val_rel_types'] = Array (
 		),
 		'rt_descr' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_rel_types.rt_descr',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_rel_types.rt_descr',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '30',
@@ -1654,14 +1654,14 @@ $TCA['tx_partner_val_rel_types'] = Array (
 		),
 		'allowed_categories' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_rel_types.allowed_categories',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_rel_types.allowed_categories',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
-					Array('LLL:EXT:partner/locallang.php:tx_partner_val_rel_types.allowed_categories.I.0', '0'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_val_rel_types.allowed_categories.I.1', '1'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_val_rel_types.allowed_categories.I.2', '2'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_val_rel_types.allowed_categories.I.3', '3'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_val_rel_types.allowed_categories.I.0', '0'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_val_rel_types.allowed_categories.I.1', '1'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_val_rel_types.allowed_categories.I.2', '2'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_val_rel_types.allowed_categories.I.3', '3'),
 				),
 				'size' => 4,
 				'maxitems' => 4,
@@ -1670,7 +1670,7 @@ $TCA['tx_partner_val_rel_types'] = Array (
 		),
 		'primary_title' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_rel_types.primary_title',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_rel_types.primary_title',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '48',
@@ -1680,7 +1680,7 @@ $TCA['tx_partner_val_rel_types'] = Array (
 		),
 		'secondary_title' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_val_rel_types.secondary_title',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_rel_types.secondary_title',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '48',
@@ -1705,7 +1705,7 @@ $TCA['tx_partner_reports'] = Array (
 	'columns' => Array (
 		'title' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_reports.title',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_reports.title',
 			'config' => Array (
 				'type' => 'input',
 				'size' => '30',
@@ -1715,7 +1715,7 @@ $TCA['tx_partner_reports'] = Array (
 		),
 		'query' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_reports.query',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_reports.query',
 			'config' => Array (
 				'type' => 'text',
 				'cols' => '48',
@@ -1725,12 +1725,12 @@ $TCA['tx_partner_reports'] = Array (
 		),
 		'field_scope' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_reports.field_scope',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_reports.field_scope',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
-					Array('LLL:EXT:partner/locallang.php:tx_partner_reports.field_scope.I.all', 'all'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_reports.field_scope.I.field_selection', 'field_selection'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_reports.field_scope.I.all', 'all'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_reports.field_scope.I.field_selection', 'field_selection'),
 				),
 				'size' => 1,
 				'maxitems' => 1,
@@ -1738,13 +1738,13 @@ $TCA['tx_partner_reports'] = Array (
 		),
 		'contact_info_scope' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_reports.contact_info_scope',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_reports.contact_info_scope',
 			'config' => Array (
 				'type' => 'select',
 				'items' => Array (
-					Array('LLL:EXT:partner/locallang.php:tx_partner_reports.contact_info_scope.I.none', '0'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_reports.contact_info_scope.I.only_std', '1'),
-					Array('LLL:EXT:partner/locallang.php:tx_partner_reports.contact_info_scope.I.all', '2'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_reports.contact_info_scope.I.none', '0'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_reports.contact_info_scope.I.only_std', '1'),
+					Array('LLL:EXT:partner/locallang_db.xml:tx_partner_reports.contact_info_scope.I.all', '2'),
 				),
 				'size' => 1,
 				'maxitems' => 1,
@@ -1752,28 +1752,28 @@ $TCA['tx_partner_reports'] = Array (
 		),
 		'processed_values' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_reports.processed_values',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_reports.processed_values',
 			'config' => Array (
 				'type' => 'check',
 			)
 		),
 		'tech_keys' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_reports.tech_keys',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_reports.tech_keys',
 			'config' => Array (
 				'type' => 'check',
 			)
 		),
 		'blank_values' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_reports.blank_values',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_reports.blank_values',
 			'config' => Array (
 				'type' => 'check',
 			)
 		),
 		'allowed_formats' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_reports.allowed_formats',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_reports.allowed_formats',
 			'config' => Array (
 				'type' => 'select',
 					// Attention! If the order within the items-array changes, don't forget to change
@@ -1789,7 +1789,7 @@ $TCA['tx_partner_reports'] = Array (
 		),
 		'format_options' => Array (
 			'exclude' => 1,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_reports.format_options',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_reports.format_options',
 			'config' => Array (
 				'type' => 'flex',
 				'ds_pointerField' => 'default',
@@ -1800,14 +1800,14 @@ $TCA['tx_partner_reports'] = Array (
 		),
 		'field_selection' => Array (
 			'exclude' => 0,
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_reports.field_selection',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_reports.field_selection',
 			'config' => Array (
 				'type' => 'user',
 				'userFunc' => 'tx_partner_tce_user->getReportFieldSelection',
 			)
 		),
 		'preview' => Array (
-			'label' => 'LLL:EXT:partner/locallang.php:tx_partner_reports.preview',
+			'label' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_reports.preview',
 			'config' => Array (
 				'type' => 'user',
 				'userFunc' => 'tx_partner_tce_user->getReportPreview',
@@ -1815,7 +1815,7 @@ $TCA['tx_partner_reports'] = Array (
 		),
 	),
 	'types' => Array (
-		'0' => Array('showitem' => 'title,query,field_scope,contact_info_scope,processed_values,tech_keys,blank_values,csv_delimiter,csv_wrap,csv_line_end,pdf_options,--div--;LLL:EXT:partner/locallang.php:tx_partner.label.field_selection,field_selection,--div--;LLL:EXT:partner/locallang.php:tx_partner.label.formats,allowed_formats,format_options,--div--;LLL:EXT:partner/locallang.php:tx_partner.label.preview,preview')
+		'0' => Array('showitem' => 'title,query,field_scope,contact_info_scope,processed_values,tech_keys,blank_values,csv_delimiter,csv_wrap,csv_line_end,pdf_options,--div--;LLL:EXT:partner/locallang_db.xml:tx_partner.label.field_selection,field_selection,--div--;LLL:EXT:partner/locallang_db.xml:tx_partner.label.formats,allowed_formats,format_options,--div--;LLL:EXT:partner/locallang_db.xml:tx_partner.label.preview,preview')
 	),
 	'palettes' => Array (
 		'1' => Array('showitem' => '')

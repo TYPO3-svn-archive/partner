@@ -66,7 +66,7 @@ class tx_partner_reports_email extends t3lib_extobjbase {
 	 */
 	function main()		{
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 		// Which occupation? (option)
 		$occupation = $this->pObj->MOD_SETTINGS['occupation'];
@@ -203,7 +203,7 @@ class tx_partner_reports_email extends t3lib_extobjbase {
 	 */
 	function getMailIconLink($partnerUID)		{
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 		$stdEmailAdress = $this->getStandardEmailAdress($partnerUID);
 		if (!$stdEmailAdress) return;
 

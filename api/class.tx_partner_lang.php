@@ -51,7 +51,7 @@ class tx_partner_lang {
 
 		if (TYPO3_MODE == 'BE')		{
 			global $LANG;
-			$LANG->includeLLFile('EXT:partner/locallang.php');
+			$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 				// Try to read the label using the getLL function. If this doesn't return a label, try using the sL function (e.g. for use with EXT:... labels).
 			$out = $LANG->getLL($label);

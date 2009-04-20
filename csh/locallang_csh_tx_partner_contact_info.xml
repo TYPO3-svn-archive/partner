@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <description>Context Sensitive Help for the table &quot;tx_partner_contact_info&quot;</description>
+        <type>CSH</type>
+        <csh_table>tx_partner_contact_info</csh_table>
+        <labelContext type="array">
+        </labelContext>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="type.description">Type of the contact information</label>
+            <label index="type.details">Chose the type of the contact information. The possible types are defined by the Partner-Extension.</label>
+            <label index="nature.description">Nature of the contact information</label>
+            <label index="nature.details">Chose the nature of the contact information. The possible natures are defined by the Partner-Extension.</label>
+            <label index="standard.description">Standard-Flag</label>
+            <label index="standard.details">You can set this flag for exactly one contact information per type. For instance, you can declare exactly one e-mail address as the standard e-mail. The label of the standard-entry will be prefixed with a '*'.</label>
+            <label index="label.description">Label of the contact information</label>
+            <label index="label.details">The label is used in many places in the backend, usually when the contact information has to be described with just one field. This label is for instance displayed when editing a partner record. The value of the label is formed automatically by TYPO3.</label>
+            <label index="country.description">Country of the phone number</label>
+            <label index="country.details">By chosing the country, TYPO3 will automatically select the international phone prefix (e.g. +41 for Switzerland).</label>
+            <label index="area_code.description">Area Code of the phone number</label>
+            <label index="area_code.details">Enter the area code, but only if applicable.</label>
+            <label index="number.description">Phone Number</label>
+            <label index="number.details">Enter the phone number, but without the area code and without an extension.</label>
+            <label index="number.seeAlso">tx_partner_contact_info:area_code,tx_partner_contact_info:extension</label>
+            <label index="extension.description">Extension of the phone number</label>
+            <label index="extension.details">Usually used for business phone numbers. Normally corresponds to the internal phone number within an organisation.</label>
+            <label index="email.description">E-Mail address</label>
+            <label index="email.details">Enter the complete e-mail address, but &lt;b&gt;without&lt;/b&gt; mailto:</label>
+            <label index="url.description">URL (Homepage)</label>
+            <label index="url.details">Enter the complete URL (Homepage) of the partner.</label>
+            <label index="remarks.description">Remarks for the contact information</label>
+            <label index="remarks.details">Free text to further describe details about this contact information.</label>
+        </languageKey>
+    </data>
+    <orig_hash type="array">
+        <languageKey index="default" type="array">
+            <label index="type.description" type="integer">108018442</label>
+            <label index="type.details" type="integer">45274252</label>
+            <label index="nature.description" type="integer">216663543</label>
+            <label index="nature.details" type="integer">102949086</label>
+            <label index="standard.description" type="integer">12922661</label>
+            <label index="standard.details" type="integer">146757766</label>
+            <label index="label.description" type="integer">222682244</label>
+            <label index="label.details" type="integer">16679598</label>
+            <label index="country.description" type="integer">198529489</label>
+            <label index="country.details" type="integer">62810868</label>
+            <label index="area_code.description" type="integer">218080343</label>
+            <label index="area_code.details" type="integer">260400717</label>
+            <label index="number.description" type="integer">31775687</label>
+            <label index="number.details" type="integer">111776391</label>
+            <label index="number.seeAlso" type="integer">94447898</label>
+            <label index="extension.description" type="integer">179515646</label>
+            <label index="extension.details" type="integer">81714897</label>
+            <label index="email.description" type="integer">110584439</label>
+            <label index="email.details" type="integer">111084574</label>
+            <label index="url.description" type="integer">148467684</label>
+            <label index="url.details" type="integer">113775278</label>
+            <label index="remarks.description" type="integer">101792796</label>
+            <label index="remarks.details" type="integer">123015598</label>
+        </languageKey>
+    </orig_hash>
+    <orig_text type="array">
+        <languageKey index="default" type="array">
+        </languageKey>
+    </orig_text>
+</T3locallang>

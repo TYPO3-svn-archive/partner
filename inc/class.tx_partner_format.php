@@ -310,7 +310,7 @@ class tx_partner_format {
 	 */
 	function formatAsXLS(&$params, &$ref)		{
 		global $LANG, $BE_USER;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 		
 			// Define the date fields which need to be converted to UTC (this should probably be in a more central function)
 		$dateFields = array('tstamp'=>'unixDateTime', 'crdate'=>'unixDateTime', 'formation_date'=>'unixDate', 'closure_date'=>'unixDate', 'join_date'=>'unixDate', 'leave_date'=>'unixDate', 'birth_date'=>'yyyymmdd', 'death_date'=>'yyyymmdd');
@@ -544,7 +544,7 @@ class tx_partner_format {
 	 */
 	function formatAsBEModule(&$params, &$ref)		{
 		global $LANG, $TCA, $TYPO3_CONF_VARS;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Get the parameters
 		$data = $params['data'];

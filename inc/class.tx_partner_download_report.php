@@ -35,7 +35,7 @@ require($BACK_PATH.'init.php');
 require($BACK_PATH.'template.php');
 require_once(PATH_t3lib.'class.t3lib_iconworks.php');
 
-$GLOBALS['LANG']->includeLLFile ('EXT:partner/locallang.php');
+$GLOBALS['LANG']->includeLLFile ('EXT:partner/locallang_db.xml');
 
 
 /**
@@ -93,7 +93,7 @@ class tx_partner_download_report {
 		$this->doc->backPath = $GLOBALS['BACK_PATH'];
 		
 			// Language handling
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 	}
 	
 	

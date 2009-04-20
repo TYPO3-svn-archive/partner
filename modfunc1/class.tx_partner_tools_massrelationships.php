@@ -58,7 +58,7 @@ class tx_partner_tools_massrelationships extends t3lib_extobjbase {
 		global $LANG;
 
 			// Include the general language file
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Define the default styles
 		$this->defaultListStyle = 'height="18px" style="border-bottom-width:1px; border-bottom-color:#C6C2BD; border-bottom-style:solid;" nowrap';

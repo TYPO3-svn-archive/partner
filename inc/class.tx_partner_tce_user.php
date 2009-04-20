@@ -46,7 +46,7 @@ class tx_partner_tce_user {
 	 */
 	function createRelationshipsOverview($PA, $fobj) {
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Get the relationships only for already saved records
 		if (substr($PA['row']['uid'], 0, 3) != 'NEW') {
@@ -84,7 +84,7 @@ class tx_partner_tce_user {
 	 */
 	function createContactsInformationOverview($PA, $fobj) {
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Get all the contact infos for this partner (ordered by type / standard entry first)
 		$contactInfos = t3lib_BEfunc::getRecordsByField(
@@ -189,7 +189,7 @@ class tx_partner_tce_user {
 	 */
 	function transformContactInfo($contactInformationRecord) {
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Transform according to the contact-info type
 		switch ($contactInformationRecord['type'])		{
@@ -257,7 +257,7 @@ class tx_partner_tce_user {
 	 */
 	function getRelationshipsList($partnerUID, $primaryOrSecondary, $pid) {
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 		$confArr = unserialize($GLOBALS['_EXTCONF']);
 
@@ -347,7 +347,7 @@ class tx_partner_tce_user {
 	 */
 	function createOutput($partnerUID, $partnerType, $newRecordsPID, $relationshipsList) {
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			//Relationships to display
 		while ($theEntry = current($relationshipsList)) {
@@ -434,7 +434,7 @@ class tx_partner_tce_user {
 	 */
 	function fieldVisibility($PA, $fobj) {
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Get the merged field visibilities
 		$mergedFieldVisibilities = tx_partner_div::getMergedFieldVisibilities($PA['row']['uid']);
@@ -529,7 +529,7 @@ class tx_partner_tce_user {
 	 */
 	function getReportPreview($PA, $fobj) {
 		global $TYPO3_CONF_VARS, $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Make a new query instance for getting the partner data
 		$query = t3lib_div::makeInstance('tx_partner_query');
@@ -569,7 +569,7 @@ class tx_partner_tce_user {
 	 */
 	function getReportFieldSelection($PA, $fobj) {
 		global $LANG, $TCA;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 		$fieldSelection = t3lib_div::xml2array($PA['row']['field_selection']);
 		$tables = array('tx_partner_main', 'tx_partner_contact_info');

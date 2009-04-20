@@ -60,7 +60,7 @@ if (TYPO3_MODE=='BE')	{
 		'web_txpartnerM1',
 		'tx_partner_search',
 		t3lib_extMgm::extPath('partner').'modfunc1/class.tx_partner_search.php',
-		'LLL:EXT:partner/locallang.php:tx_partner.modfunc.search',
+		'LLL:EXT:partner/locallang_db.xml:tx_partner.modfunc.search',
 		'function'
 	);
 	
@@ -69,7 +69,7 @@ if (TYPO3_MODE=='BE')	{
 		'web_txpartnerM1',
 		'tx_partner_reports',
 		t3lib_extMgm::extPath('partner').'modfunc1/class.tx_partner_reports.php',
-		'LLL:EXT:partner/locallang.php:tx_partner.modfunc.reports',
+		'LLL:EXT:partner/locallang_db.xml:tx_partner.modfunc.reports',
 		'function'
 	);
 
@@ -78,7 +78,7 @@ if (TYPO3_MODE=='BE')	{
 		'web_txpartnerM1',
 		'tx_partner_tools',
 		t3lib_extMgm::extPath('partner').'modfunc1/class.tx_partner_tools.php',
-		'LLL:EXT:partner/locallang.php:tx_partner.modfunc.tools',
+		'LLL:EXT:partner/locallang_db.xml:tx_partner.modfunc.tools',
 		'function'
 	);
 
@@ -87,7 +87,7 @@ if (TYPO3_MODE=='BE')	{
 		'web_txpartnerM1',
 		'tx_partner_reports_birthdaylist',
 		t3lib_extMgm::extPath('partner').'modfunc1/class.tx_partner_reports_birthdaylist.php',
-		'LLL:EXT:partner/locallang.php:tx_partner.modfunc.reports.birthdaylist',
+		'LLL:EXT:partner/locallang_db.xml:tx_partner.modfunc.reports.birthdaylist',
 		'tx_partner_reports'
 	);
 	
@@ -96,7 +96,7 @@ if (TYPO3_MODE=='BE')	{
 		'web_txpartnerM1',
 		'tx_partner_reports_email',
 		t3lib_extMgm::extPath('partner').'modfunc1/class.tx_partner_reports_email.php',
-		'LLL:EXT:partner/locallang.php:tx_partner.modfunc.reports.email',
+		'LLL:EXT:partner/locallang_db.xml:tx_partner.modfunc.reports.email',
 		'tx_partner_reports'
 	);
 
@@ -105,7 +105,7 @@ if (TYPO3_MODE=='BE')	{
 		'web_txpartnerM1',
 		'tx_partner_reports_relationships',
 		t3lib_extMgm::extPath('partner').'modfunc1/class.tx_partner_reports_relationships.php',
-		'LLL:EXT:partner/locallang.php:tx_partner.modfunc.reports.relationships',
+		'LLL:EXT:partner/locallang_db.xml:tx_partner.modfunc.reports.relationships',
 		'tx_partner_reports'
 	);
 	
@@ -114,7 +114,7 @@ if (TYPO3_MODE=='BE')	{
 		'web_txpartnerM1',
 		'tx_partner_tools_massrelationships',
 		t3lib_extMgm::extPath('partner').'modfunc1/class.tx_partner_tools_massrelationships.php',
-		'LLL:EXT:partner/locallang.php:tx_partner.modfunc.tools.massrelationships',
+		'LLL:EXT:partner/locallang_db.xml:tx_partner.modfunc.tools.massrelationships',
 		'tx_partner_tools'
 	);
 
@@ -123,7 +123,7 @@ if (TYPO3_MODE=='BE')	{
 		'web_txpartnerM1',
 		'tx_partner_tools_assignfeusers',
 		t3lib_extMgm::extPath('partner').'modfunc1/class.tx_partner_tools_assignfeusers.php',
-		'LLL:EXT:partner/locallang.php:tx_partner.modfunc.tools.assignfeusers',
+		'LLL:EXT:partner/locallang_db.xml:tx_partner.modfunc.tools.assignfeusers',
 		'tx_partner_tools'
 	);
 
@@ -132,7 +132,7 @@ if (TYPO3_MODE=='BE')	{
 		'web_txpartnerM1',
 		'tx_partner_tools_reportdesigner',
 		t3lib_extMgm::extPath('partner').'modfunc1/class.tx_partner_tools_reportdesigner.php',
-		'LLL:EXT:partner/locallang.php:tx_partner.modfunc.tools.reportdesigner',
+		'LLL:EXT:partner/locallang_db.xml:tx_partner.modfunc.tools.reportdesigner',
 		'tx_partner_tools'
 	);
 
@@ -147,29 +147,29 @@ if (TYPO3_MODE=='BE')	{
 
 	// Define the context-sensitive help file for all tables
 $cshFiles = array(
-	'partner_main',
-	'partner_contact_info',
-	'partner_relationships',
-	'partner_val_contact_permissions',
-	'partner_val_courses',
-	'partner_val_hobbies',
-	'partner_val_legal_forms',
-	'partner_val_marital_status',
-	'partner_val_occupations',
-	'partner_val_org_types',
-	'partner_val_rel_types',
-	'partner_val_religions',
-	'partner_val_status',
-	'partner_val_titles'
+	'tx_partner_main',
+	'tx_partner_contact_info',
+	'tx_partner_relationships',
+	'tx_partner_val_contact_permissions',
+	'tx_partner_val_courses',
+	'tx_partner_val_hobbies',
+	'tx_partner_val_legal_forms',
+	'tx_partner_val_marital_status',
+	'tx_partner_val_occupations',
+	'tx_partner_val_org_types',
+	'tx_partner_val_rel_types',
+	'tx_partner_val_religions',
+	'tx_partner_val_status',
+	'tx_partner_val_titles'
 );
 
 	// Load all context-sensitive (CSH) help files for tables
 foreach ($cshFiles as $theCshFile)		{
-	t3lib_extMgm::addLLrefForTCAdescr('tx_'.$theCshFile,'EXT:partner/csh/locallang_csh_'.$theCshFile.'.php');
+	t3lib_extMgm::addLLrefForTCAdescr($theCshFile,'EXT:partner/csh/locallang_csh_'.$theCshFile.'.xml');
 }
 
 	// Load the CSH for the partner-mdule
-t3lib_extMgm::addLLrefForTCAdescr('_MOD_partner','EXT:partner/csh/locallang_csh_partner.php');
+t3lib_extMgm::addLLrefForTCAdescr('_MOD_partner','EXT:partner/csh/locallang_csh_MOD_partner.xml');
 
 
 // *************************************
@@ -177,7 +177,7 @@ t3lib_extMgm::addLLrefForTCAdescr('_MOD_partner','EXT:partner/csh/locallang_csh_
 // *************************************
 $TCA['tx_partner_main'] = Array (
 	'ctrl' => Array (
-		'title' => 'LLL:EXT:partner/locallang.php:tx_partner_main',
+		'title' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_main',
 		'label' => 'label',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -205,7 +205,7 @@ $TCA['tx_partner_main'] = Array (
 
 $TCA['tx_partner_contact_info'] = Array (
 	'ctrl' => Array (
-		'title' => 'LLL:EXT:partner/locallang.php:tx_partner_contact_info',
+		'title' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_contact_info',
 		'label' => 'label',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -231,7 +231,7 @@ $TCA['tx_partner_contact_info'] = Array (
 
 $TCA['tx_partner_relationships'] = Array (
 	'ctrl' => Array (
-		'title' => 'LLL:EXT:partner/locallang.php:tx_partner_relationships',
+		'title' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_relationships',
 		'label' => 'uid',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -249,7 +249,7 @@ $TCA['tx_partner_relationships'] = Array (
 
 $TCA['tx_partner_val_status'] = Array (
 	'ctrl' => Array (
-		'title' => 'LLL:EXT:partner/locallang.php:tx_partner_val_status',
+		'title' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_status',
 		'label' => 'st_descr',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -262,7 +262,7 @@ $TCA['tx_partner_val_status'] = Array (
 
 $TCA['tx_partner_val_contact_permissions'] = Array (
 	'ctrl' => Array (
-		'title' => 'LLL:EXT:partner/locallang.php:tx_partner_val_contact_permissions',
+		'title' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_contact_permissions',
 		'label' => 'cp_descr',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -275,7 +275,7 @@ $TCA['tx_partner_val_contact_permissions'] = Array (
 
 $TCA['tx_partner_val_titles'] = Array (
 	'ctrl' => Array (
-		'title' => 'LLL:EXT:partner/locallang.php:tx_partner_val_titles',
+		'title' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_titles',
 		'label' => 'ti_descr',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -288,7 +288,7 @@ $TCA['tx_partner_val_titles'] = Array (
 
 $TCA['tx_partner_val_org_types'] = Array (
 	'ctrl' => Array (
-		'title' => 'LLL:EXT:partner/locallang.php:tx_partner_val_org_types',
+		'title' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_org_types',
 		'label' => 'ot_descr',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -301,7 +301,7 @@ $TCA['tx_partner_val_org_types'] = Array (
 
 $TCA['tx_partner_val_legal_forms'] = Array (
 	'ctrl' => Array (
-		'title' => 'LLL:EXT:partner/locallang.php:tx_partner_val_legal_forms',
+		'title' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_legal_forms',
 		'label' => 'lf_descr',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -314,7 +314,7 @@ $TCA['tx_partner_val_legal_forms'] = Array (
 
 $TCA['tx_partner_val_marital_status'] = Array (
 	'ctrl' => Array (
-		'title' => 'LLL:EXT:partner/locallang.php:tx_partner_val_marital_status',
+		'title' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_marital_status',
 		'label' => 'ms_descr',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -327,7 +327,7 @@ $TCA['tx_partner_val_marital_status'] = Array (
 
 $TCA['tx_partner_val_religions'] = Array (
 	'ctrl' => Array (
-		'title' => 'LLL:EXT:partner/locallang.php:tx_partner_val_religions',
+		'title' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_religions',
 		'label' => 'rl_descr',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -340,7 +340,7 @@ $TCA['tx_partner_val_religions'] = Array (
 
 $TCA['tx_partner_val_occupations'] = Array (
 	'ctrl' => Array (
-		'title' => 'LLL:EXT:partner/locallang.php:tx_partner_val_occupations',
+		'title' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_occupations',
 		'label' => 'oc_descr',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -353,7 +353,7 @@ $TCA['tx_partner_val_occupations'] = Array (
 
 $TCA['tx_partner_val_hobbies'] = Array (
 	'ctrl' => Array (
-		'title' => 'LLL:EXT:partner/locallang.php:tx_partner_val_hobbies',
+		'title' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_hobbies',
 		'label' => 'hb_descr',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -366,7 +366,7 @@ $TCA['tx_partner_val_hobbies'] = Array (
 
 $TCA['tx_partner_val_courses'] = Array (
 	'ctrl' => Array (
-		'title' => 'LLL:EXT:partner/locallang.php:tx_partner_val_courses',
+		'title' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_courses',
 		'label' => 'cs_name',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -379,7 +379,7 @@ $TCA['tx_partner_val_courses'] = Array (
 
 $TCA['tx_partner_val_rel_types'] = Array (
 	'ctrl' => Array (
-		'title' => 'LLL:EXT:partner/locallang.php:tx_partner_val_rel_types',
+		'title' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_val_rel_types',
 		'label' => 'rt_descr',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -392,7 +392,7 @@ $TCA['tx_partner_val_rel_types'] = Array (
 
 $TCA['tx_partner_reports'] = Array (
 	'ctrl' => Array (
-		'title' => 'LLL:EXT:partner/locallang.php:tx_partner_reports',
+		'title' => 'LLL:EXT:partner/locallang_db.xml:tx_partner_reports',
 		'label' => 'title',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',

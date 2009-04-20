@@ -771,7 +771,7 @@ class tx_partner_div {
 	 */
 	function getEditPartnerLink($partnerUID)		{
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Edit parameters
 		$params = '&edit[tx_partner_main]['.$partnerUID.']=edit';
@@ -798,7 +798,7 @@ class tx_partner_div {
 	 */
 	function getEditFeUserLink($feUserUid)		{
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Edit parameters
 		$params = '&edit[fe_users]['.$feUserUid.']=edit';
@@ -826,7 +826,7 @@ class tx_partner_div {
 	 */
 	function getEditReportLink($reportUID)		{
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Edit parameters
 		$params = '&edit[tx_partner_reports]['.$reportUID.']=edit';
@@ -855,7 +855,7 @@ class tx_partner_div {
 	 */
 	function getMailIconLink($partnerUID)		{
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 		$mailIconLink = '';
 
 			// Get the standard e-mail address
@@ -891,7 +891,7 @@ class tx_partner_div {
 	 */
 	function getFormatIcons($reportUid, $requestedFormats='', $orientation='horizontal', $linked=TRUE, $withLabels=TRUE, $tableWrap=TRUE, $backPath = '')		{
 		global $LANG, $TYPO3_CONF_VARS;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Determine which formats to display. If specific formats were requested, take those, otherwise take all formats defined in the global conf-vars
 		if ($requestedFormats)		{

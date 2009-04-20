@@ -53,7 +53,7 @@ class tx_partner_tools_reportdesigner extends t3lib_extobjbase {
 	 */
 	function main()	{
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 		$tce = t3lib_div::makeInstance('t3lib_TCEmain');
 
 			// Make 'New Report'-link, but only if creation of a new report is allowed on the current page

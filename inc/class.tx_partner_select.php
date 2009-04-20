@@ -89,7 +89,7 @@ class tx_partner_select {
 	 */
 	function allowed_formats(&$params, &$pObj) {
 		global $LANG, $TYPO3_CONF_VARS;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Create the items-array with all possible formats
 		foreach ($TYPO3_CONF_VARS['EXTCONF']['partner']['formats'] as $theFormat=>$formatOptions)		{

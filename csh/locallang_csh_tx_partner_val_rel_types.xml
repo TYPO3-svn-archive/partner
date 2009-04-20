@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <description>Context Sensitive Help for the table &quot;tx_partner_val_rel_types&quot;</description>
+        <type>CSH</type>
+        <csh_table>tx_partner_val_rel_types</csh_table>
+        <labelContext type="array">
+        </labelContext>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="rt_descr_short.description">Description (Short)</label>
+            <label index="rt_descr_short.details">Short description of the relationship type.</label>
+            <label index="rt_descr.description">Description</label>
+            <label index="rt_descr.details">Long description of the relationship type.</label>
+            <label index="allowed_categories.description">Allowed Relationship Categories</label>
+            <label index="allowed_categories.details">Select all allowed relationship categories from the list. When creating a new relationship, only the types allowed for the selected type will be displayed.</label>
+            <label index="primary_title.description">Title Of Relationship Of Primary Partner</label>
+            <label index="primary_title.details">Describes the relationship as viewed by the primary partner.
+&lt;b&gt;Example:&lt;/b&gt;
+For the relationship type 'Has Member', this would be something like 'Has Member'.</label>
+            <label index="secondary_title.description">Title Of Relationship Of Secondary Partner</label>
+            <label index="secondary_title.details">Describes the relationship as viewed by the primary partner.
+&lt;b&gt;Example:&lt;/b&gt;
+For the relationship type 'Has Member', this would be something like 'Is Member of'.</label>
+        </languageKey>
+        <languageKey index="dk" type="array">
+        </languageKey>
+        <languageKey index="de" type="array">
+            <label index="rt_descr_short.description">Kurzbezeichnung</label>
+            <label index="rt_descr_short.details">Kurzbezeichnung des Beziehungstyps.</label>
+            <label index="rt_descr.description">Bezeichnung</label>
+            <label index="rt_descr.details">Vollständige Bezeichnung des Beziehungstyps.</label>
+            <label index="allowed_categories.description">Erlaubte Beziehungs-Typen</label>
+            <label index="allowed_categories.details">Wählen Sie alle erlaubte Beziehungs-Typen aus der Liste. Wenn eine neue Beziehung erstellt wird, stehen somit nur die Beziehungstypen zur Verfügung, die für den gewählten Beziehungs-Typ erlaubt sind.</label>
+            <label index="primary_title.description">Titel aus Sicht des Hauptpartners</label>
+            <label index="primary_title.details">Beschreibt den Titel der Bezeihung aus Sicht des Hauptpartners.
+&lt;b&gt;Beispiel:&lt;/b&gt;
+Für den Beziehungstyp 'Hat Mitglied' wäre dies z.B. 'Hat Mitglied'.</label>
+            <label index="secondary_title.description">Titel aus Sicht des verbundenen Partners</label>
+            <label index="secondary_title.details">Beschreibt den Titel der Bezeihung aus Sicht des verbundenen Partners.
+&lt;b&gt;Beispiel:&lt;/b&gt;
+Für den Beziehungstyp 'Hat Mitglied' wäre dies z.B. 'Ist Mitglied von'.</label>
+        </languageKey>
+        <languageKey index="no" type="array">
+        </languageKey>
+        <languageKey index="it" type="array">
+        </languageKey>
+        <languageKey index="fr" type="array">
+        </languageKey>
+        <languageKey index="es" type="array">
+        </languageKey>
+        <languageKey index="nl" type="array">
+        </languageKey>
+        <languageKey index="cz" type="array">
+        </languageKey>
+        <languageKey index="pl" type="array">
+        </languageKey>
+        <languageKey index="si" type="array">
+        </languageKey>
+        <languageKey index="fi" type="array">
+        </languageKey>
+        <languageKey index="tr" type="array">
+        </languageKey>
+        <languageKey index="se" type="array">
+        </languageKey>
+        <languageKey index="pt" type="array">
+        </languageKey>
+        <languageKey index="ru" type="array">
+        </languageKey>
+        <languageKey index="ro" type="array">
+        </languageKey>
+        <languageKey index="ch" type="array">
+        </languageKey>
+        <languageKey index="sk" type="array">
+        </languageKey>
+        <languageKey index="lt" type="array">
+        </languageKey>
+        <languageKey index="is" type="array">
+        </languageKey>
+        <languageKey index="hr" type="array">
+        </languageKey>
+        <languageKey index="hu" type="array">
+        </languageKey>
+        <languageKey index="gl" type="array">
+        </languageKey>
+        <languageKey index="th" type="array">
+        </languageKey>
+        <languageKey index="gr" type="array">
+        </languageKey>
+        <languageKey index="hk" type="array">
+        </languageKey>
+        <languageKey index="eu" type="array">
+        </languageKey>
+        <languageKey index="bg" type="array">
+        </languageKey>
+        <languageKey index="br" type="array">
+        </languageKey>
+        <languageKey index="et" type="array">
+        </languageKey>
+        <languageKey index="ar" type="array">
+        </languageKey>
+        <languageKey index="he" type="array">
+        </languageKey>
+        <languageKey index="ua" type="array">
+        </languageKey>
+        <languageKey index="lv" type="array">
+        </languageKey>
+        <languageKey index="jp" type="array">
+        </languageKey>
+        <languageKey index="vn" type="array">
+        </languageKey>
+    </data>
+    <orig_hash type="array">
+        <languageKey index="default" type="array">
+            <label index="rt_descr_short.description" type="integer">202238909</label>
+            <label index="rt_descr_short.details" type="integer">36967626</label>
+            <label index="rt_descr.description" type="integer">190479069</label>
+            <label index="rt_descr.details" type="integer">40955614</label>
+            <label index="allowed_categories.description" type="integer">20589432</label>
+            <label index="allowed_categories.details" type="integer">34453079</label>
+            <label index="primary_title.description" type="integer">225442313</label>
+            <label index="primary_title.details" type="integer">34728757</label>
+            <label index="secondary_title.description" type="integer">141130595</label>
+            <label index="secondary_title.details" type="integer">213224818</label>
+        </languageKey>
+        <languageKey index="dk" type="array">
+        </languageKey>
+        <languageKey index="de" type="array">
+            <label index="rt_descr_short.description" type="integer">202238909</label>
+            <label index="rt_descr_short.details" type="integer">36967626</label>
+            <label index="rt_descr.description" type="integer">190479069</label>
+            <label index="rt_descr.details" type="integer">40955614</label>
+            <label index="allowed_categories.description" type="integer">20589432</label>
+            <label index="allowed_categories.details" type="integer">34453079</label>
+            <label index="primary_title.description" type="integer">225442313</label>
+            <label index="primary_title.details" type="integer">34728757</label>
+            <label index="secondary_title.description" type="integer">141130595</label>
+            <label index="secondary_title.details" type="integer">213224818</label>
+        </languageKey>
+        <languageKey index="no" type="array">
+        </languageKey>
+        <languageKey index="it" type="array">
+        </languageKey>
+        <languageKey index="fr" type="array">
+        </languageKey>
+        <languageKey index="es" type="array">
+        </languageKey>
+        <languageKey index="nl" type="array">
+        </languageKey>
+        <languageKey index="cz" type="array">
+        </languageKey>
+        <languageKey index="pl" type="array">
+        </languageKey>
+        <languageKey index="si" type="array">
+        </languageKey>
+        <languageKey index="fi" type="array">
+        </languageKey>
+        <languageKey index="tr" type="array">
+        </languageKey>
+        <languageKey index="se" type="array">
+        </languageKey>
+        <languageKey index="pt" type="array">
+        </languageKey>
+        <languageKey index="ru" type="array">
+        </languageKey>
+        <languageKey index="ro" type="array">
+        </languageKey>
+        <languageKey index="ch" type="array">
+        </languageKey>
+        <languageKey index="sk" type="array">
+        </languageKey>
+        <languageKey index="lt" type="array">
+        </languageKey>
+        <languageKey index="is" type="array">
+        </languageKey>
+        <languageKey index="hr" type="array">
+        </languageKey>
+        <languageKey index="hu" type="array">
+        </languageKey>
+        <languageKey index="gl" type="array">
+        </languageKey>
+        <languageKey index="th" type="array">
+        </languageKey>
+        <languageKey index="gr" type="array">
+        </languageKey>
+        <languageKey index="hk" type="array">
+        </languageKey>
+        <languageKey index="eu" type="array">
+        </languageKey>
+        <languageKey index="bg" type="array">
+        </languageKey>
+        <languageKey index="br" type="array">
+        </languageKey>
+        <languageKey index="et" type="array">
+        </languageKey>
+        <languageKey index="ar" type="array">
+        </languageKey>
+        <languageKey index="he" type="array">
+        </languageKey>
+        <languageKey index="ua" type="array">
+        </languageKey>
+        <languageKey index="lv" type="array">
+        </languageKey>
+        <languageKey index="jp" type="array">
+        </languageKey>
+        <languageKey index="vn" type="array">
+        </languageKey>
+    </orig_hash>
+    <orig_text type="array">
+        <languageKey index="default" type="array">
+        </languageKey>
+        <languageKey index="dk" type="array">
+        </languageKey>
+        <languageKey index="de" type="array">
+        </languageKey>
+        <languageKey index="no" type="array">
+        </languageKey>
+        <languageKey index="it" type="array">
+        </languageKey>
+        <languageKey index="fr" type="array">
+        </languageKey>
+        <languageKey index="es" type="array">
+        </languageKey>
+        <languageKey index="nl" type="array">
+        </languageKey>
+        <languageKey index="cz" type="array">
+        </languageKey>
+        <languageKey index="pl" type="array">
+        </languageKey>
+        <languageKey index="si" type="array">
+        </languageKey>
+        <languageKey index="fi" type="array">
+        </languageKey>
+        <languageKey index="tr" type="array">
+        </languageKey>
+        <languageKey index="se" type="array">
+        </languageKey>
+        <languageKey index="pt" type="array">
+        </languageKey>
+        <languageKey index="ru" type="array">
+        </languageKey>
+        <languageKey index="ro" type="array">
+        </languageKey>
+        <languageKey index="ch" type="array">
+        </languageKey>
+        <languageKey index="sk" type="array">
+        </languageKey>
+        <languageKey index="lt" type="array">
+        </languageKey>
+        <languageKey index="is" type="array">
+        </languageKey>
+        <languageKey index="hr" type="array">
+        </languageKey>
+        <languageKey index="hu" type="array">
+        </languageKey>
+        <languageKey index="gl" type="array">
+        </languageKey>
+        <languageKey index="th" type="array">
+        </languageKey>
+        <languageKey index="gr" type="array">
+        </languageKey>
+        <languageKey index="hk" type="array">
+        </languageKey>
+        <languageKey index="eu" type="array">
+        </languageKey>
+        <languageKey index="bg" type="array">
+        </languageKey>
+        <languageKey index="br" type="array">
+        </languageKey>
+        <languageKey index="et" type="array">
+        </languageKey>
+        <languageKey index="ar" type="array">
+        </languageKey>
+        <languageKey index="he" type="array">
+        </languageKey>
+        <languageKey index="ua" type="array">
+        </languageKey>
+        <languageKey index="lv" type="array">
+        </languageKey>
+        <languageKey index="jp" type="array">
+        </languageKey>
+        <languageKey index="vn" type="array">
+        </languageKey>
+    </orig_text>
+</T3locallang>

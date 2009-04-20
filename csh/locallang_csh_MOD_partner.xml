@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <description>Context Sensitive Help for the Module &quot;Partner&quot;</description>
+        <type>CSH</type>
+        <csh_table>_MOD_partner</csh_table>
+        <labelContext type="array">
+        </labelContext>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="no_sys_folder.alttitle">No Sys-Folder</label>
+            <label index="no_sys_folder.description">You cannot create a new partner on this page, because this is not a sys-folder.</label>
+            <label index="no_sys_folder.details">Partner records can only be created on sys-folders.</label>
+            <label index="exact_search.alttitle">Exact Search</label>
+            <label index="exact_search.description">If you activate this option, the system will look for an exact match with the values you entered. If the option is deactivated however, only the beginning of the search values will be taken into account.</label>
+            <label index="exact_search.details">If this option is not active, it has the same effect as if every value was appended with a wildcard (*) at the beginning and at the end. Example: You have a partner is your system called 'Miller-Smith'. If you activate the option 'Exact Search' enter the value 'Miller', the system will not find the partner. If the option is not active however, the partner will be selected, as part after 'Miller' is disregarded.</label>
+            <label index="sec_partner_excluded_because_same_as_primary.alttitle">Secondary Partner excluded from search result</label>
+            <label index="sec_partner_excluded_because_same_as_primary.description">The secondary partner was excluded from the search result, because it is the same as the currently selected primary partner.</label>
+            <label index="sec_partner_excluded_because_same_as_primary.details">A partner record cannot have a relationship with itself.</label>
+            <label index="sec_partner_removed_because_not_allowed.alttitle">Secondary Partner removed from search result</label>
+            <label index="sec_partner_removed_because_not_allowed.description">The secondary partner was removed from the search result, because it is not allowed by the selected relationship type.</label>
+            <label index="sec_partner_removed_because_not_allowed.details">Most likely, you have changed the relationship type in the default values. The system now checks if the selected partner is allowed for this new relationship type. If this is not the case, the partner is removed from the search result.</label>
+            <label index="no_partner_found.alttitle">No Partner found</label>
+            <label index="no_partner_found.description">There was no partner record found with the entered search string.</label>
+            <label index="no_partner_found.details">The system looks for partner records with the entered search string in the label field. Please check if the string you entered was correct. Be aware that the system only searches for partner which are allowed for the currently selected relationship type! (e.g. if the relationship type is 'Has Child', the system only searches for persons, not organisations.)</label>
+            <label index="no_allowed_rel_types_found.alttitle">No allowed relationship types found</label>
+            <label index="no_allowed_rel_types_found.description">There are no relationship types which are allowed for the selected partner. Most likely, your administrator did not yet set up the relationship-type records needed to properly run this extension.</label>
+            <label index="no_allowed_rel_types_found.details">The system looks for relationship-type records in the current sys-folder. When defining relationship-type records, the adminstrator can decide for which partner-types the relationship-type is allowed. For instance, it is not allowed for a relationship type 'Is Owner of' to have a secondary partner of the type 'Person'.</label>
+            <label index="no_rel_status_found.alttitle">No status for relationships found</label>
+            <label index="no_rel_status_found.description">There are no status-records which are allowed for relationships. Most likely, your administrator did not yet set up the status records to properly run this extension.</label>
+            <label index="no_rel_status_found.details">The system looks for status records for relationships in the current sys-folder. When defining status records, the administrator can decide for which tables the status is allowed. Currently, no status records are available for the table tx_partner_relationships.</label>
+        </languageKey>
+    </data>
+    <orig_hash type="array">
+        <languageKey index="default" type="array">
+            <label index="no_sys_folder.alttitle" type="integer">81014399</label>
+            <label index="no_sys_folder.description" type="integer">56564171</label>
+            <label index="no_sys_folder.details" type="integer">235303894</label>
+            <label index="exact_search.alttitle" type="integer">108074738</label>
+            <label index="exact_search.description" type="integer">187737515</label>
+            <label index="exact_search.details" type="integer">142794188</label>
+            <label index="sec_partner_excluded_because_same_as_primary.alttitle" type="integer">31580537</label>
+            <label index="sec_partner_excluded_because_same_as_primary.description" type="integer">100143787</label>
+            <label index="sec_partner_excluded_because_same_as_primary.details" type="integer">56448742</label>
+            <label index="sec_partner_removed_because_not_allowed.alttitle" type="integer">91850985</label>
+            <label index="sec_partner_removed_because_not_allowed.description" type="integer">128261318</label>
+            <label index="sec_partner_removed_because_not_allowed.details" type="integer">15802614</label>
+            <label index="no_partner_found.alttitle" type="integer">235968179</label>
+            <label index="no_partner_found.description" type="integer">182967919</label>
+            <label index="no_partner_found.details" type="integer">22273060</label>
+            <label index="no_allowed_rel_types_found.alttitle" type="integer">264559833</label>
+            <label index="no_allowed_rel_types_found.description" type="integer">35334925</label>
+            <label index="no_allowed_rel_types_found.details" type="integer">128182022</label>
+            <label index="no_rel_status_found.alttitle" type="integer">111610932</label>
+            <label index="no_rel_status_found.description" type="integer">151973779</label>
+            <label index="no_rel_status_found.details" type="integer">169981799</label>
+        </languageKey>
+    </orig_hash>
+    <orig_text type="array">
+        <languageKey index="default" type="array">
+        </languageKey>
+    </orig_text>
+</T3locallang>

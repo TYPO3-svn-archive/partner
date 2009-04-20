@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <description>Context Sensitive Help for the table &quot;tx_partner_main&quot;</description>
+        <type>CSH</type>
+        <csh_table>tx_partner_main</csh_table>
+        <labelContext type="array">
+        </labelContext>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="label.description">Label of the partner</label>
+            <label index="label.details">The label is used in many places in the backend, usually when the partner has to be described with just one field. The value of the label is formed by TYPO3 in the following way:
+&lt;b&gt;For Persons&lt;/b&gt;
+[Last name], [First Name] - [Locality]
+
+&lt;b&gt;For Organisations&lt;/b&gt;
+[Name of Organisation] - [Locality]</label>
+            <label index="status.description">Status of the partner</label>
+            <label index="status.details">Describes the current status of the partner. The list of possible status can be defined by your administrator. Possible values could be 'Active', 'Passive' or 'To be archived'.</label>
+            <label index="data_source.description">Data source of the partner</label>
+            <label index="data_source.details">Describes where the partner has originated. Can be for instance the name of a third-party application. Can be used together with the field 'External ID' to fully identify a partner from an external application.</label>
+            <label index="data_source.seeAlso">tx_partner_main:external_id</label>
+            <label index="external_id.description">External Identification of the partner</label>
+            <label index="external_id.details">Contains the identification of this partner in an external application, which is usually defined in the field 'Data Source'.</label>
+            <label index="external_id.seeAlso">tx_partner_main:data_source</label>
+            <label index="contact_permission.description">Contact permission status for the partner</label>
+            <label index="contact_permission.details">Defines if and how a partner may be contacted. This list can be defined by your administrator. Possible values could be 'Unrestricted', 'Do not contact' or 'Call X before contacting'.</label>
+            <label index="fe_user.description">Frontend User ID of the partner</label>
+            <label index="fe_user.details">If this partner is also a frontend user, then the user record can be linked to the partner by entering the frontend user ID in this field.</label>
+            <label index="image.description">Image of the partner</label>
+            <label index="image.details">You can upload one picture of the partner here. This picture may for instance be used when displaying partner records on your website.</label>
+            <label index="relationships_overview.description">List of all relationships for this partner</label>
+            <label index="relationships_overview.details">This list gives you an overview about all the relationships that were entered for this partner. You can also change existing relationships, change related partners or create new relationships.
+
+&lt;strong&gt;Primary or Secondary Partner?&lt;/strong&gt;
+A relationship always consists of exactly two partners. One is the primary partner, the other is the secondary partner. The type of a relationship defines what kind of relationships the two partners have.
+
+Let's say, for instance, that one partner is the member of the other, like a member of a club. Well in this case, the relationship type you want to have is 'has member'. You can see already from the formulation of the type that there is a 'direction' to the relationship. Club Y 'has member' Mr. Miller and not the other way round. So Club Y is the primary partner and Mr. Miller is the secondary partner.
+
+Let's take another example. You would like to know who belongs to a certain family. Your administrator has configured the relationship types 'has child' and 'has wife' for this purpose. Again you see from the formulation that each of these types have a 'direction'. So Mr. and Mrs. Miller have a child, David. You would therefore create three new partners: Mr. Miller, Mrs. Miller and David Miller. In order to enter the family relationship, you would open the record of Mr. Miller and create a new relationship as 'primary partner'. Then you would chose the type 'has child' and enter David Miller as secondary partner. Secondly, you would create a new relationship, again with Mr. Miller as the primary partner, chose 'has wife' as type and enter Mrs. Miller as secondary partner. And here you are, you just created your family!
+		</label>
+            <label index="preceding_title.description">Preceding Title of the partner</label>
+            <label index="preceding_title.details">Describes any titles that must be used before the actual title of the partner. Examples: 'His Excellency', 'Honorable', etc.</label>
+            <label index="title.description">Title of the partner</label>
+            <label index="title.details">Defines the title of the partner, for instance 'Mister', 'Professor', 'Dr.', etc. This list can be defined by your administrator.</label>
+            <label index="letter_title.description">Letter Title of the partner</label>
+            <label index="letter_title.details">Defines a special letter title just for this partner, if applicable. If this field is blank, then letters to this partner will feature the standard letter title (like 'Dear Mr. xyz')</label>
+            <label index="first_name.description">First Name of the partner</label>
+            <label index="first_name.details">Enter &lt;b&gt;only&lt;/b&gt; the &lt;b&gt;first&lt;/b&gt; name here. There are additional fields for the middle and the last name of the partner.</label>
+            <label index="middle_name.description">Middle Name of the partner</label>
+            <label index="middle_name.details">Enter &lt;b&gt;only&lt;/b&gt; the &lt;b&gt;middle&lt;/b&gt; name here. There are additional fields for the first and the last name of the partner.</label>
+            <label index="last_name_prefix.description">Last Name Prefix of the partner</label>
+            <label index="last_name_prefix.details">If the last name of the partner should be prefixed, you can enter this prefix here. For instance 'de la' or 'van den', etc.</label>
+            <label index="last_name.description">Last Name of the partner</label>
+            <label index="last_name.details">Enter &lt;b&gt;only&lt;/b&gt; the &lt;b&gt;last&lt;/b&gt; name (e.g. family name) here. There are additional fields for the first and the middle name of the partner.</label>
+            <label index="maiden_name.description">Maiden Name of the partner</label>
+            <label index="maiden_name.details">This field can be used to enter the maiden (unmarried) name of the partner. Please note that this name will usually not be used to display or print, but server just for information.</label>
+            <label index="general_suffix.description">General Suffix of the partner</label>
+            <label index="general_suffix.details">If the whole name of the partner should be suffixed, you can enter this suffix here. Examples would be 'retired' or 'deceased'.</label>
+            <label index="initials.description">Initials of the partner</label>
+            <label index="initials.details">Usually formed by the first, middle and last name of a partner, but you can use this according to your own syntax. Example: 'Paul J. Miller' could have the initials 'PJM'.</label>
+            <label index="org_name.description">Organisation Name</label>
+            <label index="org_name.details">Full name of the organisation, for instance the name of the firm or the name of a group of persons.</label>
+            <label index="org_type.description">Organisation Type</label>
+            <label index="org_type.details">Defines the type of organistion, for instance a firm, a club, a group, or anything else which is not a person. This list can be defined by your administrator.</label>
+            <label index="org_legal_form.description">Legal Form of the organisation</label>
+            <label index="org_legal_form.details">Defines the legal form of the organisation, if applicable. This list can be defined by your administrator.</label>
+            <label index="department.description">Department (address of the partner)</label>
+            <label index="department.details">Usually used for business addresses, if the partner is a member of or has the address of a certain department.</label>
+            <label index="building.description">Building (address of the partner)</label>
+            <label index="building.details">Can be used to further refine the address by exactly naming the name of the building where the partner is located (like 'Egis' or 'Beauty Appartments').</label>
+            <label index="floor.description">Floor (address of the partner)</label>
+            <label index="floor.details">Can be used to further refine the address by exactly naming the floor where the partner is located.</label>
+            <label index="room.description">Room (address of the partner)</label>
+            <label index="room.details">Can be used to further refine the address by exactly naming the room (usually a number) where the partner is located.</label>
+            <label index="street.description">Street (address of the partner)</label>
+            <label index="street.details">Name of the street (as part of the address).</label>
+            <label index="street_number.description">Street Number (address of the partner)</label>
+            <label index="street_number.details">Street Number of the partner's building (as part of the address).</label>
+            <label index="postal_code.description">Postal Code (address of the partner)</label>
+            <label index="postal_code.details">The postal code (or ZIP code) of the partner's locality.</label>
+            <label index="locality.description">Locality (address of the partner)</label>
+            <label index="locality.details">The partner's locality. &lt;b&gt;Do not&lt;/b&gt; enter the postal code here. There is an additional field just for the postal code.</label>
+            <label index="admin_area.description">Administrative Area (address of the partner)</label>
+            <label index="admin_area.details">The administrative area that the partner's locality belongs to. In the USA, this could be the two-letter State-Code (like 'NY' for New York).</label>
+            <label index="country.description">Country (address of the partner)</label>
+            <label index="country.details">The country where the partner resides.</label>
+            <label index="po_number.description">Post Box Number (address of the partner)</label>
+            <label index="po_number.details">If the partner has a post box (PO), you can enter the number here.</label>
+            <label index="po_no_number.description">PO Box without number (address of the partner)</label>
+            <label index="po_no_number.details">If the partner has a post box (PO box), but the PO box is not numbered, you can check this box.</label>
+            <label index="po_postal_code.description">PO Box Postal Code (address of the partner)</label>
+            <label index="po_postal_code.details">The postal code (or ZIP-code) or the partner's PO box locality.</label>
+            <label index="po_locality.description">PO Box Locality (address of the partner)</label>
+            <label index="po_locality.details">The partner's PO box locality. &lt;b&gt;Do not&lt;/b&gt; enter the postal code of the PO box here. There is an additional field just for the PO box postal code.</label>
+            <label index="po_admin_area.description">PO Box Administrative Area (address of the partner)</label>
+            <label index="po_admin_area.details">The administrative area that the partner's PO box locality belongs to. In the USA, this could be the two-letter State-Code (like 'NY' for New York).</label>
+            <label index="po_country.description">PO Box Country (address of the partner)</label>
+            <label index="po_country.details">The country of the partner's PO box.</label>
+            <label index="contact_info.description">Contact Information of the partner</label>
+            <label index="contact_info.details">You can enter an unlimited numer of contact informations for the partner here (like phone numbers or e-mail addresses).</label>
+            <label index="formation_date.description">Formation Date of the organisation</label>
+            <label index="formation_date.details">If known, you can enter the date of the formation of the organisation here.</label>
+            <label index="closure_date.description">Closure Date of the organisation</label>
+            <label index="closure_date.details">This is usually the date where the organisation has ceased to formally exist (e.g. if a firm went bankrupt).</label>
+            <label index="birth_date.description">Birth Date of the person</label>
+            <label index="birth_date.details">&lt;b&gt;Important Notice&lt;/b&gt;: You &lt;b&gt;must&lt;/b&gt; enter the birth date exactly in the following format: &lt;b&gt;YYYYMMDD&lt;/b&gt;.
+Example: &lt;b&gt;19390209&lt;/b&gt; is February 2, 1939.
+Cookbook: You enter the year first (with 4 digits, like 1939), then without a comma or anything you enter the month (with 2 digits, like 02 for february) and then, again with no comma or anything you add the day of the month (with 2 digits, like 09).</label>
+            <label index="birth_place.description">Birth Place of the person</label>
+            <label index="birth_place.details">Place (possibly including the country) where the person was born.</label>
+            <label index="death_date.description">Death Date of the person</label>
+            <label index="death_date.details">&lt;b&gt;Important Notice&lt;/b&gt;: You &lt;b&gt;must&lt;/b&gt; enter the death date exactly in the following format: &lt;b&gt;YYYYMMDD&lt;/b&gt;.
+Example: &lt;b&gt;19390209&lt;/b&gt; is February 2, 1939.
+Cookbook: You enter the year first (with 4 digits, like 1939), then without a comma or anything you enter the month (with 2 digits, like 02 for february) and then, again with no comma or anything you add the day of the month (with 2 digits, like 09).</label>
+            <label index="death_place.description">Death Place of the person</label>
+            <label index="death_place.details">Place (possibly including the country) where the person has died.</label>
+            <label index="gender.description">Gender of the person</label>
+            <label index="gender.details">Enter the gender (sex) of the partner. The list of values are defined by ISO 5218.</label>
+            <label index="marital_status.description">Marital Status of the person</label>
+            <label index="marital_status.details">Enter the marital status (e.g. 'married' or 'single') of the person. This list can be defined by your administrator.</label>
+            <label index="nationality.description">Nationality of the partner</label>
+            <label index="nationality.details">Enter the country of the partner's nationality.</label>
+            <label index="religion.description">Religion of the partner</label>
+            <label index="religion.details">Enter the religion of the person. This list can be defined by your administrator.</label>
+            <label index="mother_tongue.description">Mother Tongue of the person</label>
+            <label index="mother_tongue.details">This is the language that the person grew up with.</label>
+            <label index="preferred_language.description">Preferred Language of the partner</label>
+            <label index="preferred_language.details">Enter the language in which the partner should be contacted.</label>
+            <label index="join_date.description">Join Date of the partner</label>
+            <label index="join_date.details">If you manage the partner data of a club, then this might be the date at which the partner joined your club.</label>
+            <label index="leave_date.description">Leave Date of the partner</label>
+            <label index="leave_date.details">If you manage the partner data of a club, then this might be the date at which the partner left your club.</label>
+            <label index="occupations.description">Occupations of the partner</label>
+            <label index="occupations.details">Enter all the occupations of this partner. The list of possible occupations can be defined by your administrator.</label>
+            <label index="hobbies.description">Hobbies of the partner</label>
+            <label index="hobbies.details">Enter all the hobbies of this partner. The list of possible hobbies can be defined by your administrator.</label>
+            <label index="courses.description">Courses of the partner</label>
+            <label index="courses.details">Enter all the courses which this partner has visited. The list of possible courses can be defined by your administrator.</label>
+            <label index="meeting_period.description">Meeting Period of the organisation</label>
+            <label index="meeting_period.details">Enter the period in which the organisation will meet. If the organisation meets every 2 weeks, you would enter a '2' here and chose 'weeks' as the meeting unit.</label>
+            <label index="meeting_period.seeAlso">tx_partner_main:meeting_unit, tx_partner_main:meeting_start_date</label>
+            <label index="meeting_unit.description">Meeting Unit of the organisation</label>
+            <label index="meeting_unit.details">Enter the unit in which the organisation will meet. If the organisation meets every 2 weeks, you would chose 'weeks' here and enter a '2' in the field Meeting Period. The list of possible meeting units is defined by the Partner-Extension.</label>
+            <label index="meeting_unit.seeAlso">tx_partner_main:meeting_period, tx_partner_main:meeting_start_date</label>
+            <label index="meeting_start_date.description">Meeting Start Date of the organisation</label>
+            <label index="meeting_start_date.details">Enter the date at which the meeting series shall start or has started. The system will calculate the dates of further meetings based on this date.
+&lt;b&gt;Example:&lt;/b&gt;
+If your organisation meets every 2 weeks, always on a monday, you would enter a '2' as meeting period and chose 'weeks' as the meeting unit. Then you would enter a date here that was a monday, like 27-09-2004.</label>
+            <label index="meeting_start_date.seeAlso">tx_partner_main:meeting_period, tx_partner_main:meeting_unit</label>
+            <label index="field_visibility.description">Field Visibility Settings</label>
+            <label index="field_visibility.details">In this table, you can see all the settings which concern the visibility of partner and contact-information fields in the frontend.</label>
+            <label index="field_visibility_no_values.description">No Default Values found</label>
+            <label index="field_visibility_no_values.details">The system could not find any default values for the field visibility settings. You can configure the default values in TSconfig in your sys-folder. For details, please refer to the manual (reference section).</label>
+            <label index="field_visibility_no_values.image">EXT:partner/csh/img/field_visibility_default_settings.png</label>
+            <label index="error_invalid_keyword.description">Invalid Keyword used</label>
+            <label index="error_invalid_keyword.details">You have used a keyword other than PRIVATE, RESTRICTED or PUBLIC in your TSconfig setup. Therefore, the system cannot assign a default value for this field. Please note that the keywords are case-sensitive! You must use capital letters. Please refer to the following example for a proper setup.</label>
+            <label index="error_invalid_keyword.image">EXT:partner/csh/img/field_visibility_default_settings.png</label>
+        </languageKey>
+    </data>
+    <orig_hash type="array">
+        <languageKey index="default" type="array">
+            <label index="label.description" type="integer">132435043</label>
+            <label index="label.details" type="integer">143006986</label>
+            <label index="status.description" type="integer">123629629</label>
+            <label index="status.details" type="integer">38150757</label>
+            <label index="data_source.description" type="integer">264362304</label>
+            <label index="data_source.details" type="integer">109585436</label>
+            <label index="data_source.seeAlso" type="integer">81399331</label>
+            <label index="external_id.description" type="integer">172784591</label>
+            <label index="external_id.details" type="integer">115832565</label>
+            <label index="external_id.seeAlso" type="integer">199644630</label>
+            <label index="contact_permission.description" type="integer">206022026</label>
+            <label index="contact_permission.details" type="integer">166124251</label>
+            <label index="fe_user.description" type="integer">36074650</label>
+            <label index="fe_user.details" type="integer">178580516</label>
+            <label index="image.description" type="integer">232837069</label>
+            <label index="image.details" type="integer">215890600</label>
+            <label index="relationships_overview.description" type="integer">198920285</label>
+            <label index="relationships_overview.details" type="integer">124595851</label>
+            <label index="preceding_title.description" type="integer">238821250</label>
+            <label index="preceding_title.details" type="integer">193128704</label>
+            <label index="title.description" type="integer">71110474</label>
+            <label index="title.details" type="integer">119624304</label>
+            <label index="letter_title.description" type="integer">81242155</label>
+            <label index="letter_title.details" type="integer">6784537</label>
+            <label index="first_name.description" type="integer">147665152</label>
+            <label index="first_name.details" type="integer">131477134</label>
+            <label index="middle_name.description" type="integer">114992495</label>
+            <label index="middle_name.details" type="integer">96757469</label>
+            <label index="last_name_prefix.description" type="integer">144477005</label>
+            <label index="last_name_prefix.details" type="integer">252347552</label>
+            <label index="last_name.description" type="integer">142191563</label>
+            <label index="last_name.details" type="integer">166955427</label>
+            <label index="maiden_name.description" type="integer">156860477</label>
+            <label index="maiden_name.details" type="integer">104187738</label>
+            <label index="general_suffix.description" type="integer">240528162</label>
+            <label index="general_suffix.details" type="integer">128589618</label>
+            <label index="initials.description" type="integer">57634079</label>
+            <label index="initials.details" type="integer">15240187</label>
+            <label index="org_name.description" type="integer">235119357</label>
+            <label index="org_name.details" type="integer">243277076</label>
+            <label index="org_type.description" type="integer">52202462</label>
+            <label index="org_type.details" type="integer">61416971</label>
+            <label index="org_legal_form.description" type="integer">128434390</label>
+            <label index="org_legal_form.details" type="integer">266635569</label>
+            <label index="department.description" type="integer">95926743</label>
+            <label index="department.details" type="integer">24926050</label>
+            <label index="building.description" type="integer">185649512</label>
+            <label index="building.details" type="integer">212385335</label>
+            <label index="floor.description" type="integer">188684962</label>
+            <label index="floor.details" type="integer">42902929</label>
+            <label index="room.description" type="integer">172818405</label>
+            <label index="room.details" type="integer">24376752</label>
+            <label index="street.description" type="integer">110387527</label>
+            <label index="street.details" type="integer">187439568</label>
+            <label index="street_number.description" type="integer">240803399</label>
+            <label index="street_number.details" type="integer">139504087</label>
+            <label index="postal_code.description" type="integer">234836174</label>
+            <label index="postal_code.details" type="integer">922525</label>
+            <label index="locality.description" type="integer">26954703</label>
+            <label index="locality.details" type="integer">67424807</label>
+            <label index="admin_area.description" type="integer">22711347</label>
+            <label index="admin_area.details" type="integer">136300220</label>
+            <label index="country.description" type="integer">130467739</label>
+            <label index="country.details" type="integer">167429101</label>
+            <label index="po_number.description" type="integer">236984301</label>
+            <label index="po_number.details" type="integer">74376041</label>
+            <label index="po_no_number.description" type="integer">190011111</label>
+            <label index="po_no_number.details" type="integer">162966651</label>
+            <label index="po_postal_code.description" type="integer">66782418</label>
+            <label index="po_postal_code.details" type="integer">139637430</label>
+            <label index="po_locality.description" type="integer">240068104</label>
+            <label index="po_locality.details" type="integer">25302218</label>
+            <label index="po_admin_area.description" type="integer">222012248</label>
+            <label index="po_admin_area.details" type="integer">84973997</label>
+            <label index="po_country.description" type="integer">229252924</label>
+            <label index="po_country.details" type="integer">30074739</label>
+            <label index="contact_info.description" type="integer">43800787</label>
+            <label index="contact_info.details" type="integer">264677121</label>
+            <label index="formation_date.description" type="integer">216069795</label>
+            <label index="formation_date.details" type="integer">98281732</label>
+            <label index="closure_date.description" type="integer">57276253</label>
+            <label index="closure_date.details" type="integer">59359680</label>
+            <label index="birth_date.description" type="integer">267720256</label>
+            <label index="birth_date.details" type="integer">1732269</label>
+            <label index="birth_place.description" type="integer">193528855</label>
+            <label index="birth_place.details" type="integer">209102574</label>
+            <label index="death_date.description" type="integer">151326764</label>
+            <label index="death_date.details" type="integer">139831646</label>
+            <label index="death_place.description" type="integer">210773927</label>
+            <label index="death_place.details" type="integer">267837804</label>
+            <label index="gender.description" type="integer">41074534</label>
+            <label index="gender.details" type="integer">227799469</label>
+            <label index="marital_status.description" type="integer">210349240</label>
+            <label index="marital_status.details" type="integer">125853950</label>
+            <label index="nationality.description" type="integer">55360794</label>
+            <label index="nationality.details" type="integer">84305508</label>
+            <label index="religion.description" type="integer">89705984</label>
+            <label index="religion.details" type="integer">28516764</label>
+            <label index="mother_tongue.description" type="integer">151846511</label>
+            <label index="mother_tongue.details" type="integer">141712524</label>
+            <label index="preferred_language.description" type="integer">136489171</label>
+            <label index="preferred_language.details" type="integer">195431705</label>
+            <label index="join_date.description" type="integer">212174195</label>
+            <label index="join_date.details" type="integer">117881492</label>
+            <label index="leave_date.description" type="integer">14286075</label>
+            <label index="leave_date.details" type="integer">89894273</label>
+            <label index="occupations.description" type="integer">48804653</label>
+            <label index="occupations.details" type="integer">144837938</label>
+            <label index="hobbies.description" type="integer">134673307</label>
+            <label index="hobbies.details" type="integer">215328872</label>
+            <label index="courses.description" type="integer">145053211</label>
+            <label index="courses.details" type="integer">237576324</label>
+            <label index="meeting_period.description" type="integer">213423320</label>
+            <label index="meeting_period.details" type="integer">68388563</label>
+            <label index="meeting_period.seeAlso" type="integer">243699901</label>
+            <label index="meeting_unit.description" type="integer">76900754</label>
+            <label index="meeting_unit.details" type="integer">197994076</label>
+            <label index="meeting_unit.seeAlso" type="integer">248272956</label>
+            <label index="meeting_start_date.description" type="integer">4158962</label>
+            <label index="meeting_start_date.details" type="integer">87295091</label>
+            <label index="meeting_start_date.seeAlso" type="integer">13026008</label>
+            <label index="field_visibility.description" type="integer">181556985</label>
+            <label index="field_visibility.details" type="integer">259796690</label>
+            <label index="field_visibility_no_values.description" type="integer">42852221</label>
+            <label index="field_visibility_no_values.details" type="integer">233796971</label>
+            <label index="field_visibility_no_values.image" type="integer">229777083</label>
+            <label index="error_invalid_keyword.description" type="integer">112165360</label>
+            <label index="error_invalid_keyword.details" type="integer">158219614</label>
+            <label index="error_invalid_keyword.image" type="integer">229777083</label>
+        </languageKey>
+    </orig_hash>
+    <orig_text type="array">
+        <languageKey index="default" type="array">
+        </languageKey>
+    </orig_text>
+</T3locallang>

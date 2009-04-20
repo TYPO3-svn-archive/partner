@@ -37,5 +37,5 @@ $MCONF['access']='user,group';
 $MCONF['script']='index.php';
 
 $MLANG['default']['tabs_images']['tab'] = '../icons/icon_web_txpartnerM1.gif';
-$MLANG['default']['ll_ref']='LLL:EXT:partner/locallang.php';
+$MLANG['default']['ll_ref']='LLL:EXT:partner/locallang_db.xml';
 ?>

@@ -38,7 +38,7 @@ require_once (PATH_t3lib.'class.t3lib_tcemain.php');
 require_once (PATH_t3lib.'class.t3lib_tceforms.php');
 require_once (t3lib_extMgm::extPath('partner').'api/class.tx_partner_div.php');
 
-$GLOBALS['LANG']->includeLLFile ('EXT:partner/locallang.php');
+$GLOBALS['LANG']->includeLLFile ('EXT:partner/locallang_db.xml');
 $GLOBALS['BE_USER']->modAccess($MCONF, 0); // This checks permissions and exits if the users has no permission for entry.
 
 class tx_partner_module1 extends t3lib_SCbase {
@@ -54,7 +54,7 @@ class tx_partner_module1 extends t3lib_SCbase {
 	 */
 	function init() {
 		global $BE_USER, $LANG, $BACK_PATH, $TCA_DESCR, $TCA, $CLIENT, $TYPO3_CONF_VARS;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 		$this->tceforms = t3lib_div::makeInstance('t3lib_TCEforms');
 		$this->tceforms->totalWrap = '';
@@ -82,7 +82,7 @@ class tx_partner_module1 extends t3lib_SCbase {
 	 */
 	function main() {
 		global $BE_USER, $LANG, $BACK_PATH, $TCA_DESCR, $TCA, $CLIENT, $TYPO3_CONF_VARS;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 		$tce = t3lib_div::makeInstance('t3lib_TCEmain');
 
 			// Access check!

@@ -31,7 +31,7 @@
 
 require_once(PATH_t3lib.'class.t3lib_extobjbase.php');
 require_once(t3lib_extMgm::extPath('partner').'api/class.tx_partner_query.php');
-$GLOBALS['LANG']->includeLLFile('EXT:partner/locallang.php');
+$GLOBALS['LANG']->includeLLFile('EXT:partner/locallang_db.xml');
 
 
 
@@ -75,7 +75,7 @@ class tx_partner_search extends t3lib_extobjbase {
 	 */
 	function main()	{
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 		
 			// Define the fields by which a user can search partner-data
 		$queryFields = array(
@@ -201,7 +201,7 @@ class tx_partner_search extends t3lib_extobjbase {
 	 */
 	function getNavigationBar($begin, $total, $max, $pid)		{
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 
 			// Get the left link (go back)

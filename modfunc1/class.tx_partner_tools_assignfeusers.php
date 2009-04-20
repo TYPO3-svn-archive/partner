@@ -54,7 +54,7 @@ class tx_partner_tools_assignfeusers extends t3lib_extobjbase {
 	 */
 	function modMenu()	{
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Add the method to use
 		$modMenuAdd = array(
@@ -78,7 +78,7 @@ class tx_partner_tools_assignfeusers extends t3lib_extobjbase {
 	 */
 	function main()	{
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Check if updates need to be made (button pushed)
 		if (t3lib_div::_GP('make_updates'))	{
@@ -125,7 +125,7 @@ class tx_partner_tools_assignfeusers extends t3lib_extobjbase {
 	 */
 	function updatePartnersWithFeUser($mapArray)		{
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 		if (is_array($mapArray))		{
 			foreach ($mapArray as $partnerUid=> $feUserUid)		{
@@ -218,7 +218,7 @@ class tx_partner_tools_assignfeusers extends t3lib_extobjbase {
 	 */
 	function getFeUserCheckReport($pid)		{
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Get all fe_user for the current pid
 		$feUser = t3lib_BEfunc::getRecordsByField('fe_users','pid',$pid);
@@ -260,7 +260,7 @@ class tx_partner_tools_assignfeusers extends t3lib_extobjbase {
 	 */
 	function getFeUserToPartnerMappingList($pid, $method)		{
 		global $LANG;
-		$LANG->includeLLFile('EXT:partner/locallang.php');
+		$LANG->includeLLFile('EXT:partner/locallang_db.xml');
 
 			// Get all fe_user for the current pid
 		$feUser = t3lib_BEfunc::getRecordsByField('fe_users','pid',$pid);
