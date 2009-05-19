@@ -1017,17 +1017,17 @@ class tx_partner_div {
 					// Get the proper icon
 				switch (key($theMessage))		{
 					case 'success':
-						$img = 't3lib/gfx/icon_ok2.gif';
+						$img = 'gfx/icon_ok2.gif';
 					break;
 					case 'warning':
-						$img = 't3lib/gfx/icon_warning2.gif';
+						$img = 'gfx/icon_warning2.gif';
 					break;
 					case 'error':
-						$img = 't3lib/gfx/icon_fatalerror.gif';
+						$img = 'gfx/icon_fatalerror.gif';
 					break;
 					case 'info':
 					default:
-						$img = 't3lib/gfx/icon_note.gif';
+						$img = 'gfx/icon_note.gif';
 					break;
 				}
 
