@@ -220,10 +220,10 @@ class tx_partner_format {
     	}
 
 			// Set the page margins and start a new page
-		$pdf->SetMargins($marginLeft, $marginTop, $marginRight);
+		$pdf->SetMargins(intval($marginLeft), intval($marginTop), intval($marginRight));
 		$pdf->AddPage();
-		$pdf->SetFont($font,'',$fontSize);
-		$pdf->SetFillColor($fillColor);
+		$pdf->SetFont($font,'',intval($fontSize));
+		$pdf->SetFillColor(intval($fillColor));
 		
 			// The data must be in iso-8859-1: Determine the charset from the database
 		$fromCharset = $GLOBALS['TYPO3_CONF_VARS']['BE']['forceCharset'] ? $GLOBALS['TYPO3_CONF_VARS']['BE']['forceCharset'] : 'iso-8859-1';
